@@ -22,7 +22,23 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
+ion-title {
+    text-align: center;
+}
 
+#navigation {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+#navigation div {
+    float: left;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+#navigation h4 {
+    font-size: 1em;
+}
 
 
 // Named Color Variables
@@ -45,6 +61,8 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+
+$toolbar-ios-title-text-align: center;
 
 
 
@@ -79,6 +97,7 @@ $colors: (
 // http://ionicframework.com/docs/ionicons/
 
 @import "ionic.ionicons";
+
 
 
 // Fonts
