@@ -4,13 +4,15 @@
             "username": "bobsmith123",
             "name": "Bob Smith",
             "time": "1 hour ago",
-            "text": "This is a post that I'm posting on divy"
+            "text": "This is a post that I'm posting on divy",
+            "prof_pic": "//TODO"
         },
         {
             "username": "ericrowe321",
             "name": "Eric Rowe",
             "time": "3 hour ago",
-            "text": "I also like posting on divy"
+            "text": "I also like posting on divy",
+            "prof_pic": "//TODO"
         }
     ]
 }

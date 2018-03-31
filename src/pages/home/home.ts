@@ -9,6 +9,7 @@ var data = require("../../data/posts.json");
 export class HomePage {
 
   posts = data.Posts;
+  // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION
 
   constructor(public navCtrl: NavController) {
   }
