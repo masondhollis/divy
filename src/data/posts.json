@@ -5,14 +5,14 @@
             "name": "Bob Smith",
             "time": "1 hour ago",
             "text": "This is a post that I'm posting on divy",
-            "prof_pic": "//TODO"
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
         },
         {
             "username": "ericrowe321",
             "name": "Eric Rowe",
             "time": "3 hour ago",
             "text": "I also like posting on divy",
-            "prof_pic": "//TODO"
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
         }
     ]
 }

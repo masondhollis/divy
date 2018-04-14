@@ -23,8 +23,11 @@
 
 <ion-content padding>
   <ion-card *ngFor="let post of posts" class="posts">
+
+      <img class="prof_pic" src="{{post.prof_pic}}" />
+
       <!-- TODO: STYLE THIS -->
-      {{post.name}}: {{post.text}}
+      <h6>{{post.name}}: {{post.text}}</h6>
 
       <!-- TODO: Actions: Like, comment, repost, share -->
   </ion-card>
