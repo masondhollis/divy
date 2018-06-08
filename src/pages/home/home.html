@@ -10,25 +10,66 @@
           <ion-icon name="search"></ion-icon>
         </button>
   </ion-toolbar>
-  <div id="navigation">
+  
+  <div id="navigation" >
       <!-- TODO: CENTER THIS BETTER -->
       <div><h4> ALL </h4></div>
       <div><h4> POSTS </h4></div>
       <div><h4> PHOTOS </h4></div>
       <div><h4> VIDEOS </h4></div>
       <div><h4> PROMOS </h4></div>
-  </div>
+  </div> 
 </ion-header>
 
 
 <ion-content padding>
   <ion-card *ngFor="let post of posts" class="posts">
-
-      <img class="prof_pic" src="{{post.prof_pic}}" />
-
-      <!-- TODO: STYLE THIS -->
-      <h6>{{post.name}}: {{post.text}}</h6>
-
-      <!-- TODO: Actions: Like, comment, repost, share -->
+  
+  	<!-- TODO: STYLE THIS -->
+    <ion-item>
+	  <time>{{post.time}}</time>
+	  
+	  <ion-thumbnail item-start>
+        <img class="prof_pic" src="{{post.prof_pic}}" />
+	  </ion-thumbnail>
+	  
+	  <h2 class = "name"><strong>{{post.name}}</strong></h2>
+	  <p>@{{post.username}}</p>
+	
+      <!--Actions: Like, comment, repost, share -->
+	  <ion-row>
+        <ion-col>
+        <button ion-button color="danger" clear small icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+          46 Likes
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="dark" clear small icon-start>
+          <ion-icon name='text'></ion-icon>
+          66 Comments
+        </button>
+      </ion-col>
+	  <ion-col align-self-center text-center>
+        <button ion-button color="dark" clear small icon-start>
+          <ion-icon name='share'></ion-icon>
+		  Repost
+        </button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <button ion-button color="dark" clear small icon-start>
+          <ion-icon name='share'></ion-icon>
+		  Share
+        </button>
+      </ion-col>
+    </ion-row>
+    </ion-item>
+   
+   <ion-card-content>
+     <p>{{post.text}}</p>
+   </ion-card-content>
+   
+   <img class = "post_pic" src="{{post.post_pic}}" />
+   
   </ion-card>
 </ion-content>

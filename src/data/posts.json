@@ -1,18 +1,28 @@
 {
     "Posts": [
+		{
+            "username": "BigBoye24",
+            "name": "Willy Nilly",
+            "time": "1 hour ago",
+            "text": "Me and the Fam.",
+            "prof_pic": "/assets/imgs/prof_pics/bear.png",
+			"post_pic": "/assets/imgs/post_pics/family.jpg"
+        },
         {
             "username": "bobsmith123",
             "name": "Bob Smith",
-            "time": "1 hour ago",
+            "time": "2 hours ago",
             "text": "This is a post that I'm posting on divy",
-            "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+			"post_pic": ""
         },
         {
             "username": "ericrowe321",
             "name": "Eric Rowe",
-            "time": "3 hour ago",
+            "time": "3 hours ago",
             "text": "I also like posting on divy",
-            "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+			"post_pic": ""
         }
     ]
 }
