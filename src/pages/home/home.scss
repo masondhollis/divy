@@ -2,37 +2,67 @@ page-home {
 
 }
 
+/* Image Related Styling*/
 .prof_pic {
-    width: 10%;
+    width: 20%;
+	height: auto;
     float: left;
     margin: .3em;
+	top: .5vw;
 }
 
-.post_pic {
+.post_pic { 
 	width: 100%;
     margin: .3em;
 	float: center;
 	height: auto;
+	Padding: 0;
 }
 
+/*.Posts related classes */
 .posts h6 {
     display: inline;
     padding: 0;
     margin: .3em;
 }
 
-h2.name {
-	display: inline;
-	font-size: 24px;
-	}
-.posts time {
+.posts {
+    padding: .6em;
+}
+	
+/*Post Time formating*/
+#time {
 	position: absolute;
-	top: 10px;
-	right: 16px;
-	font-size: 12px;
+	top: 1.5vh;
+	right: .8vw;
+	font-size: 2vw;
 	color: grey;
 }
 
-.posts {
-    padding: .6em;
+#name {
+	font-size: 3.5vw;
+	width: 20%;
+	font-weight: bold;
+}
+
+#Uname {
+	font-size: 2.25vw;
+	width: 20%;
+	color: grey;
+}
+
+#Text {
+	text-align:inline;
+	font-size: 4vw;
+}
+
+/*Nav Bar*/
+#navigation h4 {
+	text-align: center;
+	font-size: 12px;
+
+}
+
+#navigation div {
+	width: 15%;
 }
