@@ -4,16 +4,16 @@ page-home {
 
 /* Image Related Styling*/
 .prof_pic {
-    width: 20%;
+  width: 20%;
 	height: auto;
-    float: left;
-    margin: .3em;
+  float: left;
+  margin: .3em;
 	top: .5vw;
 }
 
-.post_pic { 
+.post_pic {
 	width: 100%;
-    margin: .3em;
+  margin: .3em;
 	float: center;
 	height: auto;
 	Padding: 0;
@@ -29,7 +29,7 @@ page-home {
 .posts {
     padding: .6em;
 }
-	
+
 /*Post Time formating*/
 #time {
 	position: absolute;
@@ -59,10 +59,46 @@ page-home {
 /*Nav Bar*/
 #navigation h4 {
 	text-align: center;
-	font-size: 12px;
+	font-size: 3vw;
 
 }
 
 #navigation div {
 	width: 15%;
+}
+
+/*Buttons*/
+#buttons div {
+	width: 15%;
+}
+
+#buttons p {
+	font: 200px;
+}
+
+.button {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: 75%;
+	height: 24px;
+	width: 24px;
+	border:	none;
+	text-indent: 0;
+	position: relative;
+}
+
+.button-like {
+	background-image: url(/assets/icon/like.png);
+}
+
+.button-comment {
+	background-image: url(/assets/icon/comment.png);
+}
+
+.button-share {
+	background-image: url(/assets/icon/share.png);
+}
+
+.button-repost {
+	background-image: url(/assets/icon/repost.png);
 }

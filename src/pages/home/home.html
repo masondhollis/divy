@@ -33,20 +33,14 @@
 	  <h2 id = "Uname">@{{post.username}}</h2>
 	  
       <!--Actions: Like, comment, repost, share -->
-        <button ion-button color="danger" clear small icon-start>
-          <ion-icon name='thumbs-up'></ion-icon>
-          46k
-        </button>
-        <button ion-button color="dark" clear small icon-start>
-          <ion-icon name='text'></ion-icon>
-          66 
-        </button>
-        <button ion-button color="dark" clear small icon-start>
-          <ion-icon name='share'></ion-icon>
-        </button>
-        <button ion-button color="dark" clear small icon-start>
-          <ion-icon name='share'></ion-icon>
-        </button>
+	<div id ="buttons">
+        <button class = "button button-like"></button>
+		{{post.likes}}
+        <button class = "button button-comment"></button>
+		{{post.comments}}
+        <button class = "button button-repost"></button>
+        <button class = "button button-share"></button>
+	</div>
     </ion-item>
    
    <ion-card-content>
