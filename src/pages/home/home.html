@@ -10,9 +10,8 @@
           <ion-icon name="search"></ion-icon>
         </button>
   </ion-toolbar>
-  
+
   <div id="navigation" >
-      <!-- TODO: CENTER THIS BETTER -->
       <div><h4> ALL </h4></div>
       <div><h4> POSTS </h4></div>
       <div><h4> PHOTOS </h4></div>
@@ -24,30 +23,39 @@
 
 <ion-content padding>
   <ion-card *ngFor="let post of posts" class="posts">
-  
+
   	<!-- TODO: STYLE THIS -->
     <ion-item>
 	  <h2 id ="time">{{post.time}}</h2>
-      <img class="prof_pic" src="{{post.prof_pic}}" />
+     <img item-start class="prof_pic" src="{{post.prof_pic}}" />
 	  <h2 id = "name">{{post.name}}</h2>
 	  <h2 id = "Uname">@{{post.username}}</h2>
-	  
+
       <!--Actions: Like, comment, repost, share -->
-	<div id ="buttons">
-        <button class = "button button-like"></button>
-		{{post.likes}}
-        <button class = "button button-comment"></button>
-		{{post.comments}}
-        <button class = "button button-repost"></button>
-        <button class = "button button-share"></button>
-	</div>
-    </ion-item>
-   
+      <ion-row align-items-end>
+        <ion-col>
+          <button class = "button button-like"></button>
+        </ion-col>
+        <p id = "LText">{{post.likes}}</p>
+        <ion-col>
+          <button class = "button button-comment"></button>
+        </ion-col>
+        <p id = "CText">{{post.comments}}</p>
+        <ion-col>
+          <button class = "button button-repost"></button>
+        </ion-col>
+        <ion-col>
+          <button class = "button button-share"></button>
+        </ion-col>
+      </ion-row>
+   </ion-item>
+
+
    <ion-card-content>
      <p id = "Text">{{post.text}}</p>
    </ion-card-content>
-   
+
    <img class = "post_pic" src="{{post.post_pic}}" />
-   
+
   </ion-card>
 </ion-content>

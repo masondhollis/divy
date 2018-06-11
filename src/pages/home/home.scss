@@ -53,37 +53,44 @@ page-home {
 
 #Text {
 	text-align:inline;
+  white-space: normal;
 	font-size: 4vw;
+}
+
+#LText{
+  font-size: .7em;
+  color:#AA0000;
+  position: relative;
+  vertical-align: bottom;
+  right: 15px;
+  bottom: 2px;
+}
+
+#CText{
+  position: relative;
+  font-size: .75em;
+  color:lightgrey;
+  right: 10px;
+  bottom: 2px;
 }
 
 /*Nav Bar*/
 #navigation h4 {
 	text-align: center;
 	font-size: 3vw;
-
 }
 
 #navigation div {
 	width: 15%;
 }
 
-/*Buttons*/
-#buttons div {
-	width: 15%;
-}
-
-#buttons p {
-	font: 200px;
-}
-
 .button {
 	background-repeat: no-repeat;
 	background-color: transparent;
-	background-size: 75%;
+	background-size: 100%;
 	height: 24px;
 	width: 24px;
 	border:	none;
-	text-indent: 0;
 	position: relative;
 }
 
@@ -92,6 +99,7 @@ page-home {
 }
 
 .button-comment {
+  height: 22px;
 	background-image: url(/assets/icon/comment.png);
 }
 
