@@ -26,36 +26,24 @@
 
   	<!-- TODO: STYLE THIS -->
     <ion-item>
-	  <h2 id ="time">{{post.time}}</h2>
-     <img item-start class="prof_pic" src="{{post.prof_pic}}" />
-	  <h2 id = "name">{{post.name}}</h2>
-	  <h2 id = "Uname">@{{post.username}}</h2>
-
+      <h2 id ="time">{{post.time}}</h2>
+      <img item-start class="prof_pic" src="{{post.prof_pic}}" />
+	    <h2 id = "name">{{post.name}}</h2>
+	    <h2 id = "Uname">@{{post.username}}</h2>
       <!--Actions: Like, comment, repost, share -->
-      <ion-row align-items-end>
-        <ion-col>
-          <button class = "button button-like"></button>
-        </ion-col>
-        <p id = "LText">{{post.likes}}</p>
-        <ion-col>
-          <button class = "button button-comment"></button>
-        </ion-col>
-        <p id = "CText">{{post.comments}}</p>
-        <ion-col>
-          <button class = "button button-repost"></button>
-        </ion-col>
-        <ion-col>
-          <button class = "button button-share"></button>
-        </ion-col>
-      </ion-row>
-   </ion-item>
 
-
-   <ion-card-content>
-     <p id = "Text">{{post.text}}</p>
-   </ion-card-content>
-
-   <img class = "post_pic" src="{{post.post_pic}}" />
-
-  </ion-card>
+      <div id="buttons">
+          <div id="Tbuttons"><div><button class = "button button-like"></button></div>
+          <div><p id = "LText">{{post.likes}}</p></div></div>
+          <div><button class = "button button-comment"></button>
+          <p id = "CText">{{post.comments}}</p></div>
+          <div><button class = "button button-repost"></button></div>
+          <div><button class = "button button-share"></button></div>
+        </div>
+        </ion-item>
+      <ion-card-content>
+      <p id = "Text">{{post.text}}</p>
+      </ion-card-content>
+      <img class = "post_pic" src="{{post.post_pic}}" />
+    </ion-card>
 </ion-content>
