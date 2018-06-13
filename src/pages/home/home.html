@@ -12,11 +12,11 @@
   </ion-toolbar>
 
   <div id="navigation" >
-      <div><h4> ALL </h4></div>
-      <div><h4> POSTS </h4></div>
-      <div><h4> PHOTOS </h4></div>
-      <div><h4> VIDEOS </h4></div>
-      <div><h4> PROMOS </h4></div>
+      <div><a><h4> ALL </h4></a></div>
+      <div><a><h4> POSTS </h4></a></div>
+      <div><a><h4> PHOTOS </h4></a></div>
+      <div><a><h4> VIDEOS </h4></a></div>
+      <div><a><h4> PROMOS </h4></a></div>
   </div>
 </ion-header>
 
@@ -30,20 +30,31 @@
       <img item-start class="prof_pic" src="{{post.prof_pic}}" />
 	    <h2 id = "name">{{post.name}}</h2>
 	    <h2 id = "Uname">@{{post.username}}</h2>
-      <!--Actions: Like, comment, repost, share -->
 
+      <!--Actions: Like, comment, repost, share -->
       <div id="buttons">
           <div id="Tbuttons"><div><button class = "button button-like"></button></div>
           <div><p id = "LText">{{post.likes}}</p></div></div>
-          <div><button class = "button button-comment"></button>
-          <p id = "CText">{{post.comments}}</p></div>
+          <div id="Tbuttons"><div><button class = "button button-comment"></button></div>
+          <div><p id = "CText">{{post.comments}}</p></div></div>
           <div><button class = "button button-repost"></button></div>
           <div><button class = "button button-share"></button></div>
-        </div>
-        </ion-item>
-      <ion-card-content>
-      <p id = "Text">{{post.text}}</p>
-      </ion-card-content>
-      <img class = "post_pic" src="{{post.post_pic}}" />
-    </ion-card>
+      </div>
+
+    </ion-item>
+  <ion-card-content>
+    <p id = "Text">{{post.text}}</p>
+  </ion-card-content>
+<img class = "post_pic" src="{{post.post_pic}}" />
+</ion-card>
 </ion-content>
+
+<ion-footer>
+  <div id="Filters">
+      <div><a><img class="link link-all"/></a></div>
+      <div><a><img class="link link-friends"/></a></div>
+      <div><a><img class="link link-family"/></a></div>
+      <div><a><img class="link link-profile"/></a></div>
+      <div><a><img class="link link-notifications"/></a></div>
+  </div>
+</ion-footer>

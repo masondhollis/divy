@@ -11,6 +11,10 @@ page-home {
 	top: .5vw;
 }
 
+.item {
+    contain:none;
+}
+
 .post_pic {
 	width: 100%;
   margin: .3em;
@@ -61,6 +65,7 @@ page-home {
 #navigation h4 {
 	text-align: center;
 	font-size: 3vw;
+  color:black;
 }
 
 #navigation div{
@@ -70,27 +75,28 @@ page-home {
 /*Buttons CSS*/
 #buttons div{
   display: inline-block;
-  overflow: auto;
+  overflow: visible;
   width: 25%;
-  text-align: center;
+  text-align: justify;
   position: relative;
   left: 5%;
   vertical-align:bottom;
   margin: 0 auto;
-
 }
 
 #Tbuttons div{
   display: inline-block;
-  overflow: auto;
   text-align: center;
+  width: 50%;
   vertical-align:bottom;
+  overflow: visible;
 }
 
 #LText{
   position: relative;
   display:inline;
-  font-size: .7em;
+  float: left;
+  font-size: 1.5vh;
   color:#AA0000;
   margin-top: 0;
   margin-bottom: 0;
@@ -98,19 +104,21 @@ page-home {
 
 #CText{
   font-size: .75em;
-  color:lightgrey;
+  color:#ABABAB;
+  font-size: 1.5vh;
+  display:inline;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .button {
 	background-repeat: no-repeat;
 	background-color: transparent;
-	background-size: 100%;
+	background-size: cover;
 	height: 24px;
 	width: 24px;
-	position: relative;
-  float: center;
-  display:flex;
-  overflow: auto;
+	position: auto;
 }
 
 .button-like {
@@ -127,4 +135,39 @@ page-home {
 
 .button-repost {
 	background-image: url(/assets/icon/repost.png);
+}
+
+/*Footer Buttons*/
+#Filters div{
+  display:inline-block;
+  width:19%;
+  text-align: center;
+}
+
+.link {
+	width:40%;
+	position: auto;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+}
+
+.link-all{
+  content: url(/assets/icon/All.png);
+}
+
+.link-friends{
+  content: url(/assets/icon/Friends.png)
+}
+
+.link-family{
+  content: url(/assets/icon/Family.png)
+}
+
+.link-profile{
+  content: url(/assets/icon/Profile.png)
+}
+
+.link-notifications{
+  content: url(/assets/icon/Notification.png)
 }
