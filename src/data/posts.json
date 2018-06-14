@@ -5,9 +5,11 @@
             "name": "Willy Nilly",
             "time": "1 hour ago",
             "text": "Me and the Fam.",
-			"likes": "26",
+			"likes": {"Amount": "26",
+                "Display": "26",
+                "Hit": "false"},
 			"comments": "5",
-            "prof_pic": "/assets/imgs/prof_pics/bear.png",
+      "prof_pic": "/assets/imgs/prof_pics/bear.png",
 			"post_pic": "/assets/imgs/post_pics/family.jpg"
         },
         {
@@ -15,9 +17,11 @@
             "name": "Bob Smith",
             "time": "2 hours ago",
             "text": "This is a post that I'm posting on divy",
-			"likes": "52k",
-			"comments": "200",
-            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+			"likes": {"Amount": "52999",
+                "Display": "52k",
+                "Hit": "false"},
+			"comments": "2",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
 			"post_pic": ""
         },
         {
@@ -25,9 +29,11 @@
             "name": "Eric Rowe",
             "time": "3 hours ago",
             "text": "I also like posting on divy",
-			"likes": "27k",
-			"comments": "30",
-            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+			"likes": {"Amount": "27000000",
+                "Display": "27m",
+                "Hit": "false"},
+			"comments": "3",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
 			"post_pic": ""
         }
     ]

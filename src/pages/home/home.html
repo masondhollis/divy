@@ -12,11 +12,11 @@
   </ion-toolbar>
 
   <div id="navigation" >
-      <div><a><h4> ALL </h4></a></div>
-      <div><a><h4> POSTS </h4></a></div>
-      <div><a><h4> PHOTOS </h4></a></div>
-      <div><a><h4> VIDEOS </h4></a></div>
-      <div><a><h4> PROMOS </h4></a></div>
+      <div><button class="Nav"><h4> ALL </h4></button></div>
+      <div><button class="Nav"><h4> POSTS </h4></button></div>
+      <div><button class="Nav"><h4> PHOTOS </h4></button></div>
+      <div><button class="Nav"><h4> VIDEOS </h4></button></div>
+      <div><button class="Nav"><h4> PROMOS </h4></button></div>
   </div>
 </ion-header>
 
@@ -33,12 +33,16 @@
 
       <!--Actions: Like, comment, repost, share -->
       <div id="buttons">
-          <div id="Tbuttons"><div><button class = "button button-like"></button></div>
-          <div><p id = "LText">{{post.likes}}</p></div></div>
-          <div id="Tbuttons"><div><button class = "button button-comment"></button></div>
-          <div><p id = "CText">{{post.comments}}</p></div></div>
-          <div><button class = "button button-repost"></button></div>
-          <div><button class = "button button-share"></button></div>
+          <div id="Tbuttons">
+            <div><button class = "button button-like" (click) = "Like(post)"></button></div>
+            <div><p id = "LText">{{post.likes.Display}}</p></div>
+          </div>
+          <div id="Tbuttons">
+            <div><button class = "button button-comment" (click) = "Comment(post)"></button></div>
+            <div><p id = "CText">{{post.comments}}</p></div>
+          </div>
+          <div><button class = "button button-repost" (click) = "Repost(post)"></button></div>
+          <div><button class = "button button-share" (click) = "Share(post)"></button></div>
       </div>
 
     </ion-item>
