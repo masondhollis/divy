@@ -5,6 +5,7 @@
             "name": "Willy Nilly",
             "time": "1 hour ago",
             "text": "Me and the Fam.",
+            "type": "Photo",
 			"likes": {"Amount": "26",
                 "Display": "26",
                 "Hit": "false"},
@@ -13,10 +14,24 @@
 			"post_pic": "/assets/imgs/post_pics/family.jpg"
         },
         {
+            "username": "LameVid",
+            "name": "VideoUse",
+            "time": "2 hours ago",
+            "text": "",
+            "type": "Video",
+  		"likes": {"Amount": "47",
+                "Display": "47",
+                "Hit": "false"},
+  		"comments": "3",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+  		"post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
+        },
+        {
             "username": "bobsmith123",
             "name": "Bob Smith",
             "time": "2 hours ago",
             "text": "This is a post that I'm posting on divy",
+            "type": "Post",
 			"likes": {"Amount": "52999",
                 "Display": "52k",
                 "Hit": "false"},
@@ -25,10 +40,24 @@
 			"post_pic": ""
         },
         {
+          "username": "FlexSealUS",
+          "name": "FlexSeal",
+          "time": "5 hours ago",
+          "text": "Try out our new Tape!",
+          "type": "Promo",
+    "likes": {"Amount": "30000000",
+              "Display": "30m",
+              "Hit": "false"},
+    "comments": "20",
+    "prof_pic": "/assets/imgs/prof_pics/flexer.png",
+    "post_pic": "/assets/imgs/post_pics/flex.jpg"
+        },
+        {
             "username": "ericrowe321",
             "name": "Eric Rowe",
             "time": "3 hours ago",
             "text": "I also like posting on divy",
+            "type": "Post",
 			"likes": {"Amount": "27000000",
                 "Display": "27m",
                 "Hit": "false"},

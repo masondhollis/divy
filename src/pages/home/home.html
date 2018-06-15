@@ -12,18 +12,24 @@
   </ion-toolbar>
 
   <div id="navigation" >
-      <div><button class="Nav"><h4> ALL </h4></button></div>
-      <div><button class="Nav"><h4> POSTS </h4></button></div>
-      <div><button class="Nav"><h4> PHOTOS </h4></button></div>
-      <div><button class="Nav"><h4> VIDEOS </h4></button></div>
-      <div><button class="Nav"><h4> PROMOS </h4></button></div>
+      <div><button class="Nav" (click) = "filter('All')"><h4> ALL </h4>
+      </button></div>
+      <div><button class="Nav" (click) = "filter('Post')"><h4> POSTS </h4>
+      </button></div>
+      <div><button class="Nav" (click) = "filter('Photo')"><h4> PHOTOS </h4>
+      </button></div>
+      <div><button class="Nav" (click) = "filter('Video')"><h4> VIDEOS </h4>
+      </button></div>
+      <div><button class="Nav" (click) = "filter('Promo')"><h4> PROMOS </h4>
+      </button></div>
   </div>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card *ngFor="let post of posts" class="posts">
-
+  <div *ngFor="let post of posts">
+    <div *ngIf= "post.type === rType() || rType() === 'All'">
+      <ion-card class="posts">
   	<!-- TODO: STYLE THIS -->
     <ion-item>
       <h2 id ="time">{{post.time}}</h2>
@@ -34,23 +40,33 @@
       <!--Actions: Like, comment, repost, share -->
       <div id="buttons">
           <div id="Tbuttons">
-            <div><button class = "button button-like" (click) = "Like(post)"></button></div>
+            <div><button class = "button button-like" (click) = "Like(post)">
+            </button></div>
             <div><p id = "LText">{{post.likes.Display}}</p></div>
           </div>
           <div id="Tbuttons">
-            <div><button class = "button button-comment" (click) = "Comment(post)"></button></div>
+            <div><button class = "button button-comment" (click) = "Comment(post)">
+            </button></div>
             <div><p id = "CText">{{post.comments}}</p></div>
           </div>
-          <div><button class = "button button-repost" (click) = "Repost(post)"></button></div>
-          <div><button class = "button button-share" (click) = "Share(post)"></button></div>
+          <div><button class = "button button-repost" (click) = "Repost(post)">
+          </button></div>
+          <div><button class = "button button-share" (click) = "Share(post)">
+          </button></div>
       </div>
 
     </ion-item>
-  <ion-card-content>
+  <ion-card-content *ngIf = "post.text != ''">
     <p id = "Text">{{post.text}}</p>
   </ion-card-content>
-<img class = "post_pic" src="{{post.post_pic}}" />
-</ion-card>
+  <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
+  src="{{post.post_pic}}" />
+  <object *ngIf="post.type =='Video'" data="https://www.youtube.com/embed/VDGD7kEiksQ"
+  class = "post_pic"></object>
+  </ion-card>
+</div>
+</div>
+
 </ion-content>
 
 <ion-footer>

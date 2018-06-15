@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 import { NavController } from 'ionic-angular';
 var data = require("../../data/posts.json");
 
@@ -9,13 +10,21 @@ var data = require("../../data/posts.json");
 export class HomePage {
 
   posts = data.Posts;
-  // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION
-
+  filt = "All";
   constructor(public navCtrl: NavController) {
 
   }
-  
-  // TODO: MAP BUTTONS TO EFFECT POST OBJECT THEY CLICK
+
+  // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION
+  filter(type: string){
+    this.filt = type;
+  }
+
+  rType(){
+    return this.filt;
+  }
+
+  // TODO: Implement action button functions
   Like(post){
     //Either like or unlike
     if(post.likes.Hit == "false")
