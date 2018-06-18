@@ -11,6 +11,7 @@ export class HomePage {
 
   posts = data.Posts;
   filt = "All";
+  feed = "public";
   constructor(public navCtrl: NavController) {
 
   }
@@ -59,5 +60,16 @@ export class HomePage {
 
   Share(post){
     //Copy link to the post
+  }
+
+  //TODO: IMPLEMENT LOGIC FOR FOOTER BUTTONS
+  setfeed(type: string)
+  {
+    this.feed = type;
+  }
+
+  fType()
+  {
+    return this.feed;
   }
 }

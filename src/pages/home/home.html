@@ -1,6 +1,9 @@
+
+<ion-nav #hamMenu [root]="rootPage"></ion-nav>
+
 <ion-header>
   <ion-toolbar>
-        <button ion-button menuToggle left>
+        <button ion-button menuToggle="left">
           <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title center><strong>
@@ -28,14 +31,16 @@
 
 <ion-content padding>
   <div *ngFor="let post of posts">
-    <div *ngIf= "post.type === rType() || rType() === 'All'">
+    <div *ngIf= "(post.type === rType() || rType() === 'All') && post.feed === fType()">
       <ion-card class="posts">
   	<!-- TODO: STYLE THIS -->
     <ion-item>
       <h2 id ="time">{{post.time}}</h2>
       <img item-start class="prof_pic" src="{{post.prof_pic}}" />
+      <span>
 	    <h2 id = "name">{{post.name}}</h2>
 	    <h2 id = "Uname">@{{post.username}}</h2>
+      </span>
 
       <!--Actions: Like, comment, repost, share -->
       <div id="buttons">
@@ -71,10 +76,33 @@
 
 <ion-footer>
   <div id="Filters">
-      <div><a><img class="link link-all"/></a></div>
-      <div><a><img class="link link-friends"/></a></div>
-      <div><a><img class="link link-family"/></a></div>
-      <div><a><img class="link link-profile"/></a></div>
-      <div><a><img class="link link-notifications"/></a></div>
+      <div (click) = "setfeed('public')"><img class="link link-all"/></div>
+      <div (click) = "setfeed('friends')"><img class="link link-friends"/></div>
+      <div (click) = "setfeed('family')"><img class="link link-family"/></div>
+      <div><img class="link link-profile"/></div>
+      <div><img class="link link-notifications"/></div>
   </div>
 </ion-footer>
+
+<ion-menu [content] = "hamMenu">
+  <ion-content>
+    <div id = "hamMain">
+      <div menuClose><img id = "hamClose"/></div>
+      <div>Home</div>
+      <div><img class="hamB hamB-profile"/>My Profile</div>
+      <hr/>
+      <div><img class="hamB hamB-message"/>Messaging</div>
+      <hr/>
+      <div><img class="hamB hamB-public"/>Public</div>
+      <div><img class="hamB hamb-favorites"/>Favorites</div>
+      <div><img class="hamB hamb-family"/>Family</div>
+      <hr/>
+      <div><img class="hamB hamb-feed"/>Feed Members</div>
+      <hr/>
+      <div><img class="hamB hamb-set"/>Settings</div>
+      <div><img class="hamB hamb-thought"/> us your thoughts on Divy</div>
+      <div><img class="hamB hamb-sup"/>Customer Support</div>
+      <hr/><div>Log Out</div>
+    </div>
+  </ion-content>
+</ion-menu>
