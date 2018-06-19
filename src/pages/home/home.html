@@ -10,6 +10,7 @@
           Divy.
         </strong></ion-title>
         <button ion-button menuToggle right>
+        <ion-nav #search [root]="rootPage"></ion-nav>
           <ion-icon name="search"></ion-icon>
         </button>
   </ion-toolbar>
@@ -29,7 +30,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class= "feed">
   <div *ngFor="let post of posts">
     <div *ngIf= "(post.type === rType() || rType() === 'All') && post.feed === fType()">
       <ion-card class="posts">
@@ -79,10 +80,11 @@
       <div (click) = "setfeed('public')"><img class="link link-all"/></div>
       <div (click) = "setfeed('friends')"><img class="link link-friends"/></div>
       <div (click) = "setfeed('family')"><img class="link link-family"/></div>
-      <div><img class="link link-profile"/></div>
+      <div (click) = "pushPage('profile')"><img class="link link-profile"/></div>
       <div><img class="link link-notifications"/></div>
   </div>
 </ion-footer>
+
 
 <ion-menu [content] = "hamMenu">
   <ion-content>
@@ -100,7 +102,7 @@
       <div><img class="hamB hamb-feed"/>Feed Members</div>
       <hr/>
       <div><img class="hamB hamb-set"/>Settings</div>
-      <div><img class="hamB hamb-thought"/> us your thoughts on Divy</div>
+      <div><img class="hamB hamb-thought"/>Give us your thoughts on Divy</div>
       <div><img class="hamB hamb-sup"/>Customer Support</div>
       <hr/><div>Log Out</div>
     </div>

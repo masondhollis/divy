@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Pipe, PipeTransform } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -14,6 +15,12 @@ export class HomePage {
   feed = "public";
   constructor(public navCtrl: NavController) {
 
+  }
+  //TODO: IMPLEMENT PAGE Nav
+  pushPage(id: string)
+  {
+    if(id === "profile")
+      this.navCtrl.push(ProfilePage);
   }
 
   // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION
@@ -72,4 +79,6 @@ export class HomePage {
   {
     return this.feed;
   }
+
+
 }
