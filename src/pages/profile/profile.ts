@@ -13,4 +13,10 @@ export class ProfilePage {
   constructor(public navCtrl: NavController) {
 
   }
+
+  //TODO: MAKE funciton to leave PAGE
+  popPage()
+  {
+     this.navCtrl.pop({animate:false});
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
+import { MenuController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
@@ -13,14 +13,21 @@ export class HomePage {
   posts = data.Posts;
   filt = "All";
   feed = "public";
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController)
+  {
+    // menuCtrl.enable(false, 'menu-one');
+    menuCtrl.enable(true, 'hamMenu');
   }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
+
   //TODO: IMPLEMENT PAGE Nav
   pushPage(id: string)
   {
     if(id === "profile")
-      this.navCtrl.push(ProfilePage);
+      this.navCtrl.push(ProfilePage,{},{animate:false});
   }
 
   // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION

@@ -1,1 +1,23 @@
-<h1>This is the profile page</h1>
+<p (click) = 'popPage()'>This is the profile page</p>
+
+
+<ion-nav #hamMenu [root]="rootPage"></ion-nav>
+
+<ion-header>
+  <ion-toolbar color="white">
+        <button ion-button menuToggle="left">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <p class = "Title">
+          Divy.
+        </p>
+        <button ion-button menuToggle right>
+        <ion-nav #search [root]="rootPage"></ion-nav>
+          <ion-icon name="search"></ion-icon>
+        </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/icon/All.png"/>
+</ion-content>

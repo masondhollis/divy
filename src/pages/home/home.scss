@@ -16,6 +16,14 @@ page-home {
     contain:none;
 }
 
+.Title{
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 .feed{
   padding:0;
   margin:0;
@@ -79,11 +87,13 @@ page-home {
 	text-align: center;
 	font-size: 3vw;
   color:black;
+  margin-top: 0;
 }
 
 #navigation div{
   width:15%;
   background-color: white;
+  padding:0;
 }
 
 .Nav
@@ -194,92 +204,4 @@ page-home {
 
 .link-notifications{
   content: url(/assets/icon/Notification.png)
-}
-
-/*line for menu*/
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    color: black;
-    border-top: 1px solid #000;
-    margin: 1em 0;
-    padding: 0;
-}
-
-#hamClose
-{
-  width: 8%;
-  vertical-align: top;
-  padding: 0;
-  margin-top: 1em;
-  top: .5vw;
-  position: relative;
-  left:85%;
-  content: url(/assets/icon/Hamburger.png);
-}
-
-#hamMain div
-{
-  text-align: left;
-  position: relative;
-  display: block;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  width: 100%;
-}
-
-
-
-.hamB{
-  width:10%;
-	position: auto;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hamB-profile
-{
-  content: url(/assets/icon/Profile.png);
-}
-
-.hamB-message
-{
-  content: url(/assets/icon/Comment.png);
-}
-
-.hamB-public
-{
-  content: url(/assets/icon/All.png);
-}
-
-.hamb-favorites
-{
-  content: url(/assets/icon/Friends.png);
-}
-
-.hamb-feed
-{
-  content: url(/assets/icon/Add.png);
-}
-
-.hamb-family
-{
-  content: url(/assets/icon/Family.png);
-}
-
-.hamb-set
-{
-  content: url(/assets/icon/Add.png);
-}
-
-.hamb-thought
-{
-  content: url(/assets/icon/Add.png);
-}
-
-.hamb-sup
-{
-  content: url(/assets/icon/Add.png);
 }

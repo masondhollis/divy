@@ -1,14 +1,11 @@
-
-<ion-nav #hamMenu [root]="rootPage"></ion-nav>
-
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="white">
         <button ion-button menuToggle="left">
           <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title center><strong>
+        <p class = "Title">
           Divy.
-        </strong></ion-title>
+        </p>
         <button ion-button menuToggle right>
         <ion-nav #search [root]="rootPage"></ion-nav>
           <ion-icon name="search"></ion-icon>
@@ -84,27 +81,3 @@
       <div><img class="link link-notifications"/></div>
   </div>
 </ion-footer>
-
-
-<ion-menu [content] = "hamMenu">
-  <ion-content>
-    <div id = "hamMain">
-      <div menuClose><img id = "hamClose"/></div>
-      <div>Home</div>
-      <div><img class="hamB hamB-profile"/>My Profile</div>
-      <hr/>
-      <div><img class="hamB hamB-message"/>Messaging</div>
-      <hr/>
-      <div><img class="hamB hamB-public"/>Public</div>
-      <div><img class="hamB hamb-favorites"/>Favorites</div>
-      <div><img class="hamB hamb-family"/>Family</div>
-      <hr/>
-      <div><img class="hamB hamb-feed"/>Feed Members</div>
-      <hr/>
-      <div><img class="hamB hamb-set"/>Settings</div>
-      <div><img class="hamB hamb-thought"/>Give us your thoughts on Divy</div>
-      <div><img class="hamB hamb-sup"/>Customer Support</div>
-      <hr/><div>Log Out</div>
-    </div>
-  </ion-content>
-</ion-menu>
