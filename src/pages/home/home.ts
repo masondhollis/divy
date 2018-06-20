@@ -9,8 +9,10 @@ var data = require("../../data/posts.json");
   templateUrl: 'home.html'
 })
 export class HomePage {
+  posts = Object.keys(data.Posts).map(function(key){
+    return data.Posts[key];
+  });
 
-  posts = data.Posts;
   filt = "All";
   feed = "public";
   constructor(public navCtrl: NavController) {
