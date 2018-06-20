@@ -1,6 +1,6 @@
 {
-    "Posts": [
-		{
+    "Posts": {
+		"1":{
             "username": "BigBoye24",
             "name": "Willy Nilly",
             "time": "1 hour ago",
@@ -14,7 +14,7 @@
       "prof_pic": "/assets/imgs/prof_pics/bear.png",
 			"post_pic": "/assets/imgs/post_pics/family.jpg"
         },
-        {
+        "2":{
             "username": "LameVid",
             "name": "VideoUse",
             "time": "2 hours ago",
@@ -28,7 +28,7 @@
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
   		"post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
         },
-        {
+        "3":{
             "username": "bobsmith123",
             "name": "Bob Smith",
             "time": "2 hours ago",
@@ -42,7 +42,7 @@
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
 			"post_pic": ""
         },
-        {
+        "4":{
           "username": "FlexSealUS",
           "name": "FlexSeal",
           "time": "5 hours ago",
@@ -56,7 +56,7 @@
     "prof_pic": "/assets/imgs/prof_pics/flexer.png",
     "post_pic": "/assets/imgs/post_pics/flex.jpg"
         },
-        {
+        "5":{
             "username": "ericrowe321",
             "name": "Eric Rowe",
             "time": "3 hours ago",
@@ -70,5 +70,5 @@
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
 			"post_pic": ""
         }
-    ]
+    }
 }
