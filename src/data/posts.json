@@ -70,5 +70,19 @@
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
 			"post_pic": ""
         }
+    },
+    "Profiles": {
+        "0": {
+            "username": "BigBoye24",
+            "name": "Willy Nilly",
+            "prof_pic": "/assets/imgs/prof_pics/bear.png",
+            "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+            "followers": "25",
+            "following": "72",
+            "posts": "34",
+            "photos": "10",
+            "videos": "7",
+            "bio": "this is my Bio, I hope you like it."
+        }
     }
 }

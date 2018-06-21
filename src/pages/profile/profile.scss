@@ -1,0 +1,68 @@
+#THeader
+{
+  background: rgba(255,255,255,0.6);
+}
+
+#Footer
+{
+  background: rgba(255,255,255,0.6);
+}
+
+#name {
+	font-size: 3.5vw;
+	width: 20%;
+	font-weight: bold;
+  margin: 0;
+}
+
+#User{
+  display: inline-block;
+  width:100%;
+}
+
+#Uname {
+	font-size: 2.25vw;
+	width: 20%;
+  color:black;
+  margin: 0;
+}
+
+.pprof_pic {
+  width: 20%;
+	height: 20%;
+  margin: .6em;
+  padding:0;
+  border:solid;
+	top: .5vw;
+}
+
+.MainContent
+{
+  background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: contain;
+  width: 100%;
+  background: url("/assets/imgs/post_pics/alaska.jpg")
+}
+
+
+.plink {
+	width:7%;
+	position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link-add{
+  float:right;
+  margin: .6em;
+  content: url(/assets/icon/Add.png);
+}
+
+.link-expand{
+  position:relative;
+  display:block;
+  margin-left: auto;
+  margin-right: auto; 
+  content: url(/assets/icon/Add.png)
+}

@@ -21,10 +21,6 @@ export class HomePage {
     menuCtrl.enable(true, 'hamMenu');
   }
 
-  toggleMenu() {
-    this.menuCtrl.toggle();
-  }
-
   //TODO: IMPLEMENT PAGE Nav
   pushPage(id: string)
   {

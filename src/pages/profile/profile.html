@@ -1,10 +1,6 @@
-<p (click) = 'popPage()'>This is the profile page</p>
-
-
-<ion-nav #hamMenu [root]="rootPage"></ion-nav>
-
-<ion-header>
-  <ion-toolbar color="white">
+<ion-content class = "MainContent">
+<ion-header id="THeader" transparent no-border>
+  <ion-toolbar color="white"  transparent>
         <button ion-button menuToggle="left">
           <ion-icon name="menu"></ion-icon>
         </button>
@@ -18,6 +14,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <img src="/assets/icon/All.png"/>
+<ion-footer id = "Footer">
+<div id = "User">
+  <img class="plink link-add"/>
+  <img item-start class="pprof_pic" src="{{profile.prof_pic}}" />
+  <div>
+    <h2 id = "name">Name</h2>
+    <h2 id = "Uname">@Username</h2>
+  </div>
+</div>
+<img class="plink link-expand"/>
+</ion-footer>
 </ion-content>

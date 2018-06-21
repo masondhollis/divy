@@ -7,21 +7,20 @@
   <ion-content>
     <div id = "hamMain">
       <div menuClose><img id = "hamClose"/></div>
-      <div>Home</div>
-      <div><img class="hamB hamB-profile"/>My Profile</div>
+      <div (click) = "goHome()"><img class="hamB hamb-set"/>Home</div>
+      <div (click) = "goProfile()"><img class="hamB hamB-profile"/>My Profile</div>
       <hr/>
-      <div><img class="hamB hamB-message"/>Messaging</div>
+      <div (click) = "goMessages()"><img class="hamB hamB-message"/>Messaging</div>
+      <div><img class="hamB hamB-message"/>Golden Flamed</div>
       <hr/>
-      <div><img class="hamB hamB-public"/>Public</div>
-      <div><img class="hamB hamb-favorites"/>Favorites</div>
-      <div><img class="hamB hamb-family"/>Family</div>
+      <div (click) = "goMembers()"><img class="hamB hamB-public"/>Public Members</div>
+      <div><img class="hamB hamb-favorites"/>Favorites Members</div>
+      <div><img class="hamB hamb-family"/>Family Members</div>
       <hr/>
-      <div><img class="hamB hamb-feed"/>Feed Members</div>
-      <hr/>
-      <div><img class="hamB hamb-set"/>Settings</div>
+      <div (click)= "goSettings()"><img class="hamB hamb-set"/>Settings</div>
       <div><img class="hamB hamb-thought"/>Give us your thoughts on Divy</div>
       <div><img class="hamB hamb-sup"/>Customer Support</div>
-      <hr/><div>Log Out</div>
+      <hr/><div><img class="hamB hamb-set"/>Log Out</div>
     </div>
   </ion-content>
 </ion-menu>
