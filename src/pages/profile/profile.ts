@@ -10,10 +10,16 @@ var data = require("../../data/posts.json");
 export class ProfilePage {
   posts = data.Posts;
   profile = Object.keys(data.Profiles).map(function(key){
-    return data.Profiles[0];
+    return data.Profiles[key];
   });
+  myprofile;
+  menu = false;
   constructor(public navCtrl: NavController) {
-
+    this.myprofile = this.profile[0];
   }
-  
+
+  togglePro()
+  {
+    this.menu = !this.menu;
+  }
 }

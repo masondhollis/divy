@@ -1,4 +1,4 @@
-<ion-content class = "MainContent">
+<ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')'}">
 <ion-header id="THeader" transparent no-border>
   <ion-toolbar color="white"  transparent>
         <button ion-button menuToggle="left">
@@ -15,14 +15,40 @@
 </ion-header>
 
 <ion-footer id = "Footer">
-<div id = "User">
-  <img class="plink link-add"/>
-  <img item-start class="pprof_pic" src="{{profile.prof_pic}}" />
-  <div>
-    <h2 id = "name">Name</h2>
-    <h2 id = "Uname">@Username</h2>
+  <div id = "User">
+    <img (click) = "togglePro()" class="plink link-close" *ngIf = "this.menu == true"/>
+    <div id = "imgAndText">
+    <img class="plink link-add"/>
+      <img item-start class="pprof_pic" src="{{myprofile.prof_pic}}" />
+      <div id = "Info">
+        <h2 id = "pname">{{myprofile.name}}</h2>
+        <h2 id = "pUname">@{{myprofile.username}}</h2>
+        <h2 id = "location">{{myprofile.location}}</h2>
+      </div>
+    </div>
+    <img (click) = "togglePro()" class="plink link-expand" *ngIf = "this.menu == false"/>
   </div>
-</div>
-<img class="plink link-expand"/>
+  <span *ngIf ="this.menu == true" >
+    <div class = "Stats">
+      <div class = "Stats Stats-fing"> <b>{{myprofile.following}}</b>
+        Following</div>
+      <div class = "Stats Stats-fer"><b>{{myprofile.followers}}</b>
+        Followers</div>
+      <div class = "Stats Stats-po"><b>{{myprofile.posts.amount}}</b>
+        Posts</div>
+      <div class = "Stats Stats-pho"><b>{{myprofile.photos}}</b>
+        Photos</div>
+      <div class = "Stats Stats-vid"><b>{{myprofile.videos}}</b>
+        Videos</div>
+    </div>
+    <div id = "Edit">Edit Profile</div>
+    <p>{{myprofile.bio}}</p>
+
+      <div id="filters">
+        <div><img class="plink link-public"/></div>
+        <div><img class="plink link-favorites"/></div>
+        <div><img class="plink plink-family"/></div>
+      </div>
+  </span>
 </ion-footer>
 </ion-content>

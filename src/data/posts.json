@@ -79,10 +79,11 @@
             "main_pic": "/assets/imgs/post_pics/alaska.jpg",
             "followers": "25",
             "following": "72",
-            "posts": "34",
+            "posts": {"id":"1", "amount": "1"},
             "photos": "10",
             "videos": "7",
-            "bio": "this is my Bio, I hope you like it."
+            "bio": "this is my Bio, I hope you like it.",
+            "location": "Dallas, Texas"
         }
     }
 }
