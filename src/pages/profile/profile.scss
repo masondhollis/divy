@@ -82,7 +82,7 @@
 
 .link-close{
   position: relative;
-  left: 46%;
+  left: 47%;
   margin:0;
   padding: 0;
   content: url(/assets/icon/down.png);
@@ -99,22 +99,33 @@
 }
 
 .link-public{
+  width:45%;
   content: url(/assets/icon/All.png);
 }
 
 .link-favorites{
+  width:45%;
   content: url(/assets/icon/Friends.png)
 }
 
 .plink-family{
+  width:45%;
   content: url(/assets/icon/Family.png)
 }
 
 //Accordian Elements
 #filters div{
-    background: rgba(255,255,255,1);
-    width:100%;
+    width:15%;
+    padding:0;
+    margin:0;
     display:inline-block;
+    text-align: center;
+}
+
+#whitebar div
+{
+  text-align: center;
+  background: rgba(255,255,255,1);
 }
 
 #fbutton{
@@ -122,33 +133,43 @@
 }
 
 #Edit {
+  display: inline-block;
   border: solid;
-  margin-right: 0 auto;
-  margin-left: 0 auto;
+  border-width: thin;
   text-align: center;
   width:25%;
+  padding: 1.5%;
 }
 
 .Stats{
-  width: 50%;
+  display:inline;
+  text-align: center;
+  position: relative;
+  left:2%;
+}
+
+.Stats-stuff{
   display:inline-block;
+  width:18%;
 }
 
-.Stats-fing{
+#staText
+{
+  position: relative;
+  display:block;
+  padding:0;
+  margin:0;
+  text-align: center;
+  font-size: 3.25vw;
 }
 
-.Stats-fer{
-
+#bio
+{
+  text-align: center;
 }
 
-.Stats-po{
-
-}
-
-.Stats-pho{
-
-}
-
-.Stats-vid{
-
+#outer
+{
+    text-align:center;
+    padding-top: 5%;
 }

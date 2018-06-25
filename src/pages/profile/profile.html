@@ -30,24 +30,26 @@
   </div>
   <span *ngIf ="this.menu == true" >
     <div class = "Stats">
-      <div class = "Stats Stats-fing"> <b>{{myprofile.following}}</b>
-        Following</div>
-      <div class = "Stats Stats-fer"><b>{{myprofile.followers}}</b>
-        Followers</div>
-      <div class = "Stats Stats-po"><b>{{myprofile.posts.amount}}</b>
-        Posts</div>
-      <div class = "Stats Stats-pho"><b>{{myprofile.photos}}</b>
-        Photos</div>
-      <div class = "Stats Stats-vid"><b>{{myprofile.videos}}</b>
-        Videos</div>
+      <div class = "Stats Stats-stuff"> <b>{{myprofile.following}}</b>
+        <p id="staText">Following</p></div>
+      <div class = "Stats Stats-stuff"><b>{{myprofile.followers}}</b>
+        <p id="staText">Followers</p></div>
+      <div class = "Stats Stats-stuff"><b>{{myprofile.posts.amount}}</b>
+        <p id="staText">Posts</p></div>
+      <div class = "Stats Stats-stuff"><b>{{myprofile.photos}}</b>
+        <p id="staText">Photos</p></div>
+      <div class = "Stats Stats-stuff"><b>{{myprofile.videos}}</b>
+        <p id="staText">Videos</p></div>
     </div>
-    <div id = "Edit">Edit Profile</div>
-    <p>{{myprofile.bio}}</p>
 
+    <div id="outer"><div id = "Edit">Edit Profile</div></div>
+    <p id="bio">{{myprofile.bio}}</p>
+    <div id= "whitebar">
       <div id="filters">
         <div><img class="plink link-public"/></div>
         <div><img class="plink link-favorites"/></div>
         <div><img class="plink plink-family"/></div>
+      </div>
       </div>
   </span>
 </ion-footer>
