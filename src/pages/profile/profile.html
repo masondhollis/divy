@@ -1,9 +1,10 @@
 <ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')'}">
+
 <ion-header id="THeader" transparent no-border>
   <ion-toolbar color="white"  transparent>
-        <button ion-button menuToggle="left">
-          <ion-icon name="menu"></ion-icon>
-        </button>
+        <div (click)="goBack()" id="Back">
+          <img src="/assets/icon/Back.png" id="Back"/>
+        </div>
         <p class = "Title">
           Divy.
         </p>
@@ -30,25 +31,51 @@
   </div>
   <span *ngIf ="this.menu == true" >
     <div class = "Stats">
-      <div class = "Stats Stats-stuff"> <b>{{myprofile.following}}</b>
-        <p id="staText">Following</p></div>
-      <div class = "Stats Stats-stuff"><b>{{myprofile.followers}}</b>
-        <p id="staText">Followers</p></div>
-      <div class = "Stats Stats-stuff"><b>{{myprofile.posts.amount}}</b>
-        <p id="staText">Posts</p></div>
-      <div class = "Stats Stats-stuff"><b>{{myprofile.photos}}</b>
-        <p id="staText">Photos</p></div>
-      <div class = "Stats Stats-stuff"><b>{{myprofile.videos}}</b>
-        <p id="staText">Videos</p></div>
+
+      <span *ngIf ="this.view === 'public'" >
+        <div class = "Stats Stats-stuff"> <b>{{myprofile.public.following}}</b>
+          <p id="staText">Following</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.public.followers}}</b>
+          <p id="staText">Followers</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.public.posts.amount}}</b>
+          <p id="staText">Posts</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.public.photos}}</b>
+          <p id="staText">Photos</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.public.videos}}</b>
+          <p id="staText">Videos</p></div>
+      </span>
+
+      <span *ngIf ="this.view === 'favs'" >
+        <div class = "Stats Stats-stuff"> <b>{{myprofile.favs.members}}</b>
+          <p id="staText">Members</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.favs.posts.amount}}</b>
+          <p id="staText">Posts</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.favs.photos}}</b>
+          <p id="staText">Photos</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.favs.videos}}</b>
+          <p id="staText">Videos</p></div>
+      </span>
+
+      <span *ngIf ="this.view === 'fam'" >
+        <div class = "Stats Stats-stuff"> <b>{{myprofile.fam.members}}</b>
+          <p id="staText">Members</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.fam.posts.amount}}</b>
+          <p id="staText">Posts</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.fam.photos}}</b>
+          <p id="staText">Photos</p></div>
+        <div class = "Stats Stats-stuff"><b>{{myprofile.fam.videos}}</b>
+          <p id="staText">Videos</p></div>
+      </span>
+
     </div>
 
     <div id="outer"><div id = "Edit">Edit Profile</div></div>
     <p id="bio">{{myprofile.bio}}</p>
     <div id= "whitebar">
       <div id="filters">
-        <div><img class="plink link-public"/></div>
-        <div><img class="plink link-favorites"/></div>
-        <div><img class="plink plink-family"/></div>
+        <div (click) = "changeView('public')"><img class="plink link-public"/></div>
+        <div (click) = "changeView('favs')"><img class="plink link-favorites"/></div>
+        <div (click) = "changeView('fam')"><img class="plink plink-family"/></div>
       </div>
       </div>
   </span>

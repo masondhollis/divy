@@ -37,7 +37,7 @@ export class MyApp {
 
   goProfile()
   {
-    this.navCtrl.push(ProfilePage,{},{animate:false});
+    this.navCtrl.push(ProfilePage);
   }
 
   goMessages()

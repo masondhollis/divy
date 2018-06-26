@@ -134,15 +134,16 @@
 
 #Edit {
   display: inline-block;
-  border: solid;
+  border-top: solid;
+  border-bottom: solid;
   border-width: thin;
   text-align: center;
-  width:25%;
+  width:95%;
   padding: 1.5%;
 }
 
 .Stats{
-  display:inline;
+  display: inline;
   text-align: center;
   position: relative;
   left:2%;
@@ -166,10 +167,21 @@
 #bio
 {
   text-align: center;
+  padding:1%;
 }
 
 #outer
 {
     text-align:center;
     padding-top: 5%;
+}
+
+#Back img{
+  width:10%;
+  color:0;
+  float:left;
+}
+
+#Back button{
+  background-color: 0;
 }

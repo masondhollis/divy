@@ -14,6 +14,7 @@ export class ProfilePage {
   });
   myprofile;
   menu = false;
+  view = "public";
   constructor(public navCtrl: NavController) {
     this.myprofile = this.profile[0];
   }
@@ -21,5 +22,15 @@ export class ProfilePage {
   togglePro()
   {
     this.menu = !this.menu;
+  }
+
+  changeView(type: string)
+  {
+    this.view = type;
+  }
+
+  goBack()
+  {
+    this.navCtrl.pop();
   }
 }

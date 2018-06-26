@@ -31,16 +31,16 @@
   <div *ngFor="let post of posts">
     <div *ngIf= "(post.type === rType() || rType() === 'All') && post.feed === fType()">
       <ion-card class="posts">
-  	<!-- TODO: STYLE THIS -->
-    <ion-item>
-      <h2 id ="time">{{post.time}}</h2>
-      <img item-start class="prof_pic" src="{{post.prof_pic}}" />
-      <span>
-	    <h2 id = "name">{{post.name}}</h2>
-	    <h2 id = "Uname">@{{post.username}}</h2>
-      </span>
+
+    <!-- TODO: STYLE THIS -->
+      <ion-item>
+        <h2 id ="time">{{post.time}}</h2>
+        <img item-start class="prof_pic" src="{{post.prof_pic}}" />
+	      <h2 id = "name">{{post.name}}</h2>
+	      <h2 id = "Uname">@{{post.username}}</h2>
 
       <!--Actions: Like, comment, repost, share -->
+      <span *ngIf ="post.text === ''">
       <div id="buttons">
           <div id="Tbuttons">
             <div><button class = "button button-like" (click) = "Like(post)">
@@ -57,11 +57,34 @@
           <div><button class = "button button-share" (click) = "Share(post)">
           </button></div>
       </div>
+    </span>
+
+
+    <ion-card-content *ngIf = "post.text != ''">
+      <p id = "Text">{{post.text}}</p>
+    </ion-card-content>
 
     </ion-item>
-  <ion-card-content *ngIf = "post.text != ''">
-    <p id = "Text">{{post.text}}</p>
-  </ion-card-content>
+
+    <span *ngIf ="post.text !== ''">
+    <div id="buttons">
+        <div id="Tbuttons">
+          <div><button class = "button button-like" (click) = "Like(post)">
+          </button></div>
+          <div><p id = "LText">{{post.likes.Display}}</p></div>
+        </div>
+        <div id="Tbuttons">
+          <div><button class = "button button-comment" (click) = "Comment(post)">
+          </button></div>
+          <div><p id = "CText">{{post.comments}}</p></div>
+        </div>
+        <div><button class = "button button-repost" (click) = "Repost(post)">
+        </button></div>
+        <div><button class = "button button-share" (click) = "Share(post)">
+        </button></div>
+    </div>
+  </span>
+
   <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
   src="{{post.post_pic}}" />
   <object *ngIf="post.type =='Video'" data="https://www.youtube.com/embed/VDGD7kEiksQ"
