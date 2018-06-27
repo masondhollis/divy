@@ -10,4 +10,9 @@ export class settingsPage {
   constructor(public navCtrl: NavController) {
 
   }
+
+  goBack()
+  {
+    this.navCtrl.pop();
+  }
 }

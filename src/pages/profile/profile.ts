@@ -8,10 +8,10 @@ var data = require("../../data/posts.json");
 })
 
 export class ProfilePage {
-  posts = data.Posts;
   profile = Object.keys(data.Profiles).map(function(key){
     return data.Profiles[key];
   });
+
   myprofile;
   menu = false;
   view = "public";

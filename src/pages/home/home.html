@@ -24,6 +24,14 @@
       <div><button class="Nav" (click) = "filter('Promo')"><h4> PROMOS </h4>
       </button></div>
   </div>
+
+<!-- TODO Text Input -->
+  <div>
+    <input type="text"
+       ng-model="string">
+    <div class="link link-add"></div>
+    <div class="link link-add"></div>
+  </div>
 </ion-header>
 
 
@@ -67,23 +75,21 @@
     </ion-item>
 
     <span *ngIf ="post.text !== ''">
-    <div id="buttons">
-        <div id="Tbuttons">
-          <div><button class = "button button-like" (click) = "Like(post)">
-          </button></div>
-          <div><p id = "LText">{{post.likes.Display}}</p></div>
+    <div id="Lbuttons">
+        <div id="LTbuttons">
+          <div id="space"><button class = "button button-like" (click) = "Like(post)"></button></div>
+          <div id = "LText">{{post.likes.Display}}</div>
         </div>
-        <div id="Tbuttons">
-          <div><button class = "button button-comment" (click) = "Comment(post)">
-          </button></div>
-          <div><p id = "CText">{{post.comments}}</p></div>
+        <div id="LTbuttons">
+          <div class = "button button-comment" (click) = "Comment(post)"></div>
+          <div id = "CText">{{post.comments}}</div>
         </div>
         <div><button class = "button button-repost" (click) = "Repost(post)">
         </button></div>
         <div><button class = "button button-share" (click) = "Share(post)">
         </button></div>
     </div>
-  </span>
+    </span>
 
   <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
   src="{{post.post_pic}}" />

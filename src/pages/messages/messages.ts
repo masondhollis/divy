@@ -8,8 +8,15 @@ var data = require("../../data/posts.json");
 })
 
 export class messagesPage {
-  posts = data.Posts;
-  constructor(public navCtrl: NavController) {
+  messages = Object.keys(data.Profiles[0].messages).map(function(key){
+    return data.Profiles[0].messages[key];
+  });
 
+  constructor(public navCtrl: NavController) {
+  }
+
+  goBack()
+  {
+    this.navCtrl.pop();
   }
 }

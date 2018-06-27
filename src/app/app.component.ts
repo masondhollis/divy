@@ -54,4 +54,5 @@ export class MyApp {
   {
     this.navCtrl.push(membersPage,{},{animate:false});
   }
+
 }

@@ -1,3 +1,39 @@
-<ion-content>
-  <p>This is the Messaging page</p>
-<ion-content>
+<ion-header id="THeader">
+  <ion-toolbar color="white" >
+        <div (click)="goBack()" id="Back">
+          <img src="/assets/icon/Back.png" id="Back"/>
+        </div>
+        <p class = "Title">
+          Divy.
+        </p>
+  </ion-toolbar>
+
+  <!-- TODO Text Input -->
+    <div id="input">
+      <input type="text"
+         ng-model="string">
+      <div class="link link-add"></div>
+      <div class="link link-add"></div>
+    </div>
+</ion-header>
+
+<ion-content class= "feed">
+  <div *ngFor="let message of messages">
+    <span>
+      <ion-card class="posts">
+        <div id = "User">
+          <div id = "imgAndText">
+          <img class="plink link-add"/>
+          <p>{{message.time}}</p>
+          <img item-start class="pprof_pic" src="{{message.prof_pic}}" />
+            <div id = "Info">
+              <h2 id = "pname">{{message.name}}</h2>
+              <h2 id = "pUname">@{{message.username}}</h2>
+              <h2 id = "pname">{{message.text}}</h2>
+            </div>
+          </div>
+        </div>
+      </ion-card>
+    </span>
+  </div>
+</ion-content>
