@@ -9,6 +9,7 @@ import { ProfilePage} from '../pages/profile/profile';
 import { messagesPage} from '../pages/messages/messages';
 import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
+import {convoPage} from '../pages/conversation/conversation';
 
 
 @Component({

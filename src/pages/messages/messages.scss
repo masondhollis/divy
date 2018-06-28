@@ -1,3 +1,83 @@
 #input{
-  color:#E1E1E1;
+  background:#f1f1f1;
+  display: inline-block;
+  width:100%;
+  margin-bottom: 2%;
+}
+
+#textbox{
+  background:#f1f1f1;
+  font-size: 1em;
+  margin-right: 7%;
+  margin-left:7%;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  width: 100%;
+  border:none;
+  display:block;
+}
+
+#MessUser{
+  display: inline-block;
+  width:100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.mprof_pic {
+  width: 10%;
+  display:block;
+  float: left;
+  margin: .9em;
+  padding:0;
+	top: .5vw;
+  border:solid;
+}
+
+#Info{
+  position: relative;
+  display:block;
+  text-align: left;
+  vertical-align: top;
+  overflow: visible;
+  float:left;
+}
+
+.mfeed{
+  padding:0;
+  margin:0;
+  background: #f1f1f1;
+}
+
+#mname{
+  font-weight: bold;
+  font-size:.95em;
+}
+
+#mUname{
+  font-size: .65em;
+  color:grey;
+}
+
+#mcont{
+  font-size: 1em;
+}
+
+#mtime{
+  display:block;
+  font-size: .75em;
+  padding-top: 2%;
+  width:100%
+}
+
+.mgold{
+  width:7%;
+	position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: url(/assets/icon/Add.png);
+  float:right;
+  margin-right: 4%;
+  padding:0 auto;
 }

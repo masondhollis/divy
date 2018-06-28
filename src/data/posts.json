@@ -96,7 +96,7 @@
                 "0":{
                     "username": "LameVid",
                     "name": "VideoUse",
-                    "time": "20mins ago",
+                    "time": "20 mins ago",
                     "text": "This a Test",
                     "Gold": "false",
                     "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
@@ -104,7 +104,7 @@
                 "1":{
                     "username": "Banana Banan",
                     "name": "Banananana",
-                    "time": "10mins ago",
+                    "time": "10 mins ago",
                     "text": "Man messagin is great!",
                     "Gold": "true",
                     "prof_pic": "/assets/imgs/prof_pics/placeholder.png"

@@ -10,6 +10,8 @@ import { ProfilePage} from '../pages/profile/profile';
 import { messagesPage} from '../pages/messages/messages';
 import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
+import {convoPage} from '../pages/conversation/conversation';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { membersPage} from '../pages/members/members';
     ProfilePage,
     messagesPage,
     settingsPage,
-    membersPage
+    membersPage,
+    convoPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { membersPage} from '../pages/members/members';
     ProfilePage,
     messagesPage,
     settingsPage,
-    membersPage
+    membersPage,
+    convoPage
   ],
   providers: [
     StatusBar,

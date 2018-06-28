@@ -2,14 +2,12 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 var data = require("../../data/posts.json");
 
-import {convoPage} from '../conversation/conversation';
-
 @Component({
-  selector: 'page-messages',
-  templateUrl: 'messages.html'
+  selector: 'page-conversation',
+  templateUrl: 'conversation.html'
 })
 
-export class messagesPage {
+export class convoPage {
   messages = Object.keys(data.Profiles[0].messages).map(function(key){
     return data.Profiles[0].messages[key];
   });
@@ -20,10 +18,5 @@ export class messagesPage {
   goBack()
   {
     this.navCtrl.pop();
-  }
-
-  goConvo(){
-    alert("Nav to " + "key")
-    this.navCtrl.push(convoPage,{},{animate:false})
   }
 }
