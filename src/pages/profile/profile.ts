@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -15,8 +15,8 @@ export class ProfilePage {
   myprofile;
   menu = false;
   view = "public";
-  constructor(public navCtrl: NavController) {
-    this.myprofile = this.profile[0];
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.myprofile = this.profile[navParams.get("ProKey")];
   }
 
   togglePro()

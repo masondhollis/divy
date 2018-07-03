@@ -36,9 +36,9 @@ export class MyApp {
       this.navCtrl.goToRoot({animate:false});
   }
 
-  goProfile()
+  goProfile(key)
   {
-    this.navCtrl.push(ProfilePage);
+    this.navCtrl.push(ProfilePage,{ProKey: key});
   }
 
   goMessages()

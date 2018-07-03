@@ -1,4 +1,4 @@
-<ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')'}">
+<ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
 
 <ion-header id="THeader" transparent no-border>
   <ion-toolbar color="white"  transparent>
@@ -66,10 +66,16 @@
         <div class = "Stats Stats-stuff"><b>{{myprofile.fam.videos}}</b>
           <p id="staText">Videos</p></div>
       </span>
-
     </div>
 
-    <div id="outer"><div id = "Edit">Edit Profile</div></div>
+    <div id="outer"><div id = "Edit">
+      <span *ngIf = "myprofile === this.profile[0]">Edit Profile</span>
+      <span *ngIf = "myprofile !== this.profile[0]">
+        <span *ngIf ="this.view === 'public'" >Follow</span>
+        <span *ngIf ="this.view === 'favs'" >Invite to Favorites</span>
+        <span *ngIf ="this.view === 'fam'">Invite to Family</span>
+      </span>
+    </div></div>
     <p id="bio">{{myprofile.bio}}</p>
     <div id= "whitebar">
       <div id="filters">

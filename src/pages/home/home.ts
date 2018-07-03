@@ -25,7 +25,7 @@ export class HomePage {
   pushPage(id: string)
   {
     if(id === "profile")
-      this.navCtrl.push(ProfilePage,{},{animate:false});
+      this.navCtrl.push(ProfilePage,{ProKey: 0},{animate:false});
   }
 
   // TODO: FILTER POSTS BY SELECTED NAV BAR SECTION
@@ -83,6 +83,10 @@ export class HomePage {
   fType()
   {
     return this.feed;
+  }
+
+  goProfile(key){
+    this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
   }
 
 

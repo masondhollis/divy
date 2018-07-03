@@ -41,10 +41,12 @@
 
     <!-- TODO: STYLE THIS -->
       <ion-item>
+        <span (click)="goProfile(post.profile)">
         <h2 id ="time">{{post.time}}</h2>
         <img item-start class="prof_pic" src="{{post.prof_pic}}" />
 	      <h2 id = "name">{{post.name}}</h2>
 	      <h2 id = "Uname">@{{post.username}}</h2>
+      </span>
 
       <!--Actions: Like, comment, repost, share -->
       <span *ngIf ="post.text === ''">

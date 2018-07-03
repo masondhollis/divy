@@ -4,6 +4,7 @@
             "username": "BigBoye24",
             "name": "Willy Nilly",
             "time": "1 hour ago",
+            "profile":"0",
             "text": "Me and the Fam.",
             "type": "Photo",
             "feed": "family",
@@ -29,8 +30,9 @@
   		"post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
         },
         "3":{
-            "username": "bobsmith123",
-            "name": "Bob Smith",
+            "username": "BigBob25",
+            "name": "Bobby Snobby",
+            "profile":"1",
             "time": "2 hours ago",
             "text": "This is a post that I'm posting on divy",
             "type": "Post",
@@ -185,6 +187,48 @@
                     "main_pic": "/assets/imgs/post_pics/Nick.jpg"
                     }
                   ]
-                }
+                },
+           "1": {
+                "username": "BigBob25",
+                "name": "Bobby Snobby",
+                "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+                "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+                "public": {"followers": "25",
+                           "following": "72",
+                           "posts": {"id":"1", "amount": "5"},
+                           "photos": "10",
+                           "videos": "7"},
+                "favs": {"members": "12",
+                           "posts": {"id":"1", "amount": "2"},
+                           "photos": "5",
+                           "videos": "3"},
+                "fam": {"members": "10",
+                           "posts": {"id":"1", "amount": "3"},
+                           "photos": "2",
+                           "videos": "5"},
+                "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
+                "location": "Fayetteville, Arkansas"
+              },
+                "2": {
+                     "username": "BigBob24",
+                     "name": "Bobby Snobby",
+                     "prof_pic": "/assets/imgs/prof_pics/bear.png",
+                     "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+                     "public": {"followers": "25",
+                                "following": "72",
+                                "posts": {"id":"1", "amount": "5"},
+                                "photos": "10",
+                                "videos": "7"},
+                     "favs": {"members": "12",
+                                "posts": {"id":"1", "amount": "2"},
+                                "photos": "5",
+                                "videos": "3"},
+                     "fam": {"members": "10",
+                                "posts": {"id":"1", "amount": "3"},
+                                "photos": "2",
+                                "videos": "5"},
+                     "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
+                     "location": "Fayetteville, Arkansas"
+                     }
               }
 }
