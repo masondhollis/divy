@@ -92,24 +92,99 @@
                        "videos": "5"},
             "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
             "location": "Dallas, Texas",
-            "messages": {
-                "0":{
+            "messages": [
+                    {
+                    "id": "0",
                     "username": "LameVid",
                     "name": "VideoUse",
-                    "time": "20 mins ago",
-                    "text": "This a Test",
+                    "content":[
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      },
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      }
+                      ,
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      },
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      },
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      },
+                      {
+                          "time": "30 mins",
+                          "user": "true",
+                          "text": "Hey there. This message is to test that they can be reaaaally big"
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "This is a Test"
+                      }
+                    ],
                     "Gold": "false",
-                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+                    "main_pic": "/assets/imgs/post_pics/alaska.jpg"
                     },
-                "1":{
+                    {
+                    "id": "1",
                     "username": "Banana Banan",
                     "name": "Banananana",
-                    "time": "10 mins ago",
-                    "text": "Man messagin is great!",
+                    "content":[
+                      {
+                          "time": "30 mins",
+                          "user": "false",
+                          "text": "egu."
+                      },
+                      {
+                          "time": "20 mins",
+                          "user": "false",
+                          "text": "Messagin is Great"
+                      }
+                    ],
                     "Gold": "true",
-                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+                    "main_pic": "/assets/imgs/post_pics/Nick.jpg"
                     }
-                  }
+                  ]
                 }
               }
 }

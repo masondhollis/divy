@@ -18,14 +18,14 @@
   <div *ngFor="let message of messages">
     <span>
       <ion-card class="posts">
-        <div id = "MessUser" (click) = "goConvo()">
+        <div id = "MessUser" (click) = "goConvo(message.id)">
           <img class="mprof_pic" src="{{message.prof_pic}}" />
             <div id = "Info">
               <h2 id = "mname">{{message.name}}</h2>
               <h2 id = "mUname">@{{message.username}}</h2>
-              <h2 id = "mcont">{{message.text}}...</h2>
+              <h2 id = "mcont">{{message.content[0].text}}...</h2>
             </div>
-            <p id = "mtime">{{message.time}}</p>
+            <p id = "mtime">{{message.content[0].time}}</p>
          <img class="mgold"/>
         </div>
       </ion-card>

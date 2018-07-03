@@ -1,0 +1,102 @@
+#footer{
+  display:inline-block;
+  width:100%;
+}
+
+#content{
+  background: rgba(255,255,255,0.6);
+  width:76%;
+  border:none;
+  float:left;
+  padding: 2.5%;
+  padding-left: 1em;
+}
+
+#send{
+  background: rgba(255,255,255,0.6);
+  width:22%;
+  float:right;
+  position:relative;
+  text-align: center;
+  padding: 2.5%;
+  color: grey;
+}
+
+#friend{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.15em;
+}
+
+#messageFeed{
+    background: rgba(255,255,255,0.6);
+}
+
+.message{
+  background: rgba(255,255,255,0);
+  border:none;
+  background-image: none;
+  box-shadow: none;
+  margin: 2%;
+}
+
+.mePic{
+  width:100%;
+}
+
+.mePic-u{
+  float:right;
+}
+
+.mePic-c{
+  float:left;
+}
+
+
+//User message object formatting
+.userM{
+  float:right;
+  max-width:80%;
+  display:table;
+  border-spacing: 4px;
+}
+
+#Utext{
+  display:table-cell;
+  width: 70%;
+  padding:2%;
+  background-color: white;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+#Mtime{
+  display:table-cell;
+  font-size: .75em;
+  width:20%;
+  top:50%;
+  position: relative;
+  text-align: center;
+  vertical-align: middle
+}
+
+//contact message object formatting
+.contM{
+  float:left;
+  width:80%;
+  display:table;
+  border-spacing: 4px;
+}
+
+#Ctext{
+  display:table-cell;
+  width: 70%;
+  padding:2%;
+  background-color: #D1D1D1;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+#TImg{
+  width:100%;
+}

@@ -22,8 +22,7 @@ export class messagesPage {
     this.navCtrl.pop();
   }
 
-  goConvo(){
-    alert("Nav to " + "key")
-    this.navCtrl.push(convoPage,{},{animate:false})
+  goConvo(key){
+    this.navCtrl.push(convoPage,{ConKey: key},{animate:false})
   }
 }
