@@ -1,3 +1,4 @@
+<ion-content>
 <ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
 
 <ion-header id="THeader" transparent no-border>
@@ -45,7 +46,7 @@
           <p id="staText">Videos</p></div>
       </span>
 
-      <span *ngIf ="this.view === 'favs'" >
+      <span *ngIf ="this.view === 'friends'" >
         <div class = "Stats Stats-stuff"> <b>{{myprofile.favs.members}}</b>
           <p id="staText">Members</p></div>
         <div class = "Stats Stats-stuff"><b>{{myprofile.favs.posts.amount}}</b>
@@ -56,7 +57,7 @@
           <p id="staText">Videos</p></div>
       </span>
 
-      <span *ngIf ="this.view === 'fam'" >
+      <span *ngIf ="this.view === 'family'" >
         <div class = "Stats Stats-stuff"> <b>{{myprofile.fam.members}}</b>
           <p id="staText">Members</p></div>
         <div class = "Stats Stats-stuff"><b>{{myprofile.fam.posts.amount}}</b>
@@ -72,18 +73,86 @@
       <span *ngIf = "myprofile === this.profile[0]">Edit Profile</span>
       <span *ngIf = "myprofile !== this.profile[0]">
         <span *ngIf ="this.view === 'public'" >Follow</span>
-        <span *ngIf ="this.view === 'favs'" >Invite to Favorites</span>
-        <span *ngIf ="this.view === 'fam'">Invite to Family</span>
+        <span *ngIf ="this.view === 'friends'" >Invite to Favorites</span>
+        <span *ngIf ="this.view === 'family'">Invite to Family</span>
       </span>
     </div></div>
     <p id="bio">{{myprofile.bio}}</p>
     <div id= "whitebar">
       <div id="filters">
         <div (click) = "changeView('public')"><img class="plink link-public"/></div>
-        <div (click) = "changeView('favs')"><img class="plink link-favorites"/></div>
-        <div (click) = "changeView('fam')"><img class="plink plink-family"/></div>
+        <div (click) = "changeView('friends')"><img class="plink link-favorites"/></div>
+        <div (click) = "changeView('family')"><img class="plink plink-family"/></div>
       </div>
       </div>
   </span>
 </ion-footer>
+</ion-content>
+  <span *ngIf ="this.menu == true" >
+    <ion-content class= "feed">
+      <div *ngFor="let post of proPosts">
+        <div *ngIf= "post.feed === rType()">
+          <ion-card class="posts">
+
+        <!-- TODO: STYLE THIS -->
+          <ion-item>
+            <h2 id ="time">{{post.time}}</h2>
+            <img item-start class="prof_pic" src="{{post.prof_pic}}" />
+    	      <h2 id = "name">{{post.name}}</h2>
+    	      <h2 id = "Uname">@{{post.username}}</h2>
+
+          <!--Actions: Like, comment, repost, share -->
+          <span *ngIf ="post.text === ''">
+          <div id="buttons">
+              <div id="Tbuttons">
+                <div><button class = "button button-like" (click) = "Like(post)">
+                </button></div>
+                <div><p id = "LText">{{post.likes.Display}}</p></div>
+              </div>
+              <div id="Tbuttons">
+                <div><button class = "button button-comment" (click) = "Comment(post)">
+                </button></div>
+                <div><p id = "CText">{{post.comments}}</p></div>
+              </div>
+              <div><button class = "button button-repost" (click) = "Repost(post)">
+              </button></div>
+              <div><button class = "button button-share" (click) = "Share(post)">
+              </button></div>
+          </div>
+        </span>
+
+
+        <ion-card-content *ngIf = "post.text != ''">
+          <p id = "Text">{{post.text}}</p>
+        </ion-card-content>
+
+        </ion-item>
+
+        <span *ngIf ="post.text !== ''">
+        <div id="Lbuttons">
+            <div id="LTbuttons">
+              <div id="space"><button class = "button button-like" (click) = "Like(post)"></button></div>
+              <div id = "LText">{{post.likes.Display}}</div>
+            </div>
+            <div id="LTbuttons">
+              <div class = "button button-comment" (click) = "Comment(post)"></div>
+              <div id = "CText">{{post.comments}}</div>
+            </div>
+            <div><button class = "button button-repost" (click) = "Repost(post)">
+            </button></div>
+            <div><button class = "button button-share" (click) = "Share(post)">
+            </button></div>
+        </div>
+        </span>
+
+      <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
+      src="{{post.post_pic}}" />
+      <object *ngIf="post.type =='Video'" data="https://www.youtube.com/embed/VDGD7kEiksQ"
+      class = "post_pic"></object>
+      </ion-card>
+    </div>
+    </div>
+
+    </ion-content>
+  </span>
 </ion-content>

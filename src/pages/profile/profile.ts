@@ -12,11 +12,22 @@ export class ProfilePage {
     return data.Profiles[key];
   });
 
+  posts = Object.keys(data.Posts).map(function(key){
+    return data.Posts[key];
+  });
+
   myprofile;
   menu = false;
   view = "public";
+  proPosts = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.myprofile = this.profile[navParams.get("ProKey")];
+    var x;
+    for (x in this.myprofile.posts){
+      this.proPosts.push(this.posts[this.myprofile.posts[x]]);
+      alert(this.proPosts[x].feed)
+    }
   }
 
   togglePro()
@@ -32,5 +43,10 @@ export class ProfilePage {
   goBack()
   {
     this.navCtrl.pop();
+  }
+
+  rType()
+  {
+    return this.view;
   }
 }
