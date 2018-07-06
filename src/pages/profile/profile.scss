@@ -142,15 +142,14 @@
 }
 
 .Stats{
-  display: inline;
-  text-align: center;
-  position: relative;
-  left:2%;
+ width:100%;
+ text-align: center;
 }
 
 .Stats-stuff{
   display:inline-block;
-  width:18%;
+  text-align: center;
+  width:18.75%;
 }
 
 #staText

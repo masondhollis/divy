@@ -26,7 +26,6 @@ export class ProfilePage {
     var x;
     for (x in this.myprofile.posts){
       this.proPosts.push(this.posts[this.myprofile.posts[x]]);
-      alert(this.proPosts[x].feed)
     }
   }
 

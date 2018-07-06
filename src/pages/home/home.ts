@@ -13,6 +13,8 @@ export class HomePage {
     return data.Posts[key];
   });
 
+  profile= data.Profiles[0];
+
   filt = "All";
   feed = "public";
   constructor(public navCtrl: NavController, public menuCtrl: MenuController)
@@ -89,5 +91,23 @@ export class HomePage {
     this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
   }
 
+  postB(){
+    if((<HTMLInputElement>document.getElementById('htextbox')).value != "")
+    {
+      this.button = true;
+    }
+    else
+      this.button = false;
+  }
 
-}
+  createPost(){
+    var stuff = (<HTMLInputElement>document.getElementById('htextbox')).value;
+    var newPost = {name:this.profile.name,username:this.profile.username,time:"now",
+    profile:"0",text:stuff,type:"Post", feed:this.feed,
+    prof_pic:this.profile.prof_pic, post_pic:"",likes:{Amount:"0",Display:"0",Hit:"false"},
+    comments:"0"};
+    this.posts.push(newPost);
+    (<HTMLInputElement>document.getElementById("htextbox")).value = "";
+    this.button=false;
+    }
+  }

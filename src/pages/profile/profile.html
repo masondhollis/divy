@@ -78,13 +78,6 @@
       </span>
     </div></div>
     <p id="bio">{{myprofile.bio}}</p>
-    <div id= "whitebar">
-      <div id="filters">
-        <div (click) = "changeView('public')"><img class="plink link-public"/></div>
-        <div (click) = "changeView('friends')"><img class="plink link-favorites"/></div>
-        <div (click) = "changeView('family')"><img class="plink plink-family"/></div>
-      </div>
-      </div>
   </span>
 </ion-footer>
 </ion-content>
@@ -154,5 +147,15 @@
     </div>
 
     </ion-content>
-  </span>
+    </span>
 </ion-content>
+
+<ion-footer *ngIf ="this.menu == true">
+  <div id= "whitebar">
+    <div id="filters">
+      <div (click) = "changeView('public')"><img class="plink link-public"/></div>
+      <div (click) = "changeView('friends')"><img class="plink link-favorites"/></div>
+      <div (click) = "changeView('family')"><img class="plink plink-family"/></div>
+    </div>
+    </div>
+  </ion-footer>

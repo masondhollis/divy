@@ -27,12 +27,13 @@
 
 <!-- TODO Text Input -->
   <div id="input">
-    <div><input type="text" ng-model="string"
-    id="htextbox" placeholder="Say something to the world..."></div>
-    <div class="add"></div>
-  </div>
+    <input type="text" ng-model="string" (input)="postB()"
+    id="htextbox" placeholder="Say something to the world...">
+    <div id = "postButt"><div class="add"></div>
+      <div *ngIf="this.button == true" class="add" (click)="createPost()"></div>
+    </div>
+</div>
 </ion-header>
-
 
 <ion-content class= "feed">
   <div *ngFor="let post of posts">

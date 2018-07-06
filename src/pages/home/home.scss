@@ -19,9 +19,10 @@ page-home {
 .Title{
   font-size: 2em;
   font-weight: 800;
-  text-align: center;
   padding: 0;
-  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 .feed{
@@ -83,8 +84,11 @@ page-home {
 }
 
 /*Nav Bar*/
+
+#navigation{
+  text-align: center;
+}
 #navigation h4 {
-	text-align: center;
 	font-size: 3vw;
   color:black;
   margin-top: 0;
@@ -239,18 +243,25 @@ page-home {
 
 .add{
   content: url(/assets/icon/Add.png);
+  width:100%;
   display:block;
 }
 
-
 #htextbox{
   background:#f1f1f1;
-  font-size: 1em;
-  margin-right: 7%;
+  font-size: .85em;
   margin-left:7%;
-  margin-top: 1.5%;
-  margin-bottom: 1.5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   width: 70%;
-  display:block;
+  display:inline-block;
   border:none;
+  vertical-align: top;
+}
+
+#postButt{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8%;
+  width:9%;
 }
