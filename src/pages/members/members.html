@@ -1,3 +1,58 @@
-<ion-content>
-  <p>This is the Members page</p>
+<ion-header >
+  <ion-toolbar color="white">
+        <div (click)="goBack()" id="Back">
+          <img src="/assets/icon/Back.png" id="Back"/>
+        </div>
+        <p id="friend">
+           <span *ngIf="this.group == 'public'">Public Feed</span>
+           <span *ngIf="this.group == 'family'">Family Members</span>
+           <span *ngIf="this.group == 'favorites'">Favorites Members</span>
+        </p>
+        <button menuToggle right id="EditButt">
+          <ion-icon id="EditButt">Edit</ion-icon>
+        </button>
+  </ion-toolbar>
+
+  <div id="selectors">
+  <span *ngIf="this.group == 'public'">
+    <div id="selector" [ngStyle] = "style('following')" (click)="changeFilter('following')">Following</div>
+    <div id="selector" [ngStyle] = "style('followers')" (click)="changeFilter('followers')">Followers</div>
+  </span>
+
+  <span *ngIf="this.group == 'family'">
+    <div id="selector" [ngStyle] = "style('following')" >Family</div>
+  </span>
+
+  <span *ngIf="this.group == 'favorites'">
+    <div id="selector" [ngStyle] = "style('following')" (click)="changeFilter('following')">My Favorites</div>
+    <div id="selector" [ngStyle] = "style('followers')" (click)="changeFilter('followers')">Affiliated Favorites</div>
+  </span>
+  </div>
+</ion-header>
+
+<ion-content class= "mfeed">
+  <div *ngFor="let member of members">
+      <ion-card class="posts" *ngIf = "member.follower == 'true'
+      && this.filter == 'followers' || member.following == 'true'
+      && this.filter == 'following'">
+        <div id = "MessUser">
+          <img class="mprof_pic" src="{{member.prof_pic}}" />
+            <div id = "MInfo">
+              <h2 id = "mname">{{member.name}}</h2>
+              <h2 id = "mUname">@{{member.username}}</h2>
+            </div>
+            <div id="type"><span *ngIf="this.group == 'public' && this.filter == 'followers' && member.following == 'true'">
+              following
+            </span>
+            <span *ngIf="this.group == 'public' && this.filter == 'following' && member.follower == 'true'">
+              follower
+            </span>
+            <span *ngIf="this.group == 'family' && member.follower == 'true' && member.following == 'true'">
+              mutual
+            </span>
+          </div>
+      </div>
+
+      </ion-card>
+  </div>
 <ion-content>

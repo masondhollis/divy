@@ -19,6 +19,7 @@
             "username": "LameVid",
             "name": "VideoUse",
             "time": "2 hours ago",
+            "profile":"0",
             "text": "",
             "type": "Video",
             "feed": "friends",
@@ -34,6 +35,7 @@
             "name": "Bobby Snobby",
             "profile":"1",
             "time": "2 hours ago",
+            "profile":"0",
             "text": "This is a post that I'm posting on divy",
             "type": "Post",
             "feed": "public",
@@ -48,6 +50,7 @@
           "username": "FlexSealUS",
           "name": "FlexSeal",
           "time": "5 hours ago",
+          "profile":"0",
           "text": "Try out our new Tape!",
           "type": "Promo",
           "feed": "public",
@@ -62,6 +65,7 @@
             "username": "ericrowe321",
             "name": "Eric Rowe",
             "time": "3 hours ago",
+            "profile":"0",
             "text": "I also like posting on divy",
             "type": "Post",
             "feed": "public",
@@ -231,5 +235,50 @@
                      "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
                      "location": "Fayetteville, Arkansas"
                      }
-              }
+              },
+    "members":{
+      "public":[{
+        "username":"BigBob25",
+        "name":"BobbySnobby",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"true",
+        "follower":"true",
+        "id":"1"},
+        {
+        "username":"LameVid",
+        "name":"VideoUse",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"true",
+        "follower":"false",
+        "id":""}
+      ],
+      "favorites":[{
+        "username":"FlexSealUS",
+        "name":"FlexSeal",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"true",
+        "follower":"false",
+        "id":""},
+        {
+        "username":"ericrowe321",
+        "name":"Eric Rowe",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"false",
+        "follower":"true",
+        "id":""}],
+      "family":[{
+        "username":"FamilyMember123",
+        "name":"IFam",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"true",
+        "follower":"true",
+        "id":""},
+        {
+        "username":"OtherGuy",
+        "name":"Josh Millz",
+        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
+        "following":"true",
+        "follower":"false",
+        "id":""}]
+    }
 }

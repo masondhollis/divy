@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 var data = require("../../data/posts.json");
 
 import {convoPage} from '../conversation/conversation';
@@ -10,11 +10,13 @@ import {convoPage} from '../conversation/conversation';
 })
 
 export class messagesPage {
+  gold ='false';
   messages = Object.keys(data.Profiles[0].messages).map(function(key){
     return data.Profiles[0].messages[key];
   });
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.gold = navParams.get("Gold")
   }
 
   goBack()
@@ -24,5 +26,10 @@ export class messagesPage {
 
   goConvo(key){
     this.navCtrl.push(convoPage,{ConKey: key},{animate:false})
+  }
+
+  goGold()
+  {
+
   }
 }

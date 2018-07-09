@@ -41,9 +41,9 @@ export class MyApp {
     this.navCtrl.push(ProfilePage,{ProKey: key});
   }
 
-  goMessages()
+  goMessages(gold)
   {
-    this.navCtrl.push(messagesPage,{},{animate:false});
+    this.navCtrl.push(messagesPage,{Gold:gold},{animate:false});
   }
 
   goSettings()
@@ -51,9 +51,9 @@ export class MyApp {
     this.navCtrl.push(settingsPage,{},{animate:false});
   }
 
-  goMembers()
+  goMembers(group)
   {
-    this.navCtrl.push(membersPage,{},{animate:false});
+    this.navCtrl.push(membersPage,{Group: group},{animate:false});
   }
 
 }

@@ -6,6 +6,8 @@
         <p class = "Title">
           Divy.
         </p>
+      <button ion-button menuToggle right>
+      </button>
   </ion-toolbar>
 
   <!-- TODO Text Input -->
@@ -17,17 +19,18 @@
 <ion-content class= "mfeed">
   <div *ngFor="let message of messages">
     <span>
-      <ion-card class="posts">
-        <div id = "MessUser" (click) = "goConvo(message.id)">
+      <ion-card class="posts" *ngIf ="this.gold == message.Gold">
+        <div id = "MessUser" >
           <img class="mprof_pic" src="{{message.prof_pic}}" />
-            <div id = "Info">
+            <div id = "MInfo" (click) = "goConvo(message.id)">
               <h2 id = "mname">{{message.name}}</h2>
               <h2 id = "mUname">@{{message.username}}</h2>
               <h2 id = "mcont">{{message.content[0].text}}...</h2>
             </div>
-            <p id = "mtime">{{message.content[0].time}}</p>
-         <img class="mgold"/>
-        </div>
+            <div id = "mtime">{{message.content[0].time}}</div>
+        <div class="mgold" (click)="goGold()"></div>
+      </div>
+
       </ion-card>
     </span>
   </div>

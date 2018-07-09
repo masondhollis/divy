@@ -19,30 +19,26 @@
 }
 
 #MessUser{
-  display: inline-block;
   width:100%;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  vertical-align: top;
+  margin:1em;
+  position: relative;
 }
 
 .mprof_pic {
-  width: 10%;
-  display:block;
-  float: left;
-  margin: .9em;
+  width: 12%;
+  display:inline-block;
   padding:0;
-	top: .5vw;
-  border:solid;
+  vertical-align: top;
+
 }
 
-#Info{
-  position: relative;
-  display:block;
+#MInfo{
+  display: inline-block;
   text-align: left;
   vertical-align: top;
-  overflow: visible;
-  float:left;
+  padding:0 auto;
+  margin:0 auto;
+  width:50%;
 }
 
 .mfeed{
@@ -54,11 +50,13 @@
 #mname{
   font-weight: bold;
   font-size:.95em;
+  margin: 0;
 }
 
 #mUname{
   font-size: .65em;
   color:grey;
+  margin:0;
 }
 
 #mcont{
@@ -66,19 +64,24 @@
 }
 
 #mtime{
-  display:block;
   font-size: .75em;
-  padding-top: 2%;
-  width:100%
+  width:20%;
+  display:inline-block;
+  vertical-align: top;
 }
 
 .mgold{
   width:7%;
-	position: auto;
   background-repeat: no-repeat;
   background-size: cover;
   content: url(/assets/icon/Add.png);
-  float:right;
-  margin-right: 4%;
-  padding:0 auto;
+  padding-top:5%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }

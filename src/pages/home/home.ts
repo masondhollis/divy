@@ -15,6 +15,7 @@ export class HomePage {
 
   profile= data.Profiles[0];
 
+  button = false;
   filt = "All";
   feed = "public";
   constructor(public navCtrl: NavController, public menuCtrl: MenuController)
