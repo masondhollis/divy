@@ -2,6 +2,10 @@ page-home {
 
 }
 
+#head{
+  text-align: center;
+}
+
 /* Image Related Styling*/
 .prof_pic {
   width: 20%;
@@ -20,9 +24,11 @@ page-home {
   font-size: 2em;
   font-weight: 800;
   padding: 0;
+  width:100%;
+  margin: 0 auto;
   text-align: center;
   vertical-align: middle;
-  margin: 0 auto;
+  display: inline-block;
 }
 
 .feed{

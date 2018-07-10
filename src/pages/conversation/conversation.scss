@@ -3,13 +3,28 @@
   width:100%;
 }
 
-#content{
+#sendbar{
+  width: 76%;
   background: rgba(255,255,255,0.6);
-  width:76%;
-  border:none;
+  display: inline-block;
   float:left;
+  border:solid;
+  border-color:  rgba(255,255,255,0);
+}
+
+#content{
+  background: none;
+  width:85%;
+  border:none;
   padding: 2.5%;
   padding-left: 1em;
+}
+
+#picture{
+  display: inline-block;
+  width: 8%;
+  vertical-align: middle;
+  content: url(/assets/icon/Picture.png);
 }
 
 #send{
@@ -25,6 +40,9 @@
 #friend{
   text-align: center;
   vertical-align: middle;
+  display: inline-block;
+  width:50%;
+
   font-size: 1.15em;
 }
 

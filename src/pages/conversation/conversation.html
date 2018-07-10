@@ -1,8 +1,9 @@
 <ion-content class = "MainContent" [ngStyle]="{'background': 'url('+message.main_pic+')','background-size':'cover'}">
 <ion-header transparent no-border>
   <ion-toolbar color="white"  transparent>
-        <div (click)="goBack()" id="Back">
+        <div (click)="goBack()" id="Back" transparent>
           <img src="/assets/icon/Back.png" id="Back"/>
+          <p id="Back">Back</p>
         </div>
         <p id="friend">
           {{message.name}}
@@ -32,8 +33,11 @@
 </span>
 
 </ion-content>
-<ion-footer id= "footer" no-border>
-    <input id="content" placeholder="Your response..."/>
+<ion-footer id= "footer" no-border transparent>
+    <div id="sendbar">
+      <input id="content" placeholder="Your response..."/>
+      <img id="picture"/>
+    </div>
     <div id="send" (click) = "send()">
       SEND
     </div>

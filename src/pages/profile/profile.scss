@@ -175,13 +175,31 @@
 }
 
 #Back img{
-  width:10%;
+  width:40%;
   color:0;
   margin:2%;
-  padding-top: 1%;
   float:left;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 6%;
 }
 
 #Back button{
   background-color: 0;
+}
+
+#Back{
+  display: inline-block;
+  width:30%;
+}
+
+#Back p{
+  vertical-align: middle;
+  padding-top: 2%;
+  font-size: .8em;
+  width:50%;
+  text-align: left;
+  position: relative;
+  margin-right: 3%;
+  display: inline-block;
 }

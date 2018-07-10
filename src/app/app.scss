@@ -107,3 +107,16 @@ hr {
 {
   content: url(/assets/icon/Add.png);
 }
+
+ion-modal.Gold-modal{
+    background-color: rgba(0, 0, 0, 0);
+    ion-content.content{
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        height: 30%;
+
+        background: rgba(255,255,255,0.9);
+
+    }
+}

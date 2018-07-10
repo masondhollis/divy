@@ -11,6 +11,8 @@ import { messagesPage} from '../pages/messages/messages';
 import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
 import {convoPage} from '../pages/conversation/conversation';
+import {GoldPage} from '../pages/messages/messages';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import {convoPage} from '../pages/conversation/conversation';
     messagesPage,
     settingsPage,
     membersPage,
-    convoPage
+    convoPage,
+    GoldPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import {convoPage} from '../pages/conversation/conversation';
     messagesPage,
     settingsPage,
     membersPage,
-    convoPage
+    convoPage,
+    GoldPage
   ],
   providers: [
     StatusBar,
