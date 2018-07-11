@@ -10,10 +10,8 @@ page-home {
 .prof_pic {
   width: 20%;
 	height: 20%;
-  float: left;
+  display: inline-block;
   vertical-align: top;
-  margin: .3em;
-	top: .5vw;
 }
 
 .item {
@@ -57,36 +55,52 @@ page-home {
     margin-right:0;
     margin-bottom: .9em;
     margin-top: 0;
-    width:100%;
   }
 
 /*Post Time formating*/
 #time {
-	position: absolute;
-	top: 1.5vh;
-	right: .8vw;
-	font-size: 2vw;
+  display: inline-block;
+	font-size: .5em;
 	color: grey;
+  vertical-align: top;
+}
+
+#proHead{
+  width:95%;
+  margin-top:5%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  padding:0;
+}
+
+#proInfo{
+  display: inline-block;
+  width:70%;
 }
 
 #name {
 	font-size: 3.5vw;
-	width: 20%;
 	font-weight: bold;
   margin: 0;
 }
 
 #Uname {
 	font-size: 2.25vw;
-	width: 20%;
 	color: grey;
   margin: 0;
 }
 
 #Text {
-	text-align:inline;
-  white-space: normal;
-	font-size: 4vw;
+	text-align:inline-block;
+  width:100%;
+  margin:2%;
+  color:black;
+	font-size: 3.5vw;
+}
+
+#holder{
+  width:78%;
+  display:inline-block;
 }
 
 /*Nav Bar*/
@@ -113,70 +127,58 @@ page-home {
 }
 
 /*Buttons CSS*/
-#buttons div{
+#buttons{
   display: inline-block;
-  width: 11%;
-  text-align: justify;
-  position: relative;
-  vertical-align:bottom;
+  width: 100%;
   margin: 0 auto;
-  margin-left: 6.95%;
   overflow:visible;
-  margin-right: 6.95%;
+  vertical-align: bottom;
 }
 
-#Tbuttons div{
+#Tbuttons{
   display: inline-block;
   text-align: center;
-  width: 100%;
+  width: 22%;
   vertical-align:bottom;
   overflow:visible;
 }
 
 /*Buttons CSS*/
-#Lbuttons div{
-  display: inline-block;
-  width: 8%;
-  text-align: center;
+#Lbuttons{
+  width: 100%;
   position: relative;
   vertical-align:bottom;
-  left:2.5%;
-  overflow:visible;
-  margin-left: 8%;
-  margin-right: 8%;
   padding-bottom: 4%;
+  text-align: center;
+  left:2%;
 }
 
-#LTbuttons div{
+#LTbuttons{
   display: inline-block;
-  width: 100%;
+  width: 18%;
   vertical-align:bottom;
   overflow:visible;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 #LText{
-  position: relative;
-  display:block;
-  float: left;
-  right:15%;
-  font-size: 2.25vw;
+  display:inline-block;
+  width:35%;
+  font-size: 60%;
   color:#AA0000;
-  margin-top: 0;
-  margin-bottom: 0;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 #CText{
-  font-size: 2.25vw;
+  font-size: 60%;
   color:#ABABAB;
-  display:block;
+  display:inline-block;
   position: relative;
-  right: 15%;
-  float: left;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-#space{
+  text-align: left;
+  width:25%;
+  vertical-align: bottom;
 }
 
 .button {
@@ -184,27 +186,27 @@ page-home {
 	background-color: transparent;
 	background-size: contain;
   width: 100%;
-  padding-left: 20%;
-  padding-top: 100%;
-	position: auto;
-  overflow: visible;
-  display:block;
+  display:inline-block;
 }
 
 .button-like {
-	background-image: url(/assets/icon/like.png);
+  width:40%;
+	content: url(/assets/icon/like.png);
 }
 
 .button-comment {
-	background-image: url(/assets/icon/comment.png);
+  width:40%;
+	content: url(/assets/icon/comment.png);
 }
 
 .button-share {
-	background-image: url(/assets/icon/share.png);
+  width:40%;
+	content: url(/assets/icon/share.png);
 }
 
-.button-repost {
-	background-image: url(/assets/icon/repost.png);
+.button-ember {
+  width:40%;
+	content: url(/assets/icon/ember.png);
 }
 
 /*Footer Buttons*/

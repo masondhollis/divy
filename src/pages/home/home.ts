@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, ViewController,ModalController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
 
@@ -18,7 +18,7 @@ export class HomePage {
   button = false;
   filt = "All";
   feed = "public";
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController)
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController,public modalCtrl: ModalController )
   {
     // menuCtrl.enable(false, 'menu-one');
     menuCtrl.enable(true, 'hamMenu');
@@ -64,17 +64,10 @@ export class HomePage {
       post.likes.Display = String(parseInt(likes));
   }
 
-  Comment(post){
-    //Open interface to take user input
-  }
-
-  Repost(post){
-    //
-
-  }
-
-  Share(post){
-    //Copy link to the post
+  ember(post){
+    let buttonsPage = this.modalCtrl.create(buttonPage,{type:'emberA',post:post},{
+    cssClass: "Gold-modal"});
+    buttonsPage.present();
   }
 
   //TODO: IMPLEMENT LOGIC FOR FOOTER BUTTONS
@@ -111,4 +104,54 @@ export class HomePage {
     (<HTMLInputElement>document.getElementById("htextbox")).value = "";
     this.button=false;
     }
+
+    goLike(key,post){
+      let buttonsPage = this.modalCtrl.create(buttonPage,{type:key,post:post},{
+      cssClass: "Gold-modal"});
+      buttonsPage.present();
+    }
+
+    goPic(key){
+      let pictPage = this.modalCtrl.create(picPage,{type:key},{
+      cssClass: "Gold-modal"});
+      pictPage.present();
+    }
+  }
+
+
+
+  @Component({selector: 'page-buttonPage',
+  template:`<ion-content (click) = 'dismiss()'>
+    <h1>{{post.name}}</h1>
+  </ion-content>>`})
+
+  export class buttonPage {
+    post={};
+    type= null;
+   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+     this.type = navParams.get("type");
+     this.post = navParams.get("post");
+   }
+
+   dismiss() {
+     this.viewCtrl.dismiss();
+   }
+  }
+
+
+
+  @Component({selector: 'page-picPage',
+  template:`<ion-content (click) = 'dismiss()'>
+    <h1>{{type}}</h1>
+  </ion-content>>`})
+
+  export class picPage {
+    type={};
+   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+     this.type = navParams.get("type");
+   }
+
+   dismiss() {
+     this.viewCtrl.dismiss();
+   }
   }

@@ -12,8 +12,8 @@ import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
 import {convoPage} from '../pages/conversation/conversation';
 import {GoldPage} from '../pages/messages/messages';
-
-
+import { buttonPage } from '../pages/home/home';
+import { picPage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,9 @@ import {GoldPage} from '../pages/messages/messages';
     settingsPage,
     membersPage,
     convoPage,
-    GoldPage
+    GoldPage,
+    buttonPage,
+    picPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,9 @@ import {GoldPage} from '../pages/messages/messages';
     settingsPage,
     membersPage,
     convoPage,
-    GoldPage
+    GoldPage,
+    buttonPage,
+    picPage
   ],
   providers: [
     StatusBar,

@@ -1,284 +1,379 @@
 {
-    "Posts": {
-		"1":{
-            "username": "BigBoye24",
-            "name": "Willy Nilly",
-            "time": "1 hour ago",
-            "profile":"0",
-            "text": "Me and the Fam.",
-            "type": "Photo",
-            "feed": "family",
-			"likes": {"Amount": "26",
-                "Display": "26",
-                "Hit": "false"},
-			"comments": "5",
+  "Posts": {
+    "1": {
+      "username": "BigBoye24",
+      "name": "Willy Nilly",
+      "time": "1 hour ago",
+      "profile": "0",
+      "text": "Me and the Fam.",
+      "type": "Photo",
+      "feed": "family",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": "5",
       "prof_pic": "/assets/imgs/prof_pics/bear.png",
-			"post_pic": "/assets/imgs/post_pics/family.jpg"
-        },
-        "2":{
-            "username": "LameVid",
-            "name": "VideoUse",
-            "time": "2 hours ago",
-            "profile":"0",
-            "text": "",
-            "type": "Video",
-            "feed": "friends",
-  		"likes": {"Amount": "47",
-                "Display": "47",
-                "Hit": "false"},
-  		"comments": "3",
-      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-  		"post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
-        },
-        "3":{
-            "username": "BigBob25",
-            "name": "Bobby Snobby",
-            "profile":"1",
-            "time": "2 hours ago",
-            "profile":"0",
-            "text": "This is a post that I'm posting on divy",
-            "type": "Post",
-            "feed": "public",
-			"likes": {"Amount": "52999",
-                "Display": "52k",
-                "Hit": "false"},
-			"comments": "2",
-      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-			"post_pic": ""
-        },
-        "4":{
-          "username": "FlexSealUS",
-          "name": "FlexSeal",
-          "time": "5 hours ago",
-          "profile":"0",
-          "text": "Try out our new Tape!",
-          "type": "Promo",
-          "feed": "public",
-    "likes": {"Amount": "30000000",
-              "Display": "30m",
-              "Hit": "false"},
-    "comments": "20",
-    "prof_pic": "/assets/imgs/prof_pics/flexer.png",
-    "post_pic": "/assets/imgs/post_pics/flex.jpg"
-        },
-        "5":{
-            "username": "ericrowe321",
-            "name": "Eric Rowe",
-            "time": "3 hours ago",
-            "profile":"0",
-            "text": "I also like posting on divy",
-            "type": "Post",
-            "feed": "public",
-			"likes": {"Amount": "27000000",
-                "Display": "27m",
-                "Hit": "false"},
-			"comments": "3",
-      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-			"post_pic": ""
-        }
+      "post_pic": "/assets/imgs/post_pics/family.jpg"
     },
-    "Profiles": {
-        "0": {
-            "username": "BigBoye24",
-            "name": "Willy Nilly",
-            "prof_pic": "/assets/imgs/prof_pics/bear.png",
-            "main_pic": "/assets/imgs/post_pics/alaska.jpg",
-            "public": {"followers": "25",
-                       "following": "72",
-                       "posts": {"amount": "5"},
-                       "photos": "10",
-                       "videos": "7"},
-            "favs": {"members": "12",
-                       "posts": {"amount": "2"},
-                       "photos": "5",
-                       "videos": "3"},
-            "fam": {"members": "10",
-                       "posts": {"amount": "3"},
-                       "photos": "2",
-                       "videos": "5"},
-            "posts": ["1","4"],
-            "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
-            "location": "Dallas, Texas",
-            "messages": [
-                    {
-                    "id": "0",
-                    "username": "LameVid",
-                    "name": "VideoUse",
-                    "content":[
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      },
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      }
-                      ,
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      },
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      },
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      },
-                      {
-                          "time": "30 mins",
-                          "user": "true",
-                          "text": "Hey there. This message is to test that they can be reaaaally big"
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "This is a Test"
-                      }
-                    ],
-                    "Gold": "false",
-                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-                    "main_pic": "/assets/imgs/post_pics/alaska.jpg"
-                    },
-                    {
-                    "id": "1",
-                    "username": "Banana Banan",
-                    "name": "Banananana",
-                    "content":[
-                      {
-                          "time": "30 mins",
-                          "user": "false",
-                          "text": "egu."
-                      },
-                      {
-                          "time": "20 mins",
-                          "user": "false",
-                          "text": "Messagin is Great"
-                      }
-                    ],
-                    "Gold": "true",
-                    "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-                    "main_pic": "/assets/imgs/post_pics/Nick.jpg"
-                    }
-                  ]
-                },
-           "1": {
-                "username": "BigBob25",
-                "name": "Bobby Snobby",
-                "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-                "main_pic": "/assets/imgs/post_pics/alaska.jpg",
-                "public": {"followers": "25",
-                           "following": "72",
-                           "posts": {"id":"1", "amount": "5"},
-                           "photos": "10",
-                           "videos": "7"},
-                "favs": {"members": "12",
-                           "posts": {"id":"1", "amount": "2"},
-                           "photos": "5",
-                           "videos": "3"},
-                "fam": {"members": "10",
-                           "posts": {"id":"1", "amount": "3"},
-                           "photos": "2",
-                           "videos": "5"},
-                "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
-                "location": "Fayetteville, Arkansas"
-              },
-                "2": {
-                     "username": "BigBob24",
-                     "name": "Bobby Snobby",
-                     "prof_pic": "/assets/imgs/prof_pics/bear.png",
-                     "main_pic": "/assets/imgs/post_pics/alaska.jpg",
-                     "public": {"followers": "25",
-                                "following": "72",
-                                "posts": {"id":"1", "amount": "5"},
-                                "photos": "10",
-                                "videos": "7"},
-                     "favs": {"members": "12",
-                                "posts": {"id":"1", "amount": "2"},
-                                "photos": "5",
-                                "videos": "3"},
-                     "fam": {"members": "10",
-                                "posts": {"id":"1", "amount": "3"},
-                                "photos": "2",
-                                "videos": "5"},
-                     "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
-                     "location": "Fayetteville, Arkansas"
-                     }
-              },
-    "members":{
-      "public":[{
-        "username":"BigBob25",
-        "name":"BobbySnobby",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"true",
-        "follower":"true",
-        "id":"1"},
-        {
-        "username":"LameVid",
-        "name":"VideoUse",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"true",
-        "follower":"false",
-        "id":""}
-      ],
-      "favorites":[{
-        "username":"FlexSealUS",
-        "name":"FlexSeal",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"true",
-        "follower":"false",
-        "id":""},
-        {
-        "username":"ericrowe321",
-        "name":"Eric Rowe",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"false",
-        "follower":"true",
-        "id":""}],
-      "family":[{
-        "username":"FamilyMember123",
-        "name":"IFam",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"true",
-        "follower":"true",
-        "id":""},
-        {
-        "username":"OtherGuy",
-        "name":"Josh Millz",
-        "prof_pic":"/assets/imgs/prof_pics/placeholder.png",
-        "following":"true",
-        "follower":"false",
-        "id":""}]
+    "2": {
+      "username": "LameVid",
+      "name": "VideoUse",
+      "time": "2 hours ago",
+      "profile": "0",
+      "text": "",
+      "type": "Video",
+      "feed": "friends",
+      "likes": {
+        "Amount": "47",
+        "Display": "47",
+        "Hit": "false"
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": "3",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+      "post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
+    },
+    "3": {
+      "username": "BigBob25",
+      "name": "Bobby Snobby",
+      "profile": "0",
+      "time": "2 hours ago",
+      "text": "This is a post that I'm posting on divy",
+      "type": "Post",
+      "feed": "public",
+      "likes": {
+        "Amount": "52999",
+        "Display": "52k",
+        "Hit": "false"
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": "2",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+      "post_pic": ""
+    },
+    "4": {
+      "username": "FlexSealUS",
+      "name": "FlexSeal",
+      "time": "5 hours ago",
+      "profile": "0",
+      "text": "Try out our new Tape!",
+      "type": "Promo",
+      "feed": "public",
+      "likes": {
+        "Amount": "30000000",
+        "Display": "30m",
+        "Hit": "false"
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": "20",
+      "prof_pic": "/assets/imgs/prof_pics/flexer.png",
+      "post_pic": "/assets/imgs/post_pics/flex.jpg"
+    },
+    "5": {
+      "username": "ericrowe321",
+      "name": "Eric Rowe",
+      "time": "3 hours ago",
+      "profile": "0",
+      "text": "I also like posting on divy",
+      "type": "Post",
+      "feed": "public",
+      "likes": {
+        "Amount": "27000000",
+        "Display": "27m",
+        "Hit": "false"
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": "3",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+      "post_pic": ""
     }
+  },
+  "Profiles": {
+    "0": {
+      "username": "BigBoye24",
+      "name": "Willy Nilly",
+      "prof_pic": "/assets/imgs/prof_pics/bear.png",
+      "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "public": {
+        "followers": "25",
+        "following": "72",
+        "posts": {
+          "amount": "5"
+        },
+        "photos": "10",
+        "videos": "7"
+      },
+      "favs": {
+        "members": "12",
+        "posts": {
+          "amount": "2"
+        },
+        "photos": "5",
+        "videos": "3"
+      },
+      "fam": {
+        "members": "10",
+        "posts": {
+          "amount": "3"
+        },
+        "photos": "2",
+        "videos": "5"
+      },
+      "posts": [
+        "1",
+        "4"
+      ],
+      "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
+      "location": "Dallas, Texas",
+      "messages": [
+        {
+          "id": "0",
+          "username": "LameVid",
+          "name": "VideoUse",
+          "content": [
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            },
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            },
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            },
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            },
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            },
+            {
+              "time": "30 mins",
+              "user": "true",
+              "text": "Hey there. This message is to test that they can be reaaaally big"
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "This is a Test"
+            }
+          ],
+          "Gold": "false",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "main_pic": "/assets/imgs/post_pics/alaska.jpg"
+        },
+        {
+          "id": "1",
+          "username": "Banana Banan",
+          "name": "Banananana",
+          "content": [
+            {
+              "time": "30 mins",
+              "user": "false",
+              "text": "egu."
+            },
+            {
+              "time": "20 mins",
+              "user": "false",
+              "text": "Messagin is Great"
+            }
+          ],
+          "Gold": "true",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "main_pic": "/assets/imgs/post_pics/Nick.jpg"
+        }
+      ]
+    },
+    "1": {
+      "username": "BigBob25",
+      "name": "Bobby Snobby",
+      "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+      "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "public": {
+        "followers": "25",
+        "following": "72",
+        "posts": {
+          "id": "1",
+          "amount": "5"
+        },
+        "photos": "10",
+        "videos": "7"
+      },
+      "favs": {
+        "members": "12",
+        "posts": {
+          "id": "1",
+          "amount": "2"
+        },
+        "photos": "5",
+        "videos": "3"
+      },
+      "fam": {
+        "members": "10",
+        "posts": {
+          "id": "1",
+          "amount": "3"
+        },
+        "photos": "2",
+        "videos": "5"
+      },
+      "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
+      "location": "Fayetteville, Arkansas"
+    },
+    "2": {
+      "username": "BigBob24",
+      "name": "Bobby Snobby",
+      "prof_pic": "/assets/imgs/prof_pics/bear.png",
+      "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "public": {
+        "followers": "25",
+        "following": "72",
+        "posts": {
+          "id": "1",
+          "amount": "5"
+        },
+        "photos": "10",
+        "videos": "7"
+      },
+      "favs": {
+        "members": "12",
+        "posts": {
+          "id": "1",
+          "amount": "2"
+        },
+        "photos": "5",
+        "videos": "3"
+      },
+      "fam": {
+        "members": "10",
+        "posts": {
+          "id": "1",
+          "amount": "3"
+        },
+        "photos": "2",
+        "videos": "5"
+      },
+      "bio": "this is my Bio, I hope you like it. I can bearly handle any puns, so keep things pawsitive!",
+      "location": "Fayetteville, Arkansas"
+    }
+  },
+  "members": {
+    "public": [
+      {
+        "username": "BigBob25",
+        "name": "BobbySnobby",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "true",
+        "follower": "true",
+        "id": "1"
+      },
+      {
+        "username": "LameVid",
+        "name": "VideoUse",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "true",
+        "follower": "false",
+        "id": ""
+      }
+    ],
+    "favorites": [
+      {
+        "username": "FlexSealUS",
+        "name": "FlexSeal",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "true",
+        "follower": "false",
+        "id": ""
+      },
+      {
+        "username": "ericrowe321",
+        "name": "Eric Rowe",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "false",
+        "follower": "true",
+        "id": ""
+      }
+    ],
+    "family": [
+      {
+        "username": "FamilyMember123",
+        "name": "IFam",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "true",
+        "follower": "true",
+        "id": ""
+      },
+      {
+        "username": "OtherGuy",
+        "name": "Josh Millz",
+        "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+        "following": "true",
+        "follower": "false",
+        "id": ""
+      }
+    ]
+  }
 }

@@ -42,7 +42,7 @@ export class messagesPage {
 
   presentAlert(message) {
     let GoldModal = this.modalCtrl.create(GoldPage,{message:message},{
-    cssClass: "Gold-modal",animate:false});
+    cssClass: "Gold-modal"});
         GoldModal.present();
   }
 }
