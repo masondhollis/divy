@@ -85,3 +85,29 @@
     height: 100%;
     vertical-align: middle;
 }
+
+#goldAlert{
+  display: inline-block;
+  height:100%;
+  margin:0;
+  vertical-align: middle;
+}
+
+#goldAlert div{
+  display: block;
+  position: relative;
+  vertical-align: middle;
+  top:25%;
+}
+
+#goldAlert img{
+  content: url(/assets/icon/Add.png);
+  width:10%;
+  display: inline-block;
+}
+
+#goldAlert h4{
+  font-size: 1em;
+  padding:0;
+  margin:.2em auto;
+}

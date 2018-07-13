@@ -113,7 +113,7 @@ export class HomePage {
 
     goPic(key){
       let pictPage = this.modalCtrl.create(picPage,{type:key},{
-      cssClass: "Gold-modal"});
+      cssClass: "select-modal"});
       pictPage.present();
     }
 
@@ -146,17 +146,62 @@ export class HomePage {
 
 
   @Component({selector: 'page-picPage',
-  template:`<ion-content (click) = 'dismiss()'>
-    <h1>{{type}}</h1>
+  template:`<ion-content>
+  <span *ngIf="this.type === 'main'">
+    <div id='padding'></div>
+    <div id='Picbar'>
+      <img id='Pic-close' (click)= 'dismiss()' />
+      <div>
+        <h1> Add Photo </h1>
+        <img id='Pic-pic'/>
+      </div>
+      <div>
+        <h1> Add Video </h1>
+        <img id='Pic-video'/>
+      </div>
+      <div (click)= 'gotime()'>
+        <h1> Adjust Time </h1>
+        <img id='Pic-time'/>
+      </div>
+    </div>
+    </span>
+
+    <span *ngIf="this.type === 'time'">
+    <div id='Timebar'>
+      <div id='padding'></div>
+      <img id='Pic-close' (click)= 'dismiss()' />
+      <div (click)= 'gotime()'>
+        <h1> Adjust Time </h1>
+        <img id='Pic-time'/>
+      </div>
+
+      <div id = 'slider'>
+      <input type='range' class='tSlider'/>
+      <h1>4 hours</h1>
+      </div>
+
+      <div id='tFilt'>
+        <h1>Hours</h1>
+        <h1>Days</h1>
+        <h1>Weeks</h1>
+      </div>
+      <h2> Adjust Time for your post to be visible.</h2>
+      <h1>Done</h1>
+      </div>
+    </span>
   </ion-content>>`})
 
   export class picPage {
     type={};
-   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+   constructor(public modalCtrl: ModalController,public viewCtrl: ViewController, public navParams: NavParams) {
      this.type = navParams.get("type");
    }
 
    dismiss() {
      this.viewCtrl.dismiss();
+   }
+
+   gotime(){
+     this.type='time';
    }
   }

@@ -49,15 +49,20 @@ export class messagesPage {
 
 @Component({selector: 'page-GoldPage',
 template:`<ion-content (click) = 'dismiss()'>
-  <div class="add"></div>
-  <h1>{{message.name}}</h1>
-  <h1>Has been added to your Flamed Messages!</h1>
+  <div id="goldAlert">
+  <div>
+  <img/>
+  <h4>{{message.name}}</h4>
+  <h4>Was added to your Flamed Messages!</h4>
+  </div>
+  </div>
 </ion-content>>`})
 
 export class GoldPage {
   message={};
  constructor(public viewCtrl: ViewController, public navParams: NavParams) {
    this.message = navParams.get("message");
+   setTimeout(() => {this.dismiss();}, 3000);
  }
 
  dismiss() {
