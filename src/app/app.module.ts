@@ -14,6 +14,7 @@ import {convoPage} from '../pages/conversation/conversation';
 import {GoldPage} from '../pages/messages/messages';
 import { buttonPage } from '../pages/home/home';
 import { picPage } from '../pages/home/home';
+import {editPage} from '../pages/profile/profile'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { picPage } from '../pages/home/home';
     convoPage,
     GoldPage,
     buttonPage,
-    picPage
+    picPage,
+    editPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { picPage } from '../pages/home/home';
     convoPage,
     GoldPage,
     buttonPage,
-    picPage
+    picPage,
+    editPage
   ],
   providers: [
     StatusBar,

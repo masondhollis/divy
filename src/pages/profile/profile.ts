@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ViewController,ModalController } from 'ionic-angular';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -18,10 +18,12 @@ export class ProfilePage {
 
   myprofile;
   menu = false;
+  plus = false;
   view = "public";
   proPosts = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public modalCtrl: ModalController) {
     this.myprofile = this.profile[navParams.get("ProKey")];
     var x;
     for (x in this.myprofile.posts){
@@ -48,4 +50,28 @@ export class ProfilePage {
   {
     return this.view;
   }
+
+  plusTog()
+  {
+    this.plus = !this.plus;
+  }
+
+  edit()
+  {
+    let edit = this.modalCtrl.create(editPage,{
+    cssClass: ""});
+    edit.present();
+  }
+}
+
+@Component({selector: 'page-edit',
+templateUrl: 'profileSett.html'})
+
+export class editPage {
+ constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+ }
+
+ goBack() {
+   this.viewCtrl.dismiss();
+ }
 }

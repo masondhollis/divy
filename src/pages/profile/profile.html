@@ -1,13 +1,13 @@
 <ion-content>
-<ion-content class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
+<ion-content center class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
 
 <ion-header id="THeader" transparent no-border>
   <ion-toolbar color="white"  transparent>
     <div (click)="goBack()" id="Back" transparent>
       <img src="/assets/icon/Back.png" id="Back"/>
-      <p id="Back">Back</p>
+      <p>Back</p>
     </div>
-        <p class = "Title">
+        <p class = "PTitle">
           Divy.
         </p>
         <button ion-button menuToggle right>
@@ -21,7 +21,7 @@
   <div id = "User">
     <img (click) = "togglePro()" class="plink link-close" *ngIf = "this.menu == true"/>
     <div id = "imgAndText">
-    <img class="plink link-add"/>
+    <img class="plink link-add" (click) = "plusTog()"/>
       <img item-start class="pprof_pic" src="{{myprofile.prof_pic}}" />
       <div id = "Info">
         <h2 id = "pname">{{myprofile.name}}</h2>
@@ -71,15 +71,28 @@
     </div>
 
     <div id="outer"><div id = "Edit">
-      <span *ngIf = "myprofile === this.profile[0]">Edit Profile</span>
+      <span *ngIf = "myprofile === this.profile[0]" (click) = "edit()">Edit Profile</span>
       <span *ngIf = "myprofile !== this.profile[0]">
-        <span *ngIf ="this.view === 'public'" >Follow</span>
-        <span *ngIf ="this.view === 'friends'" >Invite to Favorites</span>
-        <span *ngIf ="this.view === 'family'">Invite to Family</span>
+        <span *ngIf ="this.view === 'public'" (click) = "toggle('follow')">Follow</span>
+        <span *ngIf ="this.view === 'friends'" (click) = "toggle('favorites')">Invite to Favorites</span>
+        <span *ngIf ="this.view === 'family'" (click) = "toggle('family')">Invite to Family</span>
       </span>
     </div></div>
     <p id="bio">{{myprofile.bio}}</p>
   </span>
+
+  <ion-footer center id="plusM"*ngIf="this.plus == true">
+    <h4>Send {{myprofile.name}} a message</h4><hr/>
+    <h4>Block</h4><hr/>
+    <h4>Mute</h4><hr/>
+    <h4>Report</h4><hr/>
+    <h4>Turn on post notification</h4><hr/>
+    <div id="plusMH"></div><hr/>
+    <div id='plusMHold'></div>
+    <hr/>
+    <h4 (click) = "plusTog()"> Go Back</h4>
+  </ion-footer>
+
 </ion-footer>
 </ion-content>
   <span *ngIf ="this.menu == true" >
@@ -162,9 +175,9 @@
 <ion-footer *ngIf ="this.menu == true">
   <div id= "whitebar">
     <div id="filters">
-      <div (click) = "changeView('public')"><img class="plink link-public"/>Public</div>
-      <div (click) = "changeView('friends')"><img class="plink link-favorites"/>Favorites</div>
-      <div (click) = "changeView('family')"><img class="plink plink-family"/>Family</div>
+      <div (click) = "changeView('public')"><img class="plink link-public"/><h4>Public</h4></div>
+      <div (click) = "changeView('friends')"><img class="plink link-favorites"/><h4>Favorites</h4></div>
+      <div (click) = "changeView('family')"><img class="plink plink-family"/><h4>Family</h4></div>
     </div>
     </div>
   </ion-footer>

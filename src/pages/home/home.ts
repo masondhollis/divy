@@ -99,7 +99,7 @@ export class HomePage {
     var newPost = {name:this.profile.name,username:this.profile.username,time:"now",
     profile:"0",text:stuff,type:"Post", feed:this.feed,
     prof_pic:this.profile.prof_pic, post_pic:"",likes:{Amount:"0",Display:"0",Hit:"false"},
-    comments:"0"};
+    comments:"0", embers:{display:'0',amount:'0',hit:'false'}};
     this.posts.push(newPost);
     (<HTMLInputElement>document.getElementById("htextbox")).value = "";
     this.button=false;
@@ -115,6 +115,11 @@ export class HomePage {
       let pictPage = this.modalCtrl.create(picPage,{type:key},{
       cssClass: "Gold-modal"});
       pictPage.present();
+    }
+
+    style(type){
+      if(this.filt == type)
+        return {"border-bottom": "solid", "border-width":"thin", "color":'black'};
     }
   }
 
