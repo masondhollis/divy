@@ -12,7 +12,20 @@
         "Amount": "26",
         "Display": "26",
         "Hit": "false",
-        "people": []
+        "people": [
+          {
+            "username": "BigBob25",
+            "name": "BobbySnobby",
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+            "id":""
+          },
+          {
+            "username": "LameVid",
+            "name": "VideoUse",
+            "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+            "id": ""
+          }
+        ]
       },
       "embers": {
         "amount": "4",
@@ -20,7 +33,34 @@
         "hit": "false",
         "people": []
       },
-      "comments": "5",
+      "comments": {"amount": "5",
+        "display": "5",
+        "list":[{
+          "username": "BigBob25",
+          "name": "BobbySnobby",
+          "text": "This is not ccooooolll",
+          "time": "10:59pm",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[
+            {
+              "name": "BobbySnobby",
+              "text": "This is not ccooooolll",
+              "time": "10:59pm",
+              "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+            }
+          ],
+          "id":""
+        },
+        {
+          "username": "LameVid",
+          "name": "VideoUse",
+          "text": "This is sooo not ccooooolll",
+          "time": "11:35pm",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id": ""
+        }]
+      },
       "prof_pic": "/assets/imgs/prof_pics/bear.png",
       "post_pic": "/assets/imgs/post_pics/family.jpg"
     },
@@ -43,7 +83,27 @@
         "hit": "false",
         "people": []
       },
-      "comments": "3",
+      "comments": {"amount": "5",
+        "display": "5",
+        "list":[{
+          "username": "BigBob25",
+          "name": "BobbySnobby",
+          "text": "This is not ccooooolll",
+          "time": "7 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id":""
+        },
+        {
+          "username": "LameVid",
+          "name": "VideoUse",
+          "text": "This is sooo not ccooooolll",
+          "time": "10 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id": ""
+        }]
+      },
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
       "post_pic": "https://www.youtube.com/embed/VDGD7kEiksQ"
     },
@@ -66,7 +126,32 @@
         "hit": "false",
         "people": []
       },
-      "comments": "2",
+      "comments": {"amount": "5",
+        "display": "5",
+        "list":[{
+          "username": "BigBob25",
+          "name": "BobbySnobby",
+          "text": "This is not ccooooolll",
+          "time": "7 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[  {
+              "name": "BobbySnobby",
+              "text": "This is not ccooooolll",
+              "time": "10:59pm",
+              "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
+            }],
+          "id":""
+        },
+        {
+          "username": "LameVid",
+          "name": "VideoUse",
+          "text": "This is sooo not ccooooolll",
+          "time": "10 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id": ""
+        }]
+      },
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
       "post_pic": ""
     },
@@ -89,7 +174,27 @@
         "hit": "false",
         "people": []
       },
-      "comments": "20",
+      "comments": {"amount": "5",
+        "display": "5",
+        "list":[{
+          "username": "BigBob25",
+          "name": "BobbySnobby",
+          "text": "This is not ccooooolll",
+          "time": "7 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id":""
+        },
+        {
+          "username": "LameVid",
+          "name": "VideoUse",
+          "text": "This is sooo not ccooooolll",
+          "time": "10 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id": ""
+        }]
+      },
       "prof_pic": "/assets/imgs/prof_pics/flexer.png",
       "post_pic": "/assets/imgs/post_pics/flex.jpg"
     },
@@ -112,7 +217,27 @@
         "hit": "false",
         "people": []
       },
-      "comments": "3",
+      "comments": {"amount": "5",
+        "display": "5",
+        "list":[{
+          "username": "BigBob25",
+          "name": "BobbySnobby",
+          "text": "This is not ccooooolll",
+          "time": "7 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id":""
+        },
+        {
+          "username": "LameVid",
+          "name": "VideoUse",
+          "text": "This is sooo not ccooooolll",
+          "time": "10 mins",
+          "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
+          "replies":[],
+          "id": ""
+        }]
+      },
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
       "post_pic": ""
     }

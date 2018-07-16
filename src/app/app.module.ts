@@ -15,6 +15,8 @@ import {GoldPage} from '../pages/messages/messages';
 import { buttonPage } from '../pages/home/home';
 import { picPage } from '../pages/home/home';
 import {editPage} from '../pages/profile/profile'
+import { emberPage } from '../pages/home/home';
+import { commentPage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {editPage} from '../pages/profile/profile'
     GoldPage,
     buttonPage,
     picPage,
-    editPage
+    editPage,
+    emberPage,
+    commentPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import {editPage} from '../pages/profile/profile'
     GoldPage,
     buttonPage,
     picPage,
-    editPage
+    editPage,
+    emberPage,
+    commentPage
   ],
   providers: [
     StatusBar,

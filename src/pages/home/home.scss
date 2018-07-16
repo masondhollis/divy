@@ -8,14 +8,19 @@ page-home {
 
 /* Image Related Styling*/
 .prof_pic {
-  width: 20%;
-	height: 20%;
+  width: 15%;
+	height: 15%;
   display: inline-block;
   vertical-align: top;
 }
 
 .item {
     contain:none;
+}
+
+#mFooter{
+  border:none;
+  box-shadow:none;
 }
 
 .Title{
@@ -190,23 +195,23 @@ page-home {
 }
 
 .button-like {
-  width:40%;
-	content: url(/assets/icon/like.png);
+  width:20%;
+	content: url(/assets/icon/likeB.png);
 }
 
 .button-comment {
-  width:40%;
+  width:30%;
 	content: url(/assets/icon/comment.png);
 }
 
 .button-share {
-  width:40%;
+  width:20%;
 	content: url(/assets/icon/share.png);
 }
 
 .button-ember {
-  width:40%;
-	content: url(/assets/icon/ember.png);
+  width:20%;
+	content: url(/assets/icon/emberxlB.png);
 }
 
 /*Footer Buttons*/
@@ -221,10 +226,11 @@ page-home {
   width:100%;
   padding: 0;
   margin: 0;
+  color:grey;
 }
 
 .link {
-	width:40%;
+	width:30%;
 	position: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -403,4 +409,240 @@ page-home {
     height: 2px;
     background: grey;
     cursor: pointer;
+}
+
+//Ember popup
+#YN{
+  text-align: center;
+  margin:5%;
+}
+
+#YN h4{
+  width:30%;
+  display: inline-block;
+}
+
+//Like list
+#likeH{
+  width:100%;
+  text-align: right;
+  background-color:white;
+  background-size: cover;
+}
+
+#likeH h4{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .9em;
+  color:#AA0000;
+  margin-left: 25%;
+}
+
+#post-like{
+  width:8%;
+  vertical-align: middle;
+	content: url(/assets/icon/like.png);
+  display: inline-block;
+  margin-right:25%;
+}
+
+#post-ember{
+  width:6%;
+  vertical-align: middle;
+	content: url(/assets/icon/emberxl.png);
+  display: inline-block;
+  margin-right:25%;
+}
+
+#post-comment{
+  width:6%;
+  vertical-align: middle;
+	content: url(/assets/icon/comment.png);
+  display: inline-block;
+  margin-right:25%;
+}
+
+#post-close{
+  width:8%;
+  vertical-align: middle;
+	content: url(/assets/icon/close.png);
+  display: inline-block;
+  text-align: right;
+  float: right;
+  margin-right:3%;
+  margin-top:3%;
+}
+
+.feed{
+  padding:0;
+  margin:0;
+  width: 100%;
+  height: 100%;
+}
+
+.notify{
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.95);
+}
+
+.people{
+  width:100%;
+  margin:0;
+  padding:0;
+  box-shadow: none;
+}
+
+#likeUser{
+  width:100%;
+  margin-bottom:.25em;
+  margin-top: .25em;
+  margin-left: .5em;
+  padding:0;
+  text-align: left;
+  position: relative;
+}
+
+
+//commments stuff
+
+#cbar{
+  width:100%;
+  padding: 1em;
+  background-color: white;
+  color:white;
+  box-shadow: none;
+}
+
+#cfooter{
+  box-shadow: none;
+  border:none;
+}
+
+#cbar input{
+  width:75%;
+  display: inline-block;
+  font-size: 1.25em;
+  border:none;
+}
+
+#cbar div{
+  display: inline-block;
+  width:20%;
+  font-size: 1.25em;
+  color:grey;
+  box-shadow:none;
+}
+
+#CInfo{
+  display: inline-block;
+  width:40%;
+  vertical-align: top;
+
+}
+
+#CInfo h2{
+  font-size: 1em;
+  margin:0;
+  padding: 0;
+}
+
+#CInfo h1{
+  font-size: .75em;
+  margin:0;
+  padding: 0;
+}
+
+#commentT{
+  display: inline-block;
+  width:45%;
+  margin:0;
+  padding:0;
+  vertical-align: top;
+}
+
+#commentT h2{
+  font-size: .75em;
+}
+
+#cprof_pic{
+  width: 10%;
+  display:inline-block;
+  padding:0;
+  vertical-align: top;
+}
+
+#ctime{
+  margin-left: 10%;
+}
+
+#ctime h4{
+  font-size: .7em;
+  display: inline-block;
+  margin-right: 6%;
+  color:grey;
+  vertical-align: top;
+}
+
+#rtime{
+  margin-left: 8%;
+}
+
+#rtime h3{
+  font-size: .5em;
+  display: inline-block;
+  vertical-align: top;
+  margin:0;
+  padding: 0;
+  color:grey;
+}
+
+//Reply stuff
+#reUser{
+  width:100%;
+  margin-bottom:.25em;
+  margin-top: .25em;
+  margin-left: 12%;
+  padding:0;
+  text-align: left;
+  position: relative;
+}
+
+#reprof_pic{
+  width: 8%;
+  display:inline-block;
+  padding:0;
+  vertical-align: top;
+  margin: 0;
+}
+
+
+#embAlert{
+  display: inline-block;
+  height:100%;
+  margin:0;
+  vertical-align: middle;
+}
+
+#embAlert div{
+  display: block;
+  position: relative;
+  vertical-align: middle;
+  top:25%;
+}
+
+#embAlert img{
+  content: url(/assets/icon/emberxl.png);
+  width:8%;
+  display: inline-block;
+}
+
+#embAlert h4{
+  font-size: 1em;
+  padding:0;
+  margin:.2em auto;
 }

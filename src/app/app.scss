@@ -62,7 +62,9 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.hamB-home{
+  content: url(/assets/icon/Home.png);
+}
 .hamB-profile
 {
   content: url(/assets/icon/Profile.png);
@@ -71,6 +73,11 @@ hr {
 .hamB-message
 {
   content: url(/assets/icon/Comment.png);
+}
+
+.hamB-Gold
+{
+  content: url(/assets/icon/likeB.png);
 }
 
 .hamB-public
@@ -83,29 +90,34 @@ hr {
   content: url(/assets/icon/Friends.png);
 }
 
-.hamb-feed
-{
-  content: url(/assets/icon/Add.png);
-}
-
 .hamb-family
 {
   content: url(/assets/icon/Family.png);
 }
 
+.hamb-promos
+{
+  content: url(/assets/icon/promos.png);
+}
+
 .hamb-set
 {
-  content: url(/assets/icon/Add.png);
+  content: url(/assets/icon/settings.png);
 }
 
 .hamb-thought
 {
-  content: url(/assets/icon/Add.png);
+  content: url(/assets/icon/thoughts.png);
 }
 
 .hamb-sup
 {
-  content: url(/assets/icon/Add.png);
+  content: url(/assets/icon/support.png);
+}
+
+.hamb-logout
+{
+  content: url(/assets/icon/logout.png);
 }
 
 ion-modal.Gold-modal{
@@ -129,4 +141,21 @@ ion-modal.select-modal{
         vertical-align: middle;
         background: none;
     }
+}
+
+ion-modal.ember-modal{
+    background-color: rgba(0, 0, 0, 0);
+    ion-content.content{
+        top: 30%;
+        left: 5%;
+        width: 90%;
+        height: 30%;
+        text-align: center;
+        vertical-align: middle;
+        background: rgba(255,255,255,0.95);
+    }
+}
+
+ion-modal.button-modal{
+  background-color: rgba(0, 0, 0, .8);
 }

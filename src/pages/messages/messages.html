@@ -32,7 +32,7 @@
               <h2 id = "mcont">{{message.content[0].text}}...</h2>
             </div>
             <div id = "mtime">{{message.content[0].time}}</div>
-        <div class="mgold" (click)="goGold(message)"></div>
+        <div class="mgold" (click)="goGold(message)" [ngStyle]="golden()"></div>
       </div>
 
       </ion-card>

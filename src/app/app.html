@@ -7,15 +7,16 @@
   <ion-content>
     <div id = "hamMain">
       <div menuClose><img id = "hamClose"/></div>
-      <div (click) = "goHome()"><img class="hamB hamb-set"/>Home</div>
+      <div (click) = "goHome()"><img class="hamB hamB-home"/>Home</div>
       <div (click) = "goProfile('0')"><img class="hamB hamB-profile"/>My Profile</div>
       <hr/>
       <div (click) = "goMessages('false')"><img class="hamB hamB-message"/>Messaging</div>
-      <div (click) = "goMessages('true')"><img class="hamB hamB-message"/>Golden Flamed</div>
+      <div (click) = "goMessages('true')"><img class="hamB hamB-Gold"/>Flamed Messengers</div>
       <hr/>
       <div (click) = "goMembers('public')"><img class="hamB hamB-public"/>Public Members</div>
       <div (click) = "goMembers('favorites')"><img class="hamB hamb-favorites"/>Favorites Members</div>
       <div (click) = "goMembers('family')"><img class="hamB hamb-family"/>Family Members</div>
+      <div (click) = "goMembers('promos')"><img class="hamB hamb-promos"/>Promotions</div>
       <hr/>
       <div (click)= "goSettings()"><img class="hamB hamb-set"/>Settings</div>
       <div><img class="hamB hamb-thought"/>Give us your thoughts on Divy</div>

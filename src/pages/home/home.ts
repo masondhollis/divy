@@ -40,18 +40,21 @@ export class HomePage {
     return this.filt;
   }
 
-  // TODO: Implement action button functions
-  Like(post){
+    Like(post){
     //Either like or unlike
     if(post.likes.Hit == "false")
     {
       post.likes.Hit = "true";
       post.likes.Amount =  String (parseInt(post.likes.Amount)+ 1);
+      var newLike = {name:this.profile.name,username:this.profile.username,
+      prof_pic: this.profile.prof_pic, id:"0"};
+      post.likes.people.push(newLike);
     }
     else
     {
       post.likes.Hit = "false";
       post.likes.Amount =  String (parseInt(post.likes.Amount)- 1);
+      post.likes.people.pop();
     }
 
     //Parse the data for Display
@@ -65,9 +68,15 @@ export class HomePage {
   }
 
   ember(post){
-    let buttonsPage = this.modalCtrl.create(buttonPage,{type:'emberA',post:post},{
-    cssClass: "Gold-modal"});
-    buttonsPage.present();
+    let embPage = this.modalCtrl.create(emberPage,{post:post},{
+    cssClass: "ember-modal"});
+    embPage.present();
+  }
+
+  Comment(post){
+    let comPage = this.modalCtrl.create(commentPage,{post:post},{
+    cssClass: "button-modal"});
+    comPage.present();
   }
 
   //TODO: IMPLEMENT LOGIC FOR FOOTER BUTTONS
@@ -94,6 +103,10 @@ export class HomePage {
       this.button = false;
   }
 
+  Share(){
+
+  }
+
   createPost(){
     var stuff = (<HTMLInputElement>document.getElementById('htextbox')).value;
     var newPost = {name:this.profile.name,username:this.profile.username,time:"now",
@@ -107,7 +120,7 @@ export class HomePage {
 
     goLike(key,post){
       let buttonsPage = this.modalCtrl.create(buttonPage,{type:key,post:post},{
-      cssClass: "Gold-modal"});
+      cssClass: "button-modal"});
       buttonsPage.present();
     }
 
@@ -121,17 +134,79 @@ export class HomePage {
       if(this.filt == type)
         return {"border-bottom": "solid", "border-width":"thin", "color":'black'};
     }
+
+    tfilter(key){
+      if(this.feed == key)
+        return {"color":'black'};
+    }
+
+    pfilter(key){
+      if(this.feed == key)
+        return{"content": 'url(/assets/icon/'+key+'B.png)'}
+    }
+
+    stylebutt(post,type)
+    {
+      if(post.likes.Hit =='true' && type == 'like')
+        return{"content": 'url(/assets/icon/like.png)'}
+      else if(post.embers.hit == 'true' && type == 'ember')
+        return{"content": 'url(/assets/icon/emberxl.png)'}
+    }
   }
 
 
 
+
+
   @Component({selector: 'page-buttonPage',
-  template:`<ion-content (click) = 'dismiss()'>
-    <h1>{{post.name}}</h1>
+  template:`<ion-content class="notify">
+
+    <ion-header id='likeH' no-border>
+    <span *ngIf="type=='like'">
+      <h4>{{post.likes.Display}} Likes</h4>
+      <img id='post-like'/>
+    </span>
+    <span *ngIf = "type == 'ember'">
+      <h4 [ngStyle]="{'color':'#1BEADD'}">{{post.embers.display}} Embers</h4>
+      <img id='post-ember'/>
+    </span>
+      <img id='post-close' (click) = 'dismiss()'/>
+    </ion-header>
+
+    <ion-content class='feed'>
+      <span *ngIf="type == 'like'">
+      <span *ngFor="let member of post.likes.people">
+        <ion-card class="people">
+        <div id = "likeUser">
+          <img class="mprof_pic" src="{{member.prof_pic}}" />
+            <div id = "MInfo">
+              <h2 id = "mname">{{member.name}}</h2>
+              <h2 id = "mUname">@{{member.username}}</h2>
+            </div>
+          </div>
+        </ion-card>
+      </span>
+      </span>
+
+      <span *ngIf="type == 'ember'">
+      <span *ngFor="let member of post.embers.people">
+        <ion-card class="people">
+        <div id = "likeUser">
+          <img class="mprof_pic" src="{{member.prof_pic}}" />
+            <div id = "MInfo">
+              <h2 id = "mname">{{member.name}}</h2>
+              <h2 id = "mUname">@{{member.username}}</h2>
+            </div>
+          </div>
+        </ion-card>
+      </span>
+      </span>
+
+      </ion-content>
   </ion-content>>`})
 
   export class buttonPage {
-    post={};
+    post;
     type= null;
    constructor(public viewCtrl: ViewController, public navParams: NavParams) {
      this.type = navParams.get("type");
@@ -142,6 +217,8 @@ export class HomePage {
      this.viewCtrl.dismiss();
    }
   }
+
+
 
 
 
@@ -203,5 +280,137 @@ export class HomePage {
 
    gotime(){
      this.type='time';
+   }
+  }
+
+
+
+
+  @Component({selector: 'page-emberPage',
+  template:`<ion-content >
+    <div id="embAlert">
+    <div>
+    <img id="button-ember"/>
+    <h4>Are you sure you want to ember {{post.name}}'s {{post.type}}?</h4>
+    </div>
+    <div id ="YN">
+    <h4 (click) = 'dismiss(1)'>Yes</h4><h4 (click) = 'dismiss(0)'>No</h4>
+    </div>
+    </div>
+  </ion-content>>`})
+  export class emberPage {
+    post;
+    profile;
+
+   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+     this.post = navParams.get("post");
+     this.profile= data.Profiles[0];
+   }
+
+   dismiss(ember) {
+     if(ember == 1 && this.post.embers.hit === 'false')
+     {
+      this.post.embers.display = String (parseInt(this.post.embers.display)+ 1);
+      this.post.embers.hit = 'true';
+      var newEmber = {name:this.profile.name,username:this.profile.username,
+      prof_pic: this.profile.prof_pic, id:"0"};
+      this.post.embers.people.push(newEmber);
+    }
+     this.viewCtrl.dismiss();
+   }
+  }
+
+
+
+  @Component({selector: 'page-commentPage',
+  template:`<ion-content class="notify">
+  <ion-header id='likeH' no-border>
+    <h4 [ngStyle]="{'color':'#000000'}">{{post.comments.display}} Comments</h4>
+    <img id='post-comment' (click)="setFeed(this.content)"/>
+    <img id='post-close' (click) = 'dismiss()'/>
+  </ion-header>
+
+  <ion-content class='feed'>
+  <span *ngFor="let member of post.comments.list">
+    <ion-card class="people">
+    <div id = "likeUser">
+      <img id="cprof_pic" src="{{member.prof_pic}}" />
+        <div id = "CInfo">
+          <h2>{{member.name}}</h2>
+        </div>
+        <div id='commentT'>
+          <h2>{{member.text}}</h2>
+        </div>
+        <div id="ctime">
+          <h4> {{member.time}}</h4>
+          <h4 (click)="setFeed(member.replies)"> Reply </h4>
+        </div>
+      </div>
+    </ion-card>
+
+    <span *ngFor="let reply of member.replies">
+    <ion-card class="people" >
+      <div id = "reUser">
+      <img id="reprof_pic" src="{{reply.prof_pic}}" />
+        <div id = "CInfo">
+          <h1>{{reply.name}}</h1>
+        </div>
+        <div id='commentT'>
+          <h2>{{reply.text}}</h2>
+        </div>
+        <div id="rtime">
+          <h3> {{reply.time}}</h3>
+        </div>
+      </div>
+    </ion-card>
+        </span>
+
+  </span>
+  </ion-content>
+
+  <ion-footer *ngIf="comment == true" id="cfooter" no-border>
+  <div id="cbar">
+    <input id='com' placeholder='Comment...'/>
+    <div (click) = 'send()'>SEND</div>
+  </div>
+  </ion-footer>
+
+  </ion-content>>`})
+  export class commentPage {
+    post;
+    content;
+    currentfeed;
+    comment = false;
+    profile= data.Profiles[0];
+   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+     this.post = navParams.get("post");
+     this.content= this.post.comments.list;
+   }
+
+   dismiss(ember) {
+     if(ember == 1 && this.post.embers.hit === 'false')
+     {
+      this.post.embers.display = String (parseInt(this.post.embers.display)+ 1);
+      this.post.embers.hit = 'true';
+    }
+     this.viewCtrl.dismiss();
+   }
+
+   send(){
+     if((<HTMLInputElement>document.getElementById('com')).value != "")
+     {
+     var stuff = (<HTMLInputElement>document.getElementById('com')).value;
+     var newComment = {text:stuff, name:this.profile.name,username:this.profile.username,
+     prof_pic: this.profile.prof_pic, time:"now"};
+     this.currentfeed.push(newComment);
+     (<HTMLInputElement>document.getElementById("com")).value = "";
+     this.comment = false;
+     this.post.comments.display = String (parseInt(this.post.comments.display)+ 1);
+     }
+   }
+
+   setFeed(object){
+     this.comment = true;
+     this.currentfeed=object;
    }
   }

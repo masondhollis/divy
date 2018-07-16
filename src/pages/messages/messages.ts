@@ -45,6 +45,11 @@ export class messagesPage {
     cssClass: "Gold-modal"});
         GoldModal.present();
   }
+
+  golden(){
+    if(this.gold == 'false')
+      return({"content": 'url(/assets/icon/likeB.png)'});
+  }
 }
 
 @Component({selector: 'page-GoldPage',

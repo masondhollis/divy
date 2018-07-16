@@ -58,16 +58,16 @@
            <span *ngIf ="post.text === ''">
            <div id="buttons">
              <div id="Tbuttons">
-               <img class = "button button-like" (click) = "Like(post)"/>
+               <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
                <div id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
              </div>
              <div id="Tbuttons">
-               <div class = "button button-like" (click) = "Ember(post)"></div>
-               <div id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+               <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "Ember(post)"></div>
+               <div id = "LText" [ngStyle]="{'color':'#1BEADD'}" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
              </div>
-             <div id="Tbuttons">
-               <div class = "button button-comment" (click) = "Comment(post)"></div>
-               <div id = "CText" (click) = "goLike('comment',post)">{{post.comments}}</div>
+             <div id="Tbuttons" (click) = "Comment(post)">
+               <div class = "button button-comment" ></div>
+               <div id = "CText">{{post.comments.display}}</div>
              </div>
              <div id="Tbuttons">
              <div class = "button button-share" (click) = "Share(post)"></div>
@@ -77,23 +77,20 @@
          </div>
           </div>
 
-
       <!--Actions: Like, comment, repost, share -->
-
-
     <span *ngIf ="post.text !== ''">
     <div id="Lbuttons">
         <div id="LTbuttons">
-          <img class = "button button-like" (click) = "Like(post)"/>
+          <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
           <div id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
         </div>
         <div id="LTbuttons">
-          <div class = "button button-like" (click) = "ember(post)"></div>
-          <div id = "LText" (click) = "goLike('emberP',post)">{{post.embers.display}}</div>
+          <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "ember(post)"></div>
+          <div id = "LText" [ngStyle]="{'color':'#1BEADD'}" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
         </div>
-        <div id="LTbuttons">
-          <div class = "button button-comment" (click) = "Comment(post)"></div>
-          <div id = "CText" (click) = "goLike('comment',post)">{{post.comments}}</div>
+        <div id="LTbuttons" (click) = "Comment(post)">
+          <div class = "button button-comment"></div>
+          <div id = "CText" >{{post.comments.display}}</div>
         </div>
         <div id="LTbuttons">
         <div class = "button button-share" (click) = "Share(post)"></div>
@@ -111,11 +108,11 @@
 
 </ion-content>
 
-<ion-footer>
+<ion-footer id="mFooter" no-border>
   <div id="Filters">
-      <div (click) = "setfeed('public')"><img class="link link-all"/><h4>Public</h4></div>
-      <div (click) = "setfeed('friends')"><img class="link link-friends"/><h4>Favorites</h4></div>
-      <div (click) = "setfeed('family')"><img class="link link-family"/><h4>Family</h4></div>
+      <div (click) = "setfeed('public')"><img [ngStyle]="pfilter('public')" class="link link-all"/><h4 [ngStyle]="tfilter('public')">Public</h4></div>
+      <div (click) = "setfeed('friends')"><img [ngStyle]="pfilter('friends')" class="link link-friends"/><h4 [ngStyle]="tfilter('friends')">Favorites</h4></div>
+      <div (click) = "setfeed('family')"><img [ngStyle]="pfilter('family')" class="link link-family"/><h4 [ngStyle]="tfilter('family')">Family</h4></div>
       <div (click) = "pushPage('profile')"><img class="link link-profile"/><h4>Profile</h4></div>
       <div><img class="link link-notifications"/><h4>Notifications</h4></div>
   </div>
