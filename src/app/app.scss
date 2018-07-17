@@ -30,6 +30,8 @@ hr {
     margin: 0;
     padding: 0;
 }
+#hamMenu{
+}
 
 #hamClose
 {
@@ -43,6 +45,11 @@ hr {
   content: url(/assets/icon/Hamburger.png);
 }
 
+#hammy{
+  background-color:rgba(255,255,255,0.6);
+
+}
+
 #hamMain div
 {
   text-align: left;
@@ -53,14 +60,20 @@ hr {
   width: 100%;
 }
 
+#hamMain{
+  background-color:rgba(255,255,255,0.6);
+}
+
 
 
 .hamB{
-  width:10%;
+  width:7%;
 	position: auto;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 .hamB-home{
   content: url(/assets/icon/Home.png);
@@ -78,6 +91,9 @@ hr {
 .hamB-Gold
 {
   content: url(/assets/icon/likeB.png);
+  width:5%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .hamB-public
@@ -117,7 +133,7 @@ hr {
 
 .hamb-logout
 {
-  content: url(/assets/icon/logout.png);
+  content: url(/assets/icon/log.png);
 }
 
 ion-modal.Gold-modal{

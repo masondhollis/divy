@@ -1,13 +1,12 @@
 <ion-content>
-<ion-content center class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
+<ion-content center class = "MainContent" [ngStyle]="{'background': 'url('+myprofile.main_pic+')','background-size':'100% 100%'}">
 
 <ion-header id="THeader" transparent no-border>
   <ion-toolbar color="white"  transparent>
     <div (click)="goBack()" id="Back" transparent>
       <img src="/assets/icon/Back.png" id="Back"/>
-      <p>Back</p>
     </div>
-        <p class = "PTitle">
+        <p class = "ProTitle">
           Divy.
         </p>
         <button ion-button menuToggle right>
@@ -70,27 +69,53 @@
       </span>
     </div>
 
-    <div id="outer"><div id = "Edit">
+    <div id="outer"><div id = "Edit" [ngStyle] = "styleButton()">
       <span *ngIf = "myprofile === this.profile[0]" (click) = "edit()">Edit Profile</span>
       <span *ngIf = "myprofile !== this.profile[0]">
-        <span *ngIf ="this.view === 'public'" (click) = "toggle('follow')">Follow</span>
-        <span *ngIf ="this.view === 'friends'" (click) = "toggle('favorites')">Invite to Favorites</span>
-        <span *ngIf ="this.view === 'family'" (click) = "toggle('family')">Invite to Family</span>
+        <span *ngIf ="this.view === 'public'" (click) = "toggle('follow')">
+          <span *ngIf="this.following == false">Follow</span>
+          <span *ngIf="this.following == true">Following</span>
+        </span>
+        <span *ngIf ="this.view === 'friends'" (click) = "toggle('favorites')">
+          <span *ngIf="this.favorites == false">Invite to Favorites</span>
+          <span *ngIf="this.favorites == true">Added to Favorites</span>
+        </span>
+        <span *ngIf ="this.view === 'family'" (click) = "toggle('family')">
+          <span *ngIf="this.family == false">Invite to Family</span>
+          <span *ngIf="this.family == true">Added to Family</span>
+        </span>
       </span>
     </div></div>
-    <p id="bio">{{myprofile.bio}}</p>
+    <div id="bio">{{myprofile.bio}}</div>
+    <div id="webLink">{{myprofile.link}}</div>
   </span>
 
   <ion-footer center id="plusM"*ngIf="this.plus == true">
-    <h4>Send {{myprofile.name}} a message</h4><hr/>
-    <h4>Block</h4><hr/>
-    <h4>Mute</h4><hr/>
-    <h4>Report</h4><hr/>
-    <h4>Turn on post notification</h4><hr/>
-    <div id="plusMH"></div><hr/>
-    <div id='plusMHold'></div>
-    <hr/>
-    <h4 (click) = "plusTog()"> Go Back</h4>
+
+    <span *ngIf="myprofile !== this.profile[0]">
+      <h4>Send {{myprofile.name}} a message</h4><hr/>
+      <h4>Block</h4><hr/>
+      <h4>Mute</h4><hr/>
+      <h4>Report</h4><hr/>
+      <div>Grid View</div><div  [ngStyle] = "{'border-bottom':'solid',
+      'border-width':'thin'}">Full View</div><hr/>
+      <div id="plusMH"></div><hr/>
+      <div id='plusMHold'></div>
+      <hr/>
+      <h4 (click) = "plusTog()"> Go Back</h4>
+    </span>
+
+    <span *ngIf="myprofile === this.profile[0]">
+      <h4>Liked</h4><hr/>
+      <h4>Embered</h4><hr/>
+      <h4>Tagged</h4><hr/>
+      <div id="plusMH"></div><hr/>
+      <div id="plusMH"></div><hr/>
+      <div id='plusMHold'></div>
+      <hr/>
+      <h4 (click) = "plusTog()"> Go Back</h4>
+    </span>
+
   </ion-footer>
 
 </ion-footer>
@@ -104,7 +129,7 @@
             <div id="proHead">
               <img class="prof_pic" src="{{post.prof_pic}}" />
               <div id="holder">
-              <span (click)="goProfile(post.profile)">
+                <span (click)="goProfile(post.profile)">
               <div id="proInfo">
     	         <h2 id = "name">{{post.name}}</h2>
     	         <h2 id = "Uname">@{{post.username}}</h2>
@@ -117,16 +142,16 @@
                <span *ngIf ="post.text === ''">
                <div id="buttons">
                  <div id="Tbuttons">
-                   <img class = "button button-like" (click) = "Like(post)"/>
-                   <div id = "LText">{{post.likes.Display}}</div>
+                   <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
+                   <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
                  </div>
                  <div id="Tbuttons">
-                   <div class = "button button-like" (click) = "Ember(post)"></div>
-                   <div id = "LText">{{post.comments}}</div>
+                   <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "Ember(post)"></div>
+                   <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
                  </div>
-                 <div id="Tbuttons">
-                   <div class = "button button-comment" (click) = "Comment(post)"></div>
-                   <div id = "CText">{{post.comments}}</div>
+                 <div id="Tbuttons" (click) = "Comment(post)">
+                   <div class = "button button-comment" ></div>
+                   <div id = "CText">{{post.comments.display}}</div>
                  </div>
                  <div id="Tbuttons">
                  <div class = "button button-share" (click) = "Share(post)"></div>
@@ -136,23 +161,20 @@
              </div>
               </div>
 
-
           <!--Actions: Like, comment, repost, share -->
-
-
         <span *ngIf ="post.text !== ''">
         <div id="Lbuttons">
             <div id="LTbuttons">
-              <img class = "button button-like" (click) = "Like(post)"/>
-              <div id = "LText">{{post.likes.Display}}</div>
+              <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
+              <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
             </div>
             <div id="LTbuttons">
-              <div class = "button button-like" (click) = "Ember(post)"></div>
-              <div id = "LText">{{post.comments}}</div>
+              <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "ember(post)"></div>
+              <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
             </div>
-            <div id="LTbuttons">
-              <div class = "button button-comment" (click) = "Comment(post)"></div>
-              <div id = "CText">{{post.comments}}</div>
+            <div id="LTbuttons" (click) = "Comment(post)">
+              <div class = "button button-comment"></div>
+              <div id = "CText" >{{post.comments.display}}</div>
             </div>
             <div id="LTbuttons">
             <div class = "button button-share" (click) = "Share(post)"></div>
@@ -175,9 +197,9 @@
 <ion-footer *ngIf ="this.menu == true">
   <div id= "whitebar">
     <div id="filters">
-      <div (click) = "changeView('public')"><img class="plink link-public"/><h4>Public</h4></div>
-      <div (click) = "changeView('friends')"><img class="plink link-favorites"/><h4>Favorites</h4></div>
-      <div (click) = "changeView('family')"><img class="plink plink-family"/><h4>Family</h4></div>
+      <div (click) = "changeView('public')"><img [ngStyle]="pfilter('public')" class="link link-all"/><h4 [ngStyle]="tfilter('public')">Public</h4></div>
+      <div (click) = "changeView('friends')"><img [ngStyle]="pfilter('friends')" class="link link-friends"/><h4 [ngStyle]="tfilter('friends')">Favorites</h4></div>
+      <div (click) = "changeView('family')"><img [ngStyle]="pfilter('family')" class="link link-family"/><h4 [ngStyle]="tfilter('family')">Family</h4></div>
     </div>
     </div>
   </ion-footer>

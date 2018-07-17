@@ -4,6 +4,7 @@ page-home {
 
 #head{
   text-align: center;
+  background-size: 100% 100%;
 }
 
 /* Image Related Styling*/
@@ -27,11 +28,9 @@ page-home {
   font-size: 2em;
   font-weight: 800;
   padding: 0;
-  width:100%;
   margin: 0 auto;
   text-align: center;
-  vertical-align: middle;
-  display: inline-block;
+
 }
 
 .feed{
@@ -66,7 +65,8 @@ page-home {
 #time {
   display: inline-block;
 	font-size: .5em;
-	color: grey;
+	color: black;
+  padding-left: 10%;
   vertical-align: top;
 }
 
@@ -171,7 +171,7 @@ page-home {
   display:inline-block;
   width:35%;
   font-size: 60%;
-  color:#AA0000;
+  color:#ABABAB;
   text-align: left;
   vertical-align: bottom;
 }
@@ -259,13 +259,25 @@ page-home {
 .link-add
 {
   content: url(/assets/icon/Add.png);
-  width:8%;
+  width:4%;
 }
 
 .add{
-  content: url(/assets/icon/Add.png);
-  width:100%;
-  display:block;
+  content: url(/assets/icon/GAdd.png);
+  width:50%;
+  display:inline-block;
+  vertical-align: middle;
+  padding-top: 25%;
+}
+
+.arrow{
+  content: url(/assets/icon/send.png);
+  width:50%;
+  display:inline-block;
+  vertical-align: middle;
+  padding-top: 30%;
+  margin-left: 10%;
+  margin-bottom:25%;
 }
 
 #htextbox{
@@ -275,6 +287,8 @@ page-home {
   margin-top: 2%;
   margin-bottom: 2%;
   width: 70%;
+  height: 70%;
+  maxlength: 250;
   display:inline-block;
   border:none;
   vertical-align: top;
@@ -312,24 +326,40 @@ page-home {
 }
 
 #Pic-time{
-  content: url(/assets/icon/Family.png);
+  content: url(/assets/icon/time.png);
   vertical-align: middle;
+  width:15%;
 }
 
 #Pic-pic{
-  content: url(/assets/icon/Family.png);
+  content: url(/assets/icon/picture.png);
   vertical-align: middle;
+  width:15%;
 }
 
 #Pic-close{
-  content: url(/assets/icon/Family.png);
+  content: url(/assets/icon/close.png);
   text-align: right;
   padding-bottom: 4%;
+  width:15%;
 }
 
 #Pic-video{
-  content: url(/assets/icon/Family.png);
+  content: url(/assets/icon/picture.png);
   vertical-align: middle;
+  width:15%;
+}
+
+#time-close{
+  content: url(/assets/icon/close.png);
+  text-align: right;
+  width:7%;
+}
+
+#time-time{
+  content: url(/assets/icon/time.png);
+  vertical-align: middle;
+  width:7%;
 }
 
 #padding{
@@ -353,7 +383,7 @@ page-home {
   width: 40%;
   display: inline-block;
   vertical-align: middle;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
   padding-right: 5%;
 }
 
@@ -361,53 +391,77 @@ page-home {
   color:white;
   font-size: .75em;
   width: 100%;
-  height: 20%;
+  height: 10%;
   display: inline-block;
   text-align: center;
-  padding-top: 15%;
-  padding-bottom: 30%;
+  padding-top: 5%;
+  padding-bottom: 15%;
 }
 
 #tFilt{
-  width:100%;
+  width:105%;
   text-align: center;
   color:white;
+  padding-right: 5%;
 }
 
 #tFilt h1{
   display: inline-block;
-  width:30%;
+  width:20%;
+  margin-left: 6%;
+  margin-right: 6%;
+  text-align: center;
   font-size: .75em;
+  padding: 0;
 }
 
 #slider{
-  padding-top: 30%;
+  padding-top: 20%;
 }
 
 #slider h1{
   text-align: center;
+  width:105%;
+  margin-top:5%;
+}
+
+#slider div{
   width:100%;
-}
-
-.tSlider{
-  width:70%;
-  margin-right: 15%;
-  margin-bottom: 5%;
-  -webkit-appearance: none;
   text-align: center;
-  vertical-align: middle
 }
 
-.tSlider::-webkit-slider-thumb  {
+#slider h2{
+  width:40%;
+  padding:0;
+  text-align: right;
+}
+
+#slider h3{
+  width:40%;
+  padding:0;
+  text-align: left;
+  color:white;
+  font-size: .75em;
+  display: inline-block;
+}
+
+.tSlider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 3px;
+    position: relative;
+    right:15%;
+    background: #d3d3d3;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.tSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
     width: 15px;
-    height: 2px;
-    background: #4CAF50;
-    cursor: pointer;
-}
-
-.tSlider::-webkit-slider-runnable-track {
-    height: 2px;
-    background: grey;
+    height: 15px;
+    background: #FFFFFF;
     cursor: pointer;
 }
 

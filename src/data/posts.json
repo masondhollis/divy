@@ -75,7 +75,8 @@
       "likes": {
         "Amount": "47",
         "Display": "47",
-        "Hit": "false"
+        "Hit": "false",
+        "people":[]
       },
       "embers": {
         "amount": "4",
@@ -110,7 +111,7 @@
     "3": {
       "username": "BigBob25",
       "name": "Bobby Snobby",
-      "profile": "0",
+      "profile": "1",
       "time": "2 hours ago",
       "text": "This is a post that I'm posting on divy",
       "type": "Post",
@@ -118,7 +119,8 @@
       "likes": {
         "Amount": "52999",
         "Display": "52k",
-        "Hit": "false"
+        "Hit": "false",
+        "people":[]
       },
       "embers": {
         "amount": "4",
@@ -166,7 +168,8 @@
       "likes": {
         "Amount": "30000000",
         "Display": "30m",
-        "Hit": "false"
+        "Hit": "false",
+        "people":[]
       },
       "embers": {
         "amount": "4",
@@ -209,7 +212,8 @@
       "likes": {
         "Amount": "27000000",
         "Display": "27m",
-        "Hit": "false"
+        "Hit": "false",
+        "people":[]
       },
       "embers": {
         "amount": "4",
@@ -248,6 +252,7 @@
       "name": "Willy Nilly",
       "prof_pic": "/assets/imgs/prof_pics/bear.png",
       "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "link":"www.GreatBearPics.com",
       "public": {
         "followers": "25",
         "following": "72",
@@ -377,6 +382,7 @@
       "name": "Bobby Snobby",
       "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
       "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "link":"www.GreatBOBPics.com",
       "public": {
         "followers": "25",
         "following": "72",

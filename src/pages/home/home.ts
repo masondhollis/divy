@@ -152,6 +152,13 @@ export class HomePage {
       else if(post.embers.hit == 'true' && type == 'ember')
         return{"content": 'url(/assets/icon/emberxl.png)'}
     }
+
+    styleText(post,type){
+      if(type == 'like' && post.likes.Hit == 'true')
+        return{"color": '#AA0000'}
+      else if(post.embers.hit == 'true' && type == 'ember')
+        return{"color": '#1BEADD'}
+    }
   }
 
 
@@ -246,24 +253,28 @@ export class HomePage {
     <span *ngIf="this.type === 'time'">
     <div id='Timebar'>
       <div id='padding'></div>
-      <img id='Pic-close' (click)= 'dismiss()' />
-      <div (click)= 'gotime()'>
+      <img id='time-close' (click)= 'goBack()' />
+      <div>
         <h1> Adjust Time </h1>
-        <img id='Pic-time'/>
+        <img id='time-time'/>
       </div>
 
       <div id = 'slider'>
+        <div>
+          <h3>1 hour</h3>
+          <h2>Unlimited</h2>
+        </div>
       <input type='range' class='tSlider'/>
       <h1>4 hours</h1>
       </div>
 
       <div id='tFilt'>
-        <h1>Hours</h1>
+        <h1 [ngStyle] = "{'border-bottom':'solid'}">Hours</h1>
         <h1>Days</h1>
         <h1>Weeks</h1>
       </div>
       <h2> Adjust Time for your post to be visible.</h2>
-      <h1>Done</h1>
+      <h1 (click)="goBack()">Done</h1>
       </div>
     </span>
   </ion-content>>`})
@@ -280,6 +291,10 @@ export class HomePage {
 
    gotime(){
      this.type='time';
+   }
+
+   goBack(){
+     this.type='main';
    }
   }
 

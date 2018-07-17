@@ -30,7 +30,7 @@
     <input type="text" ng-model="string" (input)="postB()"
     id="htextbox" placeholder="Say something to the world...">
     <div id = "postButt"><div class="add" (click) = "goPic('main')"></div>
-      <div *ngIf="this.button == true" class="add" (click)="createPost()"></div>
+      <div *ngIf="this.button == true" class="arrow" (click)="createPost()"></div>
     </div>
 </div>
 </ion-header>
@@ -59,11 +59,11 @@
            <div id="buttons">
              <div id="Tbuttons">
                <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
-               <div id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+               <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
              </div>
              <div id="Tbuttons">
                <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "Ember(post)"></div>
-               <div id = "LText" [ngStyle]="{'color':'#1BEADD'}" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+               <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
              </div>
              <div id="Tbuttons" (click) = "Comment(post)">
                <div class = "button button-comment" ></div>
@@ -82,11 +82,11 @@
     <div id="Lbuttons">
         <div id="LTbuttons">
           <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
-          <div id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+          <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
         </div>
         <div id="LTbuttons">
           <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "ember(post)"></div>
-          <div id = "LText" [ngStyle]="{'color':'#1BEADD'}" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+          <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
         </div>
         <div id="LTbuttons" (click) = "Comment(post)">
           <div class = "button button-comment"></div>
