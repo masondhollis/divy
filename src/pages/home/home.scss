@@ -25,8 +25,8 @@ page-home {
 }
 
 .Title{
-  font-size: 2em;
-  font-weight: 800;
+  content: url(/assets/icon/divy.png);
+  width:40%;
   padding: 0;
   margin: 0 auto;
   text-align: center;
@@ -80,12 +80,13 @@ page-home {
 
 #proInfo{
   display: inline-block;
-  width:70%;
+  width:69%;
+  margin-left: 2%;
 }
 
 #name {
 	font-size: 3.5vw;
-	font-weight: bold;
+	font-weight: 500;
   margin: 0;
 }
 
@@ -98,7 +99,8 @@ page-home {
 #Text {
 	text-align:inline-block;
   width:100%;
-  margin:2%;
+  margin-top:2%;
+  margin-left: 2%;
   color:black;
 	font-size: 3.5vw;
 }
@@ -116,7 +118,9 @@ page-home {
 #navigation h4 {
 	font-size: 3.5vw;
   color:grey;
+  font-weight: 400;
   margin-top: 0;
+  width:100%;
 }
 
 #navigation div{
@@ -169,7 +173,8 @@ page-home {
 
 #LText{
   display:inline-block;
-  width:35%;
+  width:40%;
+  height:auto;
   font-size: 60%;
   color:#ABABAB;
   text-align: left;
@@ -283,13 +288,12 @@ page-home {
 #htextbox{
   background:#f1f1f1;
   font-size: .85em;
-  margin-left:7%;
+  margin-left:4%;
   margin-top: 2%;
   margin-bottom: 2%;
   width: 70%;
   height: 70%;
-  maxlength: 250;
-  display:inline-block;
+  display:table-cell;
   border:none;
   vertical-align: top;
 }
@@ -345,8 +349,9 @@ page-home {
 }
 
 #Pic-video{
-  content: url(/assets/icon/picture.png);
+  content: url(/assets/icon/video.png);
   vertical-align: middle;
+  margin-left: 3%;
   width:15%;
 }
 
@@ -489,29 +494,41 @@ page-home {
   vertical-align: middle;
   font-size: .9em;
   color:#AA0000;
+  margin-top:6%;
+  margin-right: 3%;
   margin-left: 25%;
 }
 
 #post-like{
-  width:8%;
+  width:5%;
   vertical-align: middle;
 	content: url(/assets/icon/like.png);
   display: inline-block;
   margin-right:25%;
+  margin-top: 2%;
 }
 
 #post-ember{
-  width:6%;
+  width:5%;
   vertical-align: middle;
 	content: url(/assets/icon/emberxl.png);
   display: inline-block;
   margin-right:25%;
+  margin-top: 2%;
 }
 
 #post-comment{
   width:6%;
   vertical-align: middle;
 	content: url(/assets/icon/comment.png);
+  display: inline-block;
+  margin-right:25%;
+}
+
+#post-commentB{
+  width:6%;
+  vertical-align: middle;
+	content: url(/assets/icon/commentB.png);
   display: inline-block;
   margin-right:25%;
 }
@@ -581,6 +598,7 @@ page-home {
   width:75%;
   display: inline-block;
   font-size: 1.25em;
+  color:Black;
   border:none;
 }
 
@@ -594,8 +612,8 @@ page-home {
 
 #CInfo{
   display: inline-block;
-  width:40%;
   vertical-align: top;
+  margin-right: 2%;
 
 }
 
@@ -621,6 +639,7 @@ page-home {
 
 #commentT h2{
   font-size: .75em;
+  color:grey;
 }
 
 #cprof_pic{
@@ -631,7 +650,7 @@ page-home {
 }
 
 #ctime{
-  margin-left: 10%;
+  margin-left: 13%;
 }
 
 #ctime h4{
@@ -643,11 +662,11 @@ page-home {
 }
 
 #rtime{
-  margin-left: 8%;
+  margin-left: 10%;
 }
 
 #rtime h3{
-  font-size: .5em;
+  font-size: .6em;
   display: inline-block;
   vertical-align: top;
   margin:0;

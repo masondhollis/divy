@@ -31,11 +31,12 @@ hr {
     padding: 0;
 }
 #hamMenu{
+
 }
 
 #hamClose
 {
-  width: 8%;
+  width: 6%;
   vertical-align: top;
   padding: 0;
   margin-top: 1em;
@@ -43,11 +44,6 @@ hr {
   position: relative;
   left:85%;
   content: url(/assets/icon/Hamburger.png);
-}
-
-#hammy{
-  background-color:rgba(255,255,255,0.6);
-
 }
 
 #hamMain div
@@ -61,7 +57,7 @@ hr {
 }
 
 #hamMain{
-  background-color:rgba(255,255,255,0.6);
+  background-color:rgba(255,255,255,0.3);
 }
 
 
@@ -174,4 +170,9 @@ ion-modal.ember-modal{
 
 ion-modal.button-modal{
   background-color: rgba(0, 0, 0, .8);
+}
+
+ion-menu.ham-menu{
+  background-color:rgba(0,0,0,0.6);
+  background-size: 100%;
 }

@@ -340,8 +340,8 @@ export class HomePage {
   @Component({selector: 'page-commentPage',
   template:`<ion-content class="notify">
   <ion-header id='likeH' no-border>
-    <h4 [ngStyle]="{'color':'#000000'}">{{post.comments.display}} Comments</h4>
-    <img id='post-comment' (click)="setFeed(this.content)"/>
+    <h4 [ngStyle]="{'color':'#000000'}">Comments</h4>
+    <img id='post-commentB' (click)="setFeed(this.content)"/>
     <img id='post-close' (click) = 'dismiss()'/>
   </ion-header>
 

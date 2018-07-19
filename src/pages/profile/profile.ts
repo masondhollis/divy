@@ -4,7 +4,6 @@ import { NavController, NavParams, ViewController,ModalController } from 'ionic-
 import { emberPage } from '../home/home';
 import { commentPage } from '../home/home';
 import { buttonPage } from '../home/home';
-
 var data = require("../../data/posts.json");
 
 @Component({
@@ -27,6 +26,7 @@ export class ProfilePage {
   following = false;
   favorites = false;
   family = false;
+  swipe = false;
   view = "public";
   proPosts = [];
 
@@ -42,6 +42,7 @@ export class ProfilePage {
   togglePro()
   {
     this.menu = !this.menu;
+    this.swipe = true;
   }
 
   changeView(type: string)
@@ -154,6 +155,11 @@ ember(post){
   pfilter(key){
     if(this.view == key)
       return{"content": 'url(/assets/icon/'+key+'B.png)'}
+  }
+
+  swipeToggle(key){
+    if(this.menu == false)
+      this.swipe = key;
   }
 }
 

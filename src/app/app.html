@@ -3,27 +3,25 @@
 </ion-content>
 
 <!-- Hamburger Menu -->
-<ion-menu [content] = "hamMenu" id="hamMenu">
-  <ion-content id='hammy'>
+<ion-menu [content] = "hamMenu" class="ham-menu" side="left" type="overlay">
     <div id = "hamMain">
       <div menuClose><img id = "hamClose"/></div>
-      <div (click) = "goHome()"><img class="hamB hamB-home"/>Home</div>
-      <div (click) = "goProfile('0')"><img class="hamB hamB-profile"/>My Profile</div>
+      <div menuClose (click) = "goHome()"><img class="hamB hamB-home"/>Home</div>
+      <div menuClose (click) = "goProfile('0')"><img class="hamB hamB-profile"/>My Profile</div>
       <hr/>
-      <div (click) = "goMessages('false')"><img class="hamB hamB-message"/>Messaging</div>
-      <div (click) = "goMessages('true')"><img class="hamB hamB-Gold"/>Flamed Messengers</div>
+      <div menuClose (click) = "goMessages('false')"><img class="hamB hamB-message"/>Messaging</div>
+      <div menuClose (click) = "goMessages('true')"><img class="hamB hamB-Gold"/>Flamed Messengers</div>
       <hr/>
-      <div (click) = "goMembers('public')"><img class="hamB hamB-public"/>Public Members</div>
-      <div (click) = "goMembers('favorites')"><img class="hamB hamb-favorites"/>Favorites Members</div>
-      <div (click) = "goMembers('family')"><img class="hamB hamb-family"/>Family Members</div>
+      <div menuClose (click) = "goMembers('public')"><img class="hamB hamB-public"/>Public Members</div>
+      <div menuClose (click) = "goMembers('favorites')"><img class="hamB hamb-favorites"/>Favorites Members</div>
+      <div menuClose (click) = "goMembers('family')"><img class="hamB hamb-family"/>Family Members</div>
       <div><img class="hamB hamb-promos"/>Promotions</div>
       <hr/>
-      <div (click)= "goSettings()"><img class="hamB hamb-set"/>Settings</div>
+      <div menuClose (click)= "goSettings()"><img class="hamB hamb-set"/>Settings</div>
       <div><img class="hamB hamb-thought"/>Give us your thoughts on Divy</div>
       <div><img class="hamB hamb-sup"/>Customer Support</div>
       <hr/><div><img class="hamB hamb-logout"/>Log Out</div>
     </div>
-  </ion-content>
 </ion-menu>
 
 <ion-nav #hamMenu #content [root]="rootPage"></ion-nav>

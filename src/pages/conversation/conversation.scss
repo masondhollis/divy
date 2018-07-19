@@ -38,12 +38,13 @@
 }
 
 #friend{
+  font-size: 1.25em;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-right: 8%;
   text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  width:50%;
-
-  font-size: 1.15em;
 }
 
 #messageFeed{
@@ -109,9 +110,10 @@
 #Ctext{
   display:table-cell;
   width: 70%;
+  background-attachment: scroll;
   padding:2%;
   background-color: #D1D1D1;
-  object-fit: cover;
+  background-size: 100% 100%;
   vertical-align: top;
 }
 

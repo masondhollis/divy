@@ -17,8 +17,9 @@
 </ion-header>
 
 <ion-footer id = "Footer">
-  <div id = "User">
+  <div id = "User" swipeAll (swipeup) = "swipeToggle(true)" (swipedown) = "swipeToggle(false)">
     <img (click) = "togglePro()" class="plink link-close" *ngIf = "this.menu == true"/>
+    <span *ngIf="this.swipe == true">
     <div id = "imgAndText">
     <img class="plink link-add" (click) = "plusTog()"/>
       <img item-start class="pprof_pic" src="{{myprofile.prof_pic}}" />
@@ -28,6 +29,7 @@
         <h2 id = "location">{{myprofile.location}}</h2>
       </div>
     </div>
+  </span>
     <img (click) = "togglePro()" class="plink link-expand" *ngIf = "this.menu == false"/>
   </div>
   <span *ngIf ="this.menu == true" >
