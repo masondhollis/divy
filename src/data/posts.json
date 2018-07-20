@@ -140,10 +140,10 @@
         "hit": "false",
         "people": [
           {
-          "username": "CourtSmithy",
-          "name": "Courtney Smithson",
-          "prof_pic": "/assets/imgs/prof_pics/Court_pro.png",
-          "profile": "4"
+            "username": "CourtSmithy",
+            "name": "Courtney Smithson",
+            "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+            "profile": "4"
           }
         ]
       },
@@ -154,7 +154,7 @@
           {
             "username": "CourtSmithy",
             "name": "Courtney Smithson",
-            "prof_pic": "/assets/imgs/prof_pics/Court_pro.png",
+            "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
             "profile": "4",
             "text": "Beautiful Water",
             "time": "11:00am",
@@ -177,8 +177,7 @@
         "Amount": "27m",
         "Display": "27m",
         "Hit": "false",
-        "people": [
-        ]
+        "people": []
       },
       "embers": {
         "amount": "20",
@@ -189,8 +188,7 @@
       "comments": {
         "amount": "5",
         "display": "5",
-        "list": [
-        ]
+        "list": []
       },
       "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.png",
       "post_pic": "/assets/imgs/post_pics/Sonic_back2.jpg"
@@ -207,8 +205,7 @@
         "Amount": "26",
         "Display": "26",
         "Hit": "false",
-        "people": [
-        ]
+        "people": []
       },
       "embers": {
         "amount": "4",
@@ -219,9 +216,7 @@
       "comments": {
         "amount": "5",
         "display": "5",
-        "list": [
-
-        ]
+        "list": []
       },
       "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
       "post_pic": "https://www.youtube.com/embed/Gr58CYLmFww"
@@ -238,8 +233,7 @@
         "Amount": "2",
         "Display": "2",
         "Hit": "false",
-        "people": [
-        ]
+        "people": []
       },
       "embers": {
         "amount": "0",
@@ -264,7 +258,7 @@
                 "time": "1 hour ago",
                 "profile": "3",
                 "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
-                "text":"Yo I said message me."
+                "text": "Yo I said message me."
               }
             ]
           }
@@ -285,9 +279,7 @@
         "Amount": "2k",
         "Display": "2k",
         "Hit": "false",
-        "people": [
-
-        ]
+        "people": []
       },
       "embers": {
         "amount": "67",
@@ -298,8 +290,7 @@
       "comments": {
         "amount": "5",
         "display": "5",
-        "list": [
-        ]
+        "list": []
       },
       "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
       "post_pic": ""
@@ -316,8 +307,7 @@
         "Amount": "5k",
         "Display": "5k",
         "Hit": "false",
-        "people": [
-        ]
+        "people": []
       },
       "embers": {
         "amount": "10",
@@ -328,614 +318,326 @@
       "comments": {
         "amount": "40",
         "display": "40",
-        "list": [
-        ]
+        "list": []
       },
       "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
       "post_pic": "/assets/imgs/post_pics/Nike_post1.jpg"
     },
-      "8": {
-        "username": "BigMack97",
-        "name": "Mackenzie Mcalister",
-        "time": "8 hours ago",
-        "profile": "1",
-        "text": "",
-        "type": "Photo",
-        "feed": "public",
-        "likes": {
-          "Amount": "3.5k",
-          "Display": "3.5k",
-          "Hit": "false",
-          "people": [
-          ]
-        },
-        "embers": {
-          "amount": "60",
-          "display": "60",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
-        "post_pic": "/assets/imgs/post_pics/Mack_apart.jpg"
+    "8": {
+      "username": "BigMack97",
+      "name": "Mackenzie Mcalister",
+      "time": "8 hours ago",
+      "profile": "1",
+      "text": "",
+      "type": "Photo",
+      "feed": "public",
+      "likes": {
+        "Amount": "3.5k",
+        "Display": "3.5k",
+        "Hit": "false",
+        "people": []
       },
-      "9": {
-        "username": "JimJim56",
-        "name": "Jimmy Myers",
-        "time": "9 hours ago",
-        "profile": "3",
-        "text": "I've got to give it to them, this looks delicious.",
-        "type": "Photo",
-        "feed": "public",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "TheBrains",
-              "name": "Brian Lee",
-              "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
-              "profile": "2"
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
-        "post_pic": "/assets/imgs/post_pics/burger.jpg"
+      "embers": {
+        "amount": "60",
+        "display": "60",
+        "hit": "false",
+        "people": []
       },
-      "10": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
       },
-      "11": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+      "post_pic": "/assets/imgs/post_pics/Mack_apart.jpg"
+    },
+    "9": {
+      "username": "JimJim56",
+      "name": "Jimmy Myers",
+      "time": "9 hours ago",
+      "profile": "3",
+      "text": "I've got to give it to them, this looks delicious.",
+      "type": "Photo",
+      "feed": "public",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": [
+          {
+            "username": "TheBrains",
+            "name": "Brian Lee",
+            "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+            "profile": "2"
+          }
+        ]
       },
-      "12": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
       },
-      "13": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
       },
-      "14": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/burger.jpg"
+    },
+    "10": {
+      "username": "BrautWurtz",
+      "name": "Joe Wurtz",
+      "time": "10 hours ago",
+      "profile": "0",
+      "text": "",
+      "type": "Photo",
+      "feed": "family",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
       },
-      "15": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
       },
-      "16": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
       },
-      "17": {
-        "username": "BigBoye24",
-        "name": "Willy Nilly",
-        "time": "1 hour ago",
-        "profile": "1",
-        "text": "Me and the Fam.",
-        "type": "Photo",
-        "feed": "family",
-        "likes": {
-          "Amount": "26",
-          "Display": "26",
-          "Hit": "false",
-          "people": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "id": ""
-            }
-          ]
-        },
-        "embers": {
-          "amount": "4",
-          "display": "4",
-          "hit": "false",
-          "people": []
-        },
-        "comments": {
-          "amount": "5",
-          "display": "5",
-          "list": [
-            {
-              "username": "BigBob25",
-              "name": "BobbySnobby",
-              "text": "This is not ccooooolll",
-              "time": "10:59pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [
-                {
-                  "name": "BobbySnobby",
-                  "text": "This is not ccooooolll",
-                  "time": "10:59pm",
-                  "prof_pic": "/assets/imgs/prof_pics/placeholder.png"
-                }
-              ],
-              "id": ""
-            },
-            {
-              "username": "LameVid",
-              "name": "VideoUse",
-              "text": "This is sooo not ccooooolll",
-              "time": "11:35pm",
-              "prof_pic": "/assets/imgs/prof_pics/placeholder.png",
-              "replies": [],
-              "id": ""
-            }
-          ]
-        },
-        "prof_pic": "/assets/imgs/prof_pics/bear.png",
-        "post_pic": "/assets/imgs/post_pics/family.jpg"
-      }
+      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/Joe_alask.jpg"
+    },
+    "11": {
+      "username": "BigMack97",
+      "name": "Mackenzie Mcalister",
+      "time": "12 hours ago",
+      "profile": "1",
+      "text": "\"Art is not about pretty things. It's about who we are, what happened to us, and how our lives are affected\" -Elizabeth Broun",
+      "type": "Post",
+      "feed": "public",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+      "post_pic": ""
+    },
+    "12": {
+      "username": "TheBrains",
+      "name": "Brian Lee",
+      "time": "1 hour ago",
+      "profile": "2",
+      "text": "Me and the Mustang Family.",
+      "type": "Photo",
+      "feed": "friends",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/Brian_HS.jpg"
+    },
+    "13": {
+      "username": "NikeUSA",
+      "name": "Nke",
+      "time": "13 hours ago",
+      "profile": "6",
+      "text": "More than Clothing.",
+      "type": "Promo",
+      "feed": "public",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/Nike_back.jpg"
+    },
+    "14": {
+      "username": "CourtSmithy",
+      "name": "Courtney Smithson",
+      "time": "16 hours ago",
+      "profile": "4",
+      "text": "Fun at Disney!",
+      "type": "Photo",
+      "feed": "family",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/Court_disney.jpg"
+    },
+    "15": {
+      "username": "CourtSmithy",
+      "name": "Courtney Smithson",
+      "time": "24 hours ago",
+      "profile": "4",
+      "text": "Who would've known that DisneyWorld was so great! I always thought it was kind of lame but it's totally differnt when you go with someone!",
+      "type": "Post",
+      "feed": "family",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+      "post_pic": ""
+    },
+    "16": {
+      "username": "SonicUSA",
+      "name": "Sonic",
+      "time": "1 day ago",
+      "profile": "5",
+      "text": "Come in for our special Buy one, Get one Corndog for internation corndog day!",
+      "type": "Promo",
+      "feed": "public",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.png",
+      "post_pic": "/assets/imgs/post_pics/sonic_corndog.jpg"
+    },
+    "17": {
+      "username": "BrautWurtz",
+      "name": "Joe Wurtz",
+      "time": "2 days ago",
+      "profile": "0",
+      "text": "Great days here in Alaska, it's a lot cooler here than it is in Texas!",
+      "type": "Photo",
+      "feed": "friends",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
+      "post_pic": "/assets/imgs/post_pics/Joe_alask2.jpg"
+    },
+    "18": {
+      "username": "BrautWurtz",
+      "name": "Joe Wurtz",
+      "time": "3 days ago",
+      "profile": "0",
+      "text": "Saw a Grizzly Bear today! it's a shame I didn't catch a picture!.",
+      "type": "Post",
+      "feed": "friends",
+      "likes": {
+        "Amount": "26",
+        "Display": "26",
+        "Hit": "false",
+        "people": []
+      },
+      "embers": {
+        "amount": "4",
+        "display": "4",
+        "hit": "false",
+        "people": []
+      },
+      "comments": {
+        "amount": "5",
+        "display": "5",
+        "list": []
+      },
+      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
+      "post_pic": ""
+    }
   },
   "Profiles": {
     "0": {
@@ -970,14 +672,15 @@
         "videos": "5"
       },
       "posts": [
-        "16",
-        "17"
+        "10",
+        "17",
+        "18"
       ],
       "bio": "Just your average Texan. The Kodiak Grizzly Bear is the most magnificent species of Bear!",
       "location": "Dallas, Texas",
       "messages": [
         {
-          "id":"0",
+          "id": "0",
           "profile": "1",
           "username": "BigMack97",
           "name": "Mackenzie Mcalister",
@@ -1027,7 +730,6 @@
               "user": "true",
               "text": "Great, see you then!"
             }
-
           ],
           "Gold": "false",
           "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
@@ -1037,7 +739,7 @@
           "id": "1",
           "username": "TheBrains",
           "name": "Brian Lee",
-          "profile": "3",
+          "profile": "2",
           "content": [
             {
               "time": "50 mins",
@@ -1184,7 +886,7 @@
       "username": "JimJim56",
       "name": "Jim Myers",
       "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "main_pic": "/assets/imgs/post_pics/jim_back.jpg",
       "link": "",
       "public": {
         "followers": "500",

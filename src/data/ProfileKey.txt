@@ -1,0 +1,35 @@
+--Profiles
+People: 
+
+	0:
+	name:Joe Wurtz
+	username: Brautwurtz
+	posts:10,17,18
+
+	1:
+	name: Mackenzie Mcalister
+	Username: BigMack97
+	posts:2,6,8,11
+
+	2:
+	name:Brian Lee
+	username:TheBrains
+	posts:1,4,12
+
+	3:
+	name:Jimmy Myers 
+	username:JimJim56
+	posts:5,9
+
+	4:
+	name:Courtney Smith 
+	back pic dims
+	username: CourtSmith
+	posts:0,14,15
+
+Promo:
+	5:Sonic
+	posts:3,16
+
+	6:Nike
+	posts:7,13
