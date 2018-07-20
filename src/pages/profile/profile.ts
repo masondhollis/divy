@@ -4,6 +4,7 @@ import { NavController, NavParams, ViewController,ModalController } from 'ionic-
 import { emberPage } from '../home/home';
 import { commentPage } from '../home/home';
 import { buttonPage } from '../home/home';
+import { DomSanitizer } from '@angular/platform-browser';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -12,59 +13,83 @@ var data = require("../../data/posts.json");
 })
 
 export class ProfilePage {
+  //Profiles definition
   profile = Object.keys(data.Profiles).map(function(key){
     return data.Profiles[key];
   });
 
+  //Posts definition
   posts = Object.keys(data.Posts).map(function(key){
     return data.Posts[key];
   });
 
+  //Variables
   myprofile;
   menu = false;
   plus = false;
   following = false;
   favorites = false;
   family = false;
-  swipe = false;
+  swipe = true;
   view = "public";
   proPosts = [];
 
+  //constructor
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController, public sanitizer: DomSanitizer) {
+
+    //Current Profile
     this.myprofile = this.profile[navParams.get("ProKey")];
+
+    //Get current profile posts
     var x;
     for (x in this.myprofile.posts){
       this.proPosts.push(this.posts[this.myprofile.posts[x]]);
     }
   }
 
+  //Menu Toggle
   togglePro()
   {
     this.menu = !this.menu;
     this.swipe = true;
   }
 
+  //View Switch
   changeView(type: string)
   {
     this.view = type;
   }
 
+  //Changes bottom nav type
+  toggle(type){
+    if(type == 'follow')
+      this.following = !this.following;
+    else if(type == 'favorites')
+      this.favorites = !this.favorites;
+    else if(type == 'family')
+      this.family = !this.family;
+  }
+
+  //Hide menu on swipe toggle
+  swipeToggle(key){
+    if(this.menu == false)
+      this.swipe = key;
+  }
+
+  //Go to previous page
   goBack()
   {
     this.navCtrl.pop();
   }
 
-  rType()
-  {
-    return this.view;
-  }
-
+  //Toggle Plus Menu
   plusTog()
   {
     this.plus = !this.plus;
   }
 
+  //Toggle Edit modal menu
   edit()
   {
     let edit = this.modalCtrl.create(editPage,{
@@ -72,18 +97,21 @@ export class ProfilePage {
     edit.present();
   }
 
+  //Go like Modal
   goLike(key,post){
     let buttonsPage = this.modalCtrl.create(buttonPage,{type:key,post:post},{
     cssClass: "button-modal"});
     buttonsPage.present();
   }
 
+  //Go COmment Modal
   Comment(post){
     let comPage = this.modalCtrl.create(commentPage,{post:post},{
     cssClass: "button-modal"});
     comPage.present();
   }
 
+  //Like FUnction
   Like(post){
   //Either like or unlike
   if(post.likes.Hit == "false")
@@ -109,29 +137,23 @@ export class ProfilePage {
       post.likes.Display = String(parseInt(likes)).substring(0,2) + "k";
   else
     post.likes.Display = String(parseInt(likes));
-}
-
-ember(post){
-  let embPage = this.modalCtrl.create(emberPage,{post:post},{
-  cssClass: "ember-modal"});
-  embPage.present();
-}
-
-  toggle(type){
-    if(type == 'follow')
-      this.following = !this.following;
-    else if(type == 'favorites')
-      this.favorites = !this.favorites;
-    else if(type == 'family')
-      this.family = !this.family;
   }
 
+  //Go to ember modal
+  ember(post){
+    let embPage = this.modalCtrl.create(emberPage,{post:post},{
+      cssClass: "ember-modal"});
+    embPage.present();
+  }
+
+  //css button dynamic styling
   styleButton(){
     if((this.view == 'public' && this.following == true) || (this.view == 'friends'
       && this.favorites == true) || (this.view == 'family' && this.family == true))
-        return{'color':'white'};
+      return{'color':'white'};
   }
 
+  //Css button image dynamic styling
   stylebutt(post,type)
   {
     if(post.likes.Hit =='true' && type == 'like')
@@ -140,6 +162,7 @@ ember(post){
       return{"content": 'url(/assets/icon/emberxl.png)'}
   }
 
+  //Css text dynamic Styling
   styleText(post,type){
     if(type == 'like' && post.likes.Hit == 'true')
       return{"color": '#AA0000'}
@@ -147,22 +170,20 @@ ember(post){
       return{"color": '#1BEADD'}
   }
 
+  //Middle toggle styling
   tfilter(key){
     if(this.view == key)
       return {"color":'black'};
   }
 
+  //bottom row styling
   pfilter(key){
     if(this.view == key)
       return{"content": 'url(/assets/icon/'+key+'B.png)'}
   }
-
-  swipeToggle(key){
-    if(this.menu == false)
-      this.swipe = key;
-  }
 }
 
+//Edit profile page Component
 @Component({selector: 'page-edit',
 templateUrl: 'profileSett.html'})
 

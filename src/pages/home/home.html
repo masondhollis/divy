@@ -1,112 +1,124 @@
 <ion-header id="head">
+
+  <!--Main Header-->
   <ion-toolbar color="white">
-        <button ion-button menuToggle="left">
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <p class = "Title">
-          Divy.
-        </p>
-        <button ion-button menuToggle="right" right>
-          <ion-icon name="search"></ion-icon>
-        </button>
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <p class = "Title">
+      Divy.
+    </p>
+    <button ion-button menuToggle="right" right>
+      <ion-icon name="search"></ion-icon>
+    </button>
   </ion-toolbar>
 
+  <!--NavBar Selection Top -->
   <div id="navigation" >
-      <div><button class="Nav" (click) = "filter('All')"><h4 [ngStyle] = "style('All')"> ALL </h4>
-      </button></div>
-      <div><button class="Nav" (click) = "filter('Post')"><h4 [ngStyle] = "style('Post')"> POSTS </h4>
-      </button></div>
-      <div><button class="Nav" (click) = "filter('Photo')"><h4 [ngStyle] = "style('Photo')"> PHOTOS </h4>
-      </button></div>
-      <div><button class="Nav" (click) = "filter('Video')"><h4 [ngStyle] = "style('Video')"> VIDEOS </h4>
-      </button></div>
-      <div><button class="Nav" (click) = "filter('Promo')"><h4 [ngStyle] = "style('Promo')"> PROMOS </h4>
-      </button></div>
+    <div><button class="Nav" (click) = "filter('All')">
+      <h4 [ngStyle] = "style('All')"> ALL </h4></button></div>
+    <div><button class="Nav" (click) = "filter('Post')">
+      <h4 [ngStyle] = "style('Post')"> POSTS </h4></button></div>
+    <div><button class="Nav" (click) = "filter('Photo')">
+      <h4 [ngStyle] = "style('Photo')"> PHOTOS </h4></button></div>
+    <div><button class="Nav" (click) = "filter('Video')">
+      <h4 [ngStyle] = "style('Video')"> VIDEOS </h4></button></div>
+    <div><button class="Nav" (click) = "filter('Promo')">
+      <h4 [ngStyle] = "style('Promo')"> PROMOS </h4></button></div>
   </div>
 
-<!-- TODO Text Input -->
+<!--Text Input -->
   <div id="input">
     <input type="text" ng-model="string" (input)="postB()"
     id="htextbox" placeholder="Say something to the world...">
     <div id = "postButt"><div class="add" (click) = "goPic('main')"></div>
       <div *ngIf="this.button == true" class="arrow" (click)="createPost()"></div>
     </div>
-</div>
+  </div>
 </ion-header>
 
+<!--Main Feed -->
 <ion-content class= "feed">
   <div *ngFor="let post of posts">
-    <div *ngIf= "(post.type === rType() || rType() === 'All') && post.feed === fType()">
+    <div *ngIf= "(post.type === filt || filt === 'All') && post.feed === feed">
+
+      <!--Post Cards -->
       <ion-card class="posts">
-
-    <!-- TODO: STYLE THIS -->
-
         <div id="proHead">
           <img class="prof_pic" src="{{post.prof_pic}}" />
           <div id="holder">
-            <span (click)="goProfile(post.profile)">
-          <div id="proInfo">
-	         <h2 id = "name">{{post.name}}</h2>
-	         <h2 id = "Uname">@{{post.username}}</h2>
-          </div>
-          </span>
-           <h2 id ="time">{{post.time}}</h2>
-           <span *ngIf = "post.text != ''">
-             <div id = "Text">{{post.text}}</div>
+          <span (click)="goProfile(post.profile)">
+            <div id="proInfo">
+	            <h2 id = "name">{{post.name}}</h2>
+	            <h2 id = "Uname">@{{post.username}}</h2>
+            </div>
            </span>
-           <span *ngIf ="post.text === ''">
+           <h2 id ="time">{{post.time}}</h2>
+           <div *ngIf = "post.text != ''" id = "Text">{{post.text}}</div>
+
+          <!--Actions: Like, comment, repost, share -->
+          <span *ngIf ="post.text === ''">
            <div id="buttons">
              <div id="Tbuttons">
-               <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
-               <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+               <img [ngStyle]="stylebutt(post,'like')"
+                class = "button button-like" (click) = "Like(post)"/>
+               <div [ngStyle]="styleText(post,'like')" id = "LText"
+                (click) = "goLike('like',post)">{{post.likes.Display}}</div>
              </div>
              <div id="Tbuttons">
-               <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "Ember(post)"></div>
-               <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+               <div [ngStyle]="stylebutt(post,'ember')"
+                class = "button button-ember" (click) = "Ember(post)"></div>
+               <div [ngStyle]="styleText(post,'ember')" id = "LText"
+                (click) = "goLike('ember',post)">{{post.embers.display}}</div>
              </div>
              <div id="Tbuttons" (click) = "Comment(post)">
                <div class = "button button-comment" ></div>
                <div id = "CText">{{post.comments.display}}</div>
              </div>
              <div id="Tbuttons">
-             <div class = "button button-share" (click) = "Share(post)"></div>
-           </div>
+               <div class = "button button-share"></div>
+             </div>
            </div>
          </span>
-         </div>
-          </div>
-
-      <!--Actions: Like, comment, repost, share -->
+        </div>
+      </div>
     <span *ngIf ="post.text !== ''">
     <div id="Lbuttons">
         <div id="LTbuttons">
-          <img [ngStyle]="stylebutt(post,'like')" class = "button button-like" (click) = "Like(post)"/>
-          <div [ngStyle]="styleText(post,'like')" id = "LText" (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+          <img [ngStyle]="stylebutt(post,'like')"
+            class = "button button-like" (click) = "Like(post)"/>
+          <div [ngStyle]="styleText(post,'like')" id = "LText"
+            (click) = "goLike('like',post)">{{post.likes.Display}}</div>
         </div>
         <div id="LTbuttons">
-          <div [ngStyle]="stylebutt(post,'ember')" class = "button button-ember" (click) = "ember(post)"></div>
-          <div [ngStyle]="styleText(post,'ember')" id = "LText" (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+          <div [ngStyle]="stylebutt(post,'ember')"
+            class = "button button-ember" (click) = "ember(post)"></div>
+          <div [ngStyle]="styleText(post,'ember')" id = "LText"
+            (click) = "goLike('ember',post)">{{post.embers.display}}</div>
         </div>
         <div id="LTbuttons" (click) = "Comment(post)">
           <div class = "button button-comment"></div>
           <div id = "CText" >{{post.comments.display}}</div>
         </div>
         <div id="LTbuttons">
-        <div class = "button button-share" (click) = "Share(post)"></div>
+        <div class = "button button-share" ></div>
       </div>
     </div>
     </span>
 
+  <!--Image Logic -->
   <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
-  src="{{post.post_pic}}" />
-  <object *ngIf="post.type =='Video'" data="https://www.youtube.com/embed/VDGD7kEiksQ"
-  class = "post_pic"></object>
+    src="{{post.post_pic}}" />
+  <iframe *ngIf="post.type == 'Video'" width="100%" height="100%"
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(post.post_pic)"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
   </ion-card>
+ </div>
 </div>
-</div>
-
 </ion-content>
 
+<!--Bottom Nav Filter -->
 <ion-footer id="mFooter" no-border>
   <div id="Filters">
       <div (click) = "setfeed('public')"><img [ngStyle]="pfilter('public')" class="link link-all"/><h4 [ngStyle]="tfilter('public')">Public</h4></div>

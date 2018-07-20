@@ -3,40 +3,34 @@
     <button ion-button menuToggle="left">
       <ion-icon name="menu"></ion-icon>
     </button>
-        <p id= "friend">
-          <span *ngIf ="this.gold =='true'">
-            Flamed Messages </span>
-          <span *ngIf = "this.gold == 'false'">
-            Messages </span>
-
-        </p>
-      <button ion-button menuToggle="right" right>
-        <ion-icon id="EditButt">Edit</ion-icon>
-      </button>
+    <p id= "friend">
+    <span *ngIf ="this.gold =='true'">
+      Flamed Messages </span>
+    <span *ngIf = "this.gold == 'false'">
+      Messages </span>
+    </p>
+    <button ion-button menuToggle="right" right>
+      <ion-icon id="EditButt">Edit</ion-icon>
+    </button>
   </ion-toolbar>
-
-  <!-- TODO Text Input -->
-    <div id="input">
-      <input type="text" ng-model="string" id="textbox" placeholder="Search messages...">
-    </div>
+  <div id="input">
+    <input type="text" ng-model="string" id="textbox" placeholder="Search messages...">
+  </div>
 </ion-header>
 
 <ion-content class= "mfeed">
   <div *ngFor="let message of messages">
-    <span>
-      <ion-card class="posts" *ngIf ="this.gold == message.Gold">
-        <div id = "MessUser" >
-          <img class="mprof_pic" src="{{message.prof_pic}}" />
-            <div id = "MInfo" (click) = "goConvo(message.id)">
-              <h2 id = "mname">{{message.name}}</h2>
-              <h2 id = "mUname">@{{message.username}}</h2>
-              <h2 id = "mcont">{{message.content[0].text}}...</h2>
-            </div>
-            <div id = "mtime">{{message.content[0].time}}</div>
+    <ion-card class="posts" *ngIf ="this.gold == message.Gold">
+      <div id = "MessUser">
+        <img class="mprof_pic" src="{{message.prof_pic}}" (click)="goProfile(message.profile)"/>
+          <div id = "MInfo" (click) = "goConvo(message.id)">
+            <h2 id = "mname">{{message.name}}</h2>
+            <h2 id = "mUname">@{{message.username}}</h2>
+            <h2 id = "mcont">{{message.content[message.content.length-1].text}}...</h2>
+          </div>
+          <div id = "mtime">{{message.content[message.content.length-1].time}}</div>
         <div class="mgold" (click)="goGold(message)" [ngStyle]="golden()"></div>
       </div>
-
-      </ion-card>
-    </span>
+    </ion-card>
   </div>
 </ion-content>

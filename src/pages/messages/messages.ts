@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController,ViewController} from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
 
 import {convoPage} from '../conversation/conversation';
@@ -10,17 +11,18 @@ import {convoPage} from '../conversation/conversation';
 })
 
 export class messagesPage {
+
   gold ='false';
   messages = Object.keys(data.Profiles[0].messages).map(function(key){
     return data.Profiles[0].messages[key];
   });
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public modalCtrl: ModalController) {
     this.gold = navParams.get("Gold")
   }
 
-  goBack()
-  {
+  goBack(){
     this.navCtrl.pop();
   }
 
@@ -28,8 +30,7 @@ export class messagesPage {
     this.navCtrl.push(convoPage,{ConKey: key},{animate:false})
   }
 
-  goGold(message)
-  {
+  goGold(message){
     if(message.Gold == 'true')
       message.Gold = 'false';
     else
@@ -37,7 +38,6 @@ export class messagesPage {
       message.Gold = 'true';
       this.presentAlert(message);
     }
-
   }
 
   presentAlert(message) {
@@ -50,24 +50,31 @@ export class messagesPage {
     if(this.gold == 'false')
       return({"content": 'url(/assets/icon/likeB.png)'});
   }
+
+  goProfile(key){
+    this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
+  }
 }
 
+//Gold alert modal
 @Component({selector: 'page-GoldPage',
-template:`<ion-content (click) = 'dismiss()'>
+template:`
+<ion-content (click) = 'dismiss()'>
   <div id="goldAlert">
-  <div>
-  <img/>
-  <h4>{{message.name}}</h4>
-  <h4>Was added to your Flamed Messages!</h4>
-  </div>
+    <div>
+    <img/>
+    <h4>{{message.name}}</h4>
+    <h4>Was added to your Flamed Messages!</h4>
+    </div>
   </div>
 </ion-content>>`})
 
 export class GoldPage {
+
   message={};
- constructor(public viewCtrl: ViewController, public navParams: NavParams) {
-   this.message = navParams.get("message");
-   setTimeout(() => {this.dismiss();}, 3000);
+  constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+    this.message = navParams.get("message");
+    setTimeout(() => {this.dismiss();}, 3000);
  }
 
  dismiss() {

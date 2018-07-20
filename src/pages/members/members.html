@@ -3,14 +3,14 @@
     <div (click)="goBack()" id="Back" transparent>
       <img src="/assets/icon/Back.png" id="Back"/>
     </div>
-        <p id="mfeed">
-           <span *ngIf="this.group == 'public'">Public Feed</span>
-           <span *ngIf="this.group == 'family'">Family Members</span>
-           <span *ngIf="this.group == 'favorites'">Favorites Members</span>
-        </p>
-        <button menuToggle="right" right id="EditButt">
-          <ion-icon id="EditButt">Edit</ion-icon>
-        </button>
+    <p id="mfeed">
+      <span *ngIf="this.group == 'public'">Public Feed</span>
+      <span *ngIf="this.group == 'family'">Family Members</span>
+      <span *ngIf="this.group == 'favorites'">Favorites Members</span>
+    </p>
+    <button menuToggle="right" right id="EditButt">
+      <ion-icon id="EditButt">Edit</ion-icon>
+    </button>
   </ion-toolbar>
 
   <div id="selectors">
@@ -32,27 +32,29 @@
 
 <ion-content class= "mfeed">
   <div *ngFor="let member of members">
-      <ion-card class="users" *ngIf = "member.follower == 'true'
+    <ion-card class="users" *ngIf = "member.follower == 'true'
       && this.filter == 'followers' || member.following == 'true'
       && this.filter == 'following'">
-        <div id = "MessUser">
-          <img class="mprof_pic" src="{{member.prof_pic}}" />
-            <div id = "MInfo">
-              <h2 id = "mname">{{member.name}}</h2>
-              <h2 id = "mUname">@{{member.username}}</h2>
-            </div>
-            <div id="type"><span *ngIf="this.group == 'public' && this.filter == 'followers' && member.following == 'true'">
-              following
-            </span>
-            <span *ngIf="this.group == 'public' && this.filter == 'following' && member.follower == 'true'">
-              follower
-            </span>
-            <span *ngIf="this.group == 'family' && member.follower == 'true' && member.following == 'true'">
-              mutual
-            </span>
-          </div>
+      <div id = "MessUser" (click)="goProfile(member.profile)">
+        <img class="mprof_pic" src="{{member.prof_pic}}" />
+        <div id = "MInfo">
+          <h2 id = "mname">{{member.name}}</h2>
+          <h2 id = "mUname">@{{member.username}}</h2>
+        </div>
+        <div id="type"><span *ngIf="this.group == 'public' &&
+          this.filter == 'followers' && member.following == 'true'">
+          Following
+        </span>
+        <span *ngIf="this.group == 'public' &&
+          this.filter == 'following' && member.follower == 'true'">
+          Follower
+        </span>
+        <span *ngIf="this.group == 'family' && member.follower == 'true' &&
+          member.following == 'true'">
+          Mutual
+        </span>
+        </div>
       </div>
-
-      </ion-card>
+    </ion-card>
   </div>
 <ion-content>

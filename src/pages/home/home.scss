@@ -86,7 +86,7 @@ page-home {
 
 #name {
 	font-size: 3.5vw;
-	font-weight: 500;
+	font-weight: 450;
   margin: 0;
 }
 
@@ -111,10 +111,10 @@ page-home {
 }
 
 /*Nav Bar*/
-
 #navigation{
   text-align: center;
 }
+
 #navigation h4 {
 	font-size: 3.5vw;
   color:grey;
@@ -499,6 +499,16 @@ page-home {
   margin-left: 25%;
 }
 
+#likeH h3{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .9em;
+  color:#AA0000;
+  margin-top:2.5%;
+  margin-right: 3%;
+  margin-left: 25%;
+}
+
 #post-like{
   width:5%;
   vertical-align: middle;
@@ -697,6 +707,7 @@ page-home {
 #embAlert{
   display: inline-block;
   height:100%;
+  width:80%;
   margin:0;
   vertical-align: middle;
 }
@@ -718,4 +729,8 @@ page-home {
   font-size: 1em;
   padding:0;
   margin:.2em auto;
+}
+
+#extra{
+  margin-top: 20%;
 }

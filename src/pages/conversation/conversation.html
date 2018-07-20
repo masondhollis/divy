@@ -1,22 +1,23 @@
 <ion-content class = "MainContent" [ngStyle]="{'background': 'url('+message.main_pic+')','background-size':'100% 100%'}">
-<ion-header transparent no-border>
-  <ion-toolbar color="white"  transparent>
-        <div (click)="goBack()" id="Back" transparent>
-          <img src="/assets/icon/Back.png" id="Back"/>
-        </div>
-        <p id="friend">
-          {{message.name}}
-        </p>
-        <button ion-button menuToggle right>
-        <ion-nav #search [root]="rootPage"></ion-nav>
-          <ion-icon name="search"></ion-icon>
-        </button>
-  </ion-toolbar>
-</ion-header>
+  <ion-header transparent no-border>
+    <ion-toolbar color="white"  transparent>
+      <div (click)="goBack()" id="Back" transparent>
+        <img src="/assets/icon/Back.png" id="Back"/>
+      </div>
+      <p id="friend">
+        {{message.name}}
+      </p>
+      <button ion-button menuToggle right>
+      <ion-nav #search [root]="rootPage"></ion-nav>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content id="messageFeed">
-<span *ngFor="let text of content">
-    <ion-card no-shadow class="message">
+  <ion-content id="messageFeed">
+    <span *ngFor="let text of content">
+      <ion-card no-shadow class="message">
+
       <div *ngIf="text.user === 'true'" class="userM">
         <div id="Mtime">{{text.time}}</div>
         <div id="Utext">{{text.text}}</div>
@@ -28,11 +29,11 @@
         <div id="Ctext">{{text.text}}</div>
         <div id="Mtime">{{text.time}}</div>
       </div>
-    </ion-card>
-</span>
+      </ion-card>
+    </span>
+  </ion-content>
 
-</ion-content>
-<ion-footer id= "footer" no-border transparent>
+  <ion-footer id= "footer" no-border transparent>
     <div id="sendbar">
       <input id="content" placeholder="Your response..."/>
       <img id="picture"/>
@@ -40,5 +41,5 @@
     <div id="send" (click) = "send()">
       SEND
     </div>
-</ion-footer>
+  </ion-footer>
 </ion-content>

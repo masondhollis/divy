@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -8,8 +9,8 @@ var data = require("../../data/posts.json");
 })
 
 export class membersPage {
-  filter="following";
 
+  filter="following";
   group=null;
   members={};
 
@@ -18,8 +19,7 @@ export class membersPage {
     this.members = data.members[this.group];
   }
 
-  goBack()
-  {
+  goBack(){
     this.navCtrl.pop();
   }
 
@@ -30,5 +30,9 @@ export class membersPage {
   style(type){
     if(this.filter == type)
       return {"border-bottom": "solid", "border-width":"thin"};
+  }
+
+  goProfile(key){
+    this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
   }
 }

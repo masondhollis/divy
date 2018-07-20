@@ -1,5 +1,6 @@
 import { Component  } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 var data = require("../../data/posts.json");
 
 @Component({
@@ -8,6 +9,7 @@ var data = require("../../data/posts.json");
 })
 
 export class convoPage {
+
   message = null;
   content = null;
   myprofile = null;
@@ -21,19 +23,21 @@ export class convoPage {
     this.myprofile = this.profile[0];
   }
 
-  goBack()
-  {
+  goBack(){
     this.navCtrl.pop();
   }
 
-  send()
-  {
+  send(){
     if((<HTMLInputElement>document.getElementById('content')).value != "")
     {
-    var stuff = (<HTMLInputElement>document.getElementById('content')).value;
-    var newMessage = {text:stuff, user:"true", time:"now"};
-    this.content.push(newMessage);
-    (<HTMLInputElement>document.getElementById("content")).value = "";
+      var stuff = (<HTMLInputElement>document.getElementById('content')).value;
+      var newMessage = {text:stuff, user:"true", time:"now"};
+      this.content.push(newMessage);
+      (<HTMLInputElement>document.getElementById("content")).value = "";
     }
+  }
+
+  goProfile(key){
+    this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
   }
 }
