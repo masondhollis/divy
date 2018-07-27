@@ -122,7 +122,7 @@
 
 .link-add{
   float:right;
-  content: url(/assets/icon/Add.png);
+  content: url(./../assets/icon/Add.png);
   margin: .9em;
 }
 
@@ -132,7 +132,7 @@
   margin:0;
   padding: 0;
   margin-top: 2%;
-  content: url(/assets/icon/down.png);
+  content: url(./../assets/icon/down.png);
 }
 
 .link-expand{
@@ -142,22 +142,22 @@
   margin-top:  3%;
   bottom: 0;
   right:48%;
-  content: url(/assets/icon/up.png);
+  content: url(./../assets/icon/up.png);
 }
 
 .link-public{
   width:45%;
-  content: url(/assets/icon/All.png);
+  content: url(./../assets/icon/All.png);
 }
 
 .link-favorites{
   width:45%;
-  content: url(/assets/icon/Friends.png)
+  content: url(./../assets/icon/Friends.png)
 }
 
 .plink-family{
   width:45%;
-  content: url(/assets/icon/Family.png)
+  content: url(./../assets/icon/Family.png)
 }
 
 //Accordian Elements
@@ -263,7 +263,7 @@
   font-size: 2em;
   font-weight: 800;
   padding: 0;
-  content: url(/assets/icon/divy.png);
+  content: url(./../assets/icon/divy.png);
   width:30%;
   margin: 0 auto;
   margin-top: 1%;

@@ -48,7 +48,7 @@ export class messagesPage {
 
   golden(){
     if(this.gold == 'false')
-      return({"content": 'url(/assets/icon/likeB.png)'});
+      return({"content": 'url(./assets/icon/likeB.png)'});
   }
 
   goProfile(key){

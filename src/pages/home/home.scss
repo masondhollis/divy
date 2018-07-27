@@ -25,7 +25,7 @@ page-home {
 }
 
 .Title{
-  content: url(/assets/icon/divy.png);
+  content: url(./../assets/icon/divy.png);
   width:40%;
   padding: 0;
   margin: 0 auto;
@@ -201,22 +201,22 @@ page-home {
 
 .button-like {
   width:20%;
-	content: url(/assets/icon/likeB.png);
+	content: url(./../assets/icon/likeB.png);
 }
 
 .button-comment {
   width:30%;
-	content: url(/assets/icon/comment.png);
+	content: url(./../assets/icon/comment.png);
 }
 
 .button-share {
   width:20%;
-	content: url(/assets/icon/share.png);
+	content: url(./../assets/icon/share.png);
 }
 
 .button-ember {
   width:20%;
-	content: url(/assets/icon/emberxlB.png);
+	content: url(./../assets/icon/emberxlB.png);
 }
 
 /*Footer Buttons*/
@@ -242,33 +242,33 @@ page-home {
 }
 
 .link-all{
-  content: url(/assets/icon/All.png);
+  content: url(./../assets/icon/All.png);
 }
 
 .link-friends{
-  content: url(/assets/icon/Friends.png)
+  content: url(./../assets/icon/Friends.png)
 }
 
 .link-family{
-  content: url(/assets/icon/Family.png)
+  content: url(./../assets/icon/Family.png)
 }
 
 .link-profile{
-  content: url(/assets/icon/Profile.png)
+  content: url(./../assets/icon/Profile.png)
 }
 
 .link-notifications{
-  content: url(/assets/icon/Notification.png)
+  content: url(./../assets/icon/Notification.png)
 }
 
 .link-add
 {
-  content: url(/assets/icon/Add.png);
+  content: url(./../assets/icon/Add.png);
   width:4%;
 }
 
 .add{
-  content: url(/assets/icon/GAdd.png);
+  content: url(./../assets/icon/GAdd.png);
   width:50%;
   display:inline-block;
   vertical-align: middle;
@@ -276,7 +276,7 @@ page-home {
 }
 
 .arrow{
-  content: url(/assets/icon/send.png);
+  content: url(./../assets/icon/send.png);
   width:50%;
   display:inline-block;
   vertical-align: middle;
@@ -330,39 +330,39 @@ page-home {
 }
 
 #Pic-time{
-  content: url(/assets/icon/time.png);
+  content: url(./../assets/icon/time.png);
   vertical-align: middle;
   width:15%;
 }
 
 #Pic-pic{
-  content: url(/assets/icon/picture.png);
+  content: url(./../assets/icon/picture.png);
   vertical-align: middle;
   width:15%;
 }
 
 #Pic-close{
-  content: url(/assets/icon/close.png);
+  content: url(./../assets/icon/close.png);
   text-align: right;
   padding-bottom: 4%;
   width:15%;
 }
 
 #Pic-video{
-  content: url(/assets/icon/video.png);
+  content: url(./../assets/icon/video.png);
   vertical-align: middle;
   margin-left: 3%;
   width:15%;
 }
 
 #time-close{
-  content: url(/assets/icon/close.png);
+  content: url(./../assets/icon/close.png);
   text-align: right;
   width:7%;
 }
 
 #time-time{
-  content: url(/assets/icon/time.png);
+  content: url(./../assets/icon/time.png);
   vertical-align: middle;
   width:7%;
 }
@@ -512,7 +512,7 @@ page-home {
 #post-like{
   width:5%;
   vertical-align: middle;
-	content: url(/assets/icon/like.png);
+	content: url(./../assets/icon/like.png);
   display: inline-block;
   margin-right:25%;
   margin-top: 2%;
@@ -521,7 +521,7 @@ page-home {
 #post-ember{
   width:5%;
   vertical-align: middle;
-	content: url(/assets/icon/emberxl.png);
+	content: url(./../assets/icon/emberxl.png);
   display: inline-block;
   margin-right:25%;
   margin-top: 2%;
@@ -530,7 +530,7 @@ page-home {
 #post-comment{
   width:6%;
   vertical-align: middle;
-	content: url(/assets/icon/comment.png);
+	content: url(./../assets/icon/comment.png);
   display: inline-block;
   margin-right:25%;
 }
@@ -538,7 +538,7 @@ page-home {
 #post-commentB{
   width:6%;
   vertical-align: middle;
-	content: url(/assets/icon/commentB.png);
+	content: url(./../assets/icon/commentB.png);
   display: inline-block;
   margin-right:25%;
 }
@@ -546,7 +546,7 @@ page-home {
 #post-close{
   width:8%;
   vertical-align: middle;
-	content: url(/assets/icon/close.png);
+	content: url(./../assets/icon/close.png);
   display: inline-block;
   text-align: right;
   float: right;
@@ -720,7 +720,7 @@ page-home {
 }
 
 #embAlert img{
-  content: url(/assets/icon/emberxl.png);
+  content: url(./../assets/icon/emberxl.png);
   width:8%;
   display: inline-block;
 }

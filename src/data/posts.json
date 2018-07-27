@@ -16,13 +16,13 @@
           {
             "username": "JimJim56",
             "name": "Jimmy Myers",
-            "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
             "profile": "3"
           },
           {
             "username": "BigMack97",
             "name": "Mackenzie Mcalister",
-            "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+            "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
             "profile": "1"
           }
         ]
@@ -35,7 +35,7 @@
           {
             "username": "BigMack97",
             "name": "Mackenzie Mcalister",
-            "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+            "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
             "profile": "1"
           }
         ]
@@ -47,7 +47,7 @@
           {
             "username": "BigMack97",
             "name": "Mackenzie Mcalister",
-            "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+            "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
             "profile": "1",
             "text": "Looking good girl!",
             "time": "11:00am",
@@ -57,14 +57,14 @@
                 "name": "Courtney Smithson",
                 "text": "Thanks Girll",
                 "time": "12:00pm",
-                "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg"
+                "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg"
               }
             ]
           }
         ]
       },
-      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Court_Bid.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Court_Bid.jpg"
     },
     "1": {
       "username": "TheBrains",
@@ -82,7 +82,7 @@
           {
             "username": "JimJim56",
             "name": "Jimmy Myers",
-            "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
             "profile": "3"
           }
         ]
@@ -98,8 +98,8 @@
         "display": "0",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Brian_Theatre.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Brian_Theatre.jpg"
     },
     "2": {
       "username": "BigMack97",
@@ -117,19 +117,19 @@
           {
             "username": "JimJim56",
             "name": "Jimmy Myers",
-            "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
             "profile": "3"
           },
           {
             "username": "BigMack97",
             "name": "Mackenzie Mcalister",
-            "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+            "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
             "profile": "1"
           },
           {
             "username": "CourtSmithy",
             "name": "Courtney Smithson",
-            "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
             "profile": "4"
           }
         ]
@@ -142,7 +142,7 @@
           {
             "username": "CourtSmithy",
             "name": "Courtney Smithson",
-            "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
             "profile": "4"
           }
         ]
@@ -154,7 +154,7 @@
           {
             "username": "CourtSmithy",
             "name": "Courtney Smithson",
-            "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
             "profile": "4",
             "text": "Beautiful Water",
             "time": "11:00am",
@@ -162,8 +162,8 @@
           }
         ]
       },
-      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
-      "post_pic": "/assets/imgs/post_pics/Mack_Beach.jpeg"
+      "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
+      "post_pic": "./assets/imgs/post_pics/Mack_Beach.jpeg"
     },
     "3": {
       "username": "SonicUSA",
@@ -190,8 +190,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.png",
-      "post_pic": "/assets/imgs/post_pics/Sonic_back2.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.png",
+      "post_pic": "./assets/imgs/post_pics/Sonic_back2.jpg"
     },
     "4": {
       "username": "TheBrains",
@@ -218,7 +218,7 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
       "post_pic": "https://www.youtube.com/embed/Gr58CYLmFww"
     },
     "5": {
@@ -250,21 +250,21 @@
             "name": "Brian Lee",
             "text": "Yea Man! Lets do it",
             "time": "1:00pm",
-            "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
             "replies": [
               {
                 "username": "JimJim56",
                 "name": "Jimmy Myers",
                 "time": "1 hour ago",
                 "profile": "3",
-                "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+                "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
                 "text": "Yo I said message me."
               }
             ]
           }
         ]
       },
-      "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
       "post_pic": ""
     },
     "6": {
@@ -292,7 +292,7 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+      "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
       "post_pic": ""
     },
     "7": {
@@ -320,8 +320,8 @@
         "display": "40",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Nike_post1.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Nike_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Nike_post1.jpg"
     },
     "8": {
       "username": "BigMack97",
@@ -348,8 +348,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
-      "post_pic": "/assets/imgs/post_pics/Mack_apart.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
+      "post_pic": "./assets/imgs/post_pics/Mack_apart.jpg"
     },
     "9": {
       "username": "JimJim56",
@@ -367,7 +367,7 @@
           {
             "username": "TheBrains",
             "name": "Brian Lee",
-            "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+            "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
             "profile": "2"
           }
         ]
@@ -383,8 +383,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/burger.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/burger.jpg"
     },
     "10": {
       "username": "BrautWurtz",
@@ -411,8 +411,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Joe_alask.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Joe_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Joe_alask.jpg"
     },
     "11": {
       "username": "BigMack97",
@@ -439,7 +439,7 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+      "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
       "post_pic": ""
     },
     "12": {
@@ -467,8 +467,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Brian_HS.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Brian_HS.jpg"
     },
     "13": {
       "username": "NikeUSA",
@@ -495,8 +495,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Nike_back.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Nike_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Nike_back.jpg"
     },
     "14": {
       "username": "CourtSmithy",
@@ -523,8 +523,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Court_disney.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Court_disney.jpg"
     },
     "15": {
       "username": "CourtSmithy",
@@ -551,7 +551,7 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
       "post_pic": ""
     },
     "16": {
@@ -579,8 +579,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.png",
-      "post_pic": "/assets/imgs/post_pics/sonic_corndog.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.png",
+      "post_pic": "./assets/imgs/post_pics/sonic_corndog.jpg"
     },
     "17": {
       "username": "BrautWurtz",
@@ -607,8 +607,8 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
-      "post_pic": "/assets/imgs/post_pics/Joe_alask2.jpg"
+      "prof_pic": "./assets/imgs/prof_pics/Joe_pro.jpg",
+      "post_pic": "./assets/imgs/post_pics/Joe_alask2.jpg"
     },
     "18": {
       "username": "BrautWurtz",
@@ -635,7 +635,7 @@
         "display": "5",
         "list": []
       },
-      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Joe_pro.jpg",
       "post_pic": ""
     }
   },
@@ -643,8 +643,8 @@
     "0": {
       "username": "BrautWurtz",
       "name": "Joe Wurtz",
-      "prof_pic": "/assets/imgs/prof_pics/Joe_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/alaska.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Joe_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/alaska.jpg",
       "link": "www.GreatBearPics.com",
       "public": {
         "followers": "25",
@@ -732,8 +732,8 @@
             }
           ],
           "Gold": "false",
-          "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
-          "main_pic": "/assets/imgs/post_pics/Mack_back.png"
+          "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
+          "main_pic": "./assets/imgs/post_pics/Mack_back.png"
         },
         {
           "id": "1",
@@ -798,16 +798,16 @@
             }
           ],
           "Gold": "true",
-          "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
-          "main_pic": "/assets/imgs/post_pics/Brian_back.jpg"
+          "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
+          "main_pic": "./assets/imgs/post_pics/Brian_back.jpg"
         }
       ]
     },
     "1": {
       "username": "BigMack97",
       "name": "Mackenzie Mcalister",
-      "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
-      "main_pic": "/assets/imgs/post_pics/Mack_back.png",
+      "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
+      "main_pic": "./assets/imgs/post_pics/Mack_back.png",
       "link": "www.MackPhotos.com",
       "public": {
         "followers": "5k",
@@ -846,8 +846,8 @@
     "2": {
       "username": "TheBrains",
       "name": "Brian Lee",
-      "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/Brian_back.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/Brian_back.jpg",
       "link": "",
       "public": {
         "followers": "90",
@@ -885,8 +885,8 @@
     "3": {
       "username": "JimJim56",
       "name": "Jim Myers",
-      "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/jim_back.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/jim_back.jpg",
       "link": "",
       "public": {
         "followers": "500",
@@ -923,8 +923,8 @@
     "4": {
       "username": "CourtSmithy",
       "name": "Courtney Smithson",
-      "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/Court_Back.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/Court_Back.jpg",
       "public": {
         "followers": "200",
         "following": "156",
@@ -961,8 +961,8 @@
     "5": {
       "username": "SonicUSA",
       "name": "Sonic Drive-in Diner",
-      "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/Sonic_back.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/Sonic_back.jpg",
       "link": "www.Sonic.com",
       "public": {
         "followers": "2m",
@@ -999,8 +999,8 @@
     "6": {
       "username": "NikeInternational",
       "name": "Nike",
-      "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
-      "main_pic": "/assets/imgs/post_pics/Nike_back.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Nike_pro.jpg",
+      "main_pic": "./assets/imgs/post_pics/Nike_back.jpg",
       "public": {
         "followers": "50m",
         "following": "3k",
@@ -1039,7 +1039,7 @@
       {
         "username": "CourtSmithy",
         "name": "Courtney Smithson",
-        "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
         "following": "true",
         "follower": "true",
         "profile": "4"
@@ -1047,7 +1047,7 @@
       {
         "username": "JimJim56",
         "name": "Jimmy Myers",
-        "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
         "profile": "3",
         "following": "true",
         "follower": "false"
@@ -1055,7 +1055,7 @@
       {
         "username": "TheBrains",
         "name": "Brian Lee",
-        "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
         "following": "true",
         "follower": "true",
         "profile": "2"
@@ -1063,7 +1063,7 @@
       {
         "username": "SonicUSA",
         "name": "Sonic",
-        "prof_pic": "/assets/imgs/prof_pics/Sonic_pro.png",
+        "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.png",
         "profile": "5",
         "following": "true",
         "follower": "false"
@@ -1071,7 +1071,7 @@
       {
         "username": "BigMack97",
         "name": "Mackenzie Mcalister",
-        "prof_pic": "/assets/imgs/prof_pics/Mack_pro.png",
+        "prof_pic": "./assets/imgs/prof_pics/Mack_pro.png",
         "following": "true",
         "follower": "false",
         "profile": "2"
@@ -1079,7 +1079,7 @@
       {
         "username": "NikeUSA",
         "name": "Nike",
-        "prof_pic": "/assets/imgs/prof_pics/Nike_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Nike_pro.jpg",
         "following": "true",
         "follower": "false",
         "profile": "6"
@@ -1089,7 +1089,7 @@
       {
         "username": "CourtSmithy",
         "name": "Courtney Smithson",
-        "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
         "following": "true",
         "follower": "true",
         "profile": "4"
@@ -1097,7 +1097,7 @@
       {
         "username": "JimJim56",
         "name": "Jimmy Myers",
-        "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
         "profile": "3",
         "following": "true",
         "follower": "false"
@@ -1105,7 +1105,7 @@
       {
         "username": "TheBrains",
         "name": "Brian Lee",
-        "prof_pic": "/assets/imgs/prof_pics/Brian_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Brian_pro.jpg",
         "following": "true",
         "follower": "true",
         "profile": "2"
@@ -1115,7 +1115,7 @@
       {
         "username": "CourtSmithy",
         "name": "Courtney Smithson",
-        "prof_pic": "/assets/imgs/prof_pics/Court_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/Court_pro.jpg",
         "following": "true",
         "follower": "true",
         "profile": "4"
@@ -1123,7 +1123,7 @@
       {
         "username": "JimJim56",
         "name": "Jimmy Myers",
-        "prof_pic": "/assets/imgs/prof_pics/jim_pro.jpg",
+        "prof_pic": "./assets/imgs/prof_pics/jim_pro.jpg",
         "profile": "3",
         "following": "true",
         "follower": "false"

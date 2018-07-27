@@ -74,7 +74,7 @@
   width:5%;
   background-repeat: no-repeat;
   background-size: cover;
-  content: url(/assets/icon/Gold.png);
+  content: url(./../assets/icon/Gold.png);
   padding-top:5%;
   display: inline-block;
   vertical-align: middle;
@@ -101,7 +101,7 @@
 }
 
 #goldAlert img{
-  content: url(/assets/icon/Gold.png);
+  content: url(./../assets/icon/Gold.png);
   width:8%;
   display: inline-block;
 }

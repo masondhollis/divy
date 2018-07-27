@@ -43,7 +43,7 @@ hr {
   top: .5vw;
   position: relative;
   left:85%;
-  content: url(/assets/icon/Hamburger.png);
+  content: url(./../assets/icon/Hamburger.png);
 }
 
 #hamMain div
@@ -72,21 +72,21 @@ hr {
   margin-left: 2%;
 }
 .hamB-home{
-  content: url(/assets/icon/Home.png);
+  content: url(./../assets/icon/Home.png);
 }
 .hamB-profile
 {
-  content: url(/assets/icon/Profile.png);
+  content: url(./../assets/icon/Profile.png);
 }
 
 .hamB-message
 {
-  content: url(/assets/icon/Comment.png);
+  content: url(./../assets/icon/Comment.png);
 }
 
 .hamB-Gold
 {
-  content: url(/assets/icon/likeB.png);
+  content: url(./../assets/icon/likeB.png);
   width:5%;
   margin-left: 3%;
   margin-right: 3%;
@@ -94,42 +94,42 @@ hr {
 
 .hamB-public
 {
-  content: url(/assets/icon/All.png);
+  content: url(./../assets/icon/All.png);
 }
 
 .hamb-favorites
 {
-  content: url(/assets/icon/Friends.png);
+  content: url(./../assets/icon/Friends.png);
 }
 
 .hamb-family
 {
-  content: url(/assets/icon/Family.png);
+  content: url(./../assets/icon/Family.png);
 }
 
 .hamb-promos
 {
-  content: url(/assets/icon/promos.png);
+  content: url(./../assets/icon/promos.png);
 }
 
 .hamb-set
 {
-  content: url(/assets/icon/settings.png);
+  content: url(./../assets/icon/settings.png);
 }
 
 .hamb-thought
 {
-  content: url(/assets/icon/thoughts.png);
+  content: url(./../assets/icon/thoughts.png);
 }
 
 .hamb-sup
 {
-  content: url(/assets/icon/support.png);
+  content: url(./../assets/icon/support.png);
 }
 
 .hamb-logout
 {
-  content: url(/assets/icon/log.png);
+  content: url(./../assets/icon/log.png);
 }
 
 ion-modal.Gold-modal{

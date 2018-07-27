@@ -1,8 +1,8 @@
 {
   "name": "divy",
-  "app_id": "1f57a0f8",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "1f57a0f8"
 }
