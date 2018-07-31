@@ -157,7 +157,7 @@ export class ProfilePage {
   stylebutt(post,type)
   {
     if(post.likes.Hit =='true' && type == 'like')
-      return{"content": 'url(./assets/icon/like.png)'}
+      return{"content": 'url(./assets/icon/Like.png)'}
     else if(post.embers.hit == 'true' && type == 'ember')
       return{"content": 'url(./assets/icon/emberxl.png)'}
   }

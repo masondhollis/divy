@@ -472,7 +472,7 @@
     },
     "13": {
       "username": "NikeUSA",
-      "name": "Nke",
+      "name": "Nike",
       "time": "13 hours ago",
       "profile": "6",
       "text": "More than Clothing.",
@@ -961,7 +961,7 @@
     "5": {
       "username": "SonicUSA",
       "name": "Sonic Drive-in Diner",
-      "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.jpg",
+      "prof_pic": "./assets/imgs/prof_pics/Sonic_pro.png",
       "main_pic": "./assets/imgs/post_pics/Sonic_back.jpg",
       "link": "www.Sonic.com",
       "public": {
