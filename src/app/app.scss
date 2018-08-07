@@ -180,3 +180,29 @@ ion-menu.ham-menu{
 .no-scroll {
     overflow: hidden;
   }
+
+ .Title{
+    content: url(./../assets/icon/divy.png);
+    width:40%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main-header {
+    padding-top: 10px;
+}
+
+#main-content {
+    top: 50px;
+}
+
+ion-nav {
+    top: 40px;
+    height: calc(100% - 40px);
+
+}
+
+.toolbar-background {
+    border: none !important; // This is bad and I'm being a bad example don't do this sorry
+}

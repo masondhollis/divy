@@ -45,11 +45,6 @@ export class HomePage {
     this.feed = type;
   }
 
-  //Go to other user profile
-  goProfile(key){
-    this.navCtrl.push(ProfilePage,{ProKey: key},{animate:false})
-  }
-
   //Liking a post
   Like(post){
   //Either like or unlike
@@ -158,6 +153,12 @@ export class HomePage {
       return{"color": '#AA0000'}
     else if(post.embers.hit == 'true' && type == 'ember')
       return{"color": '#1BEADD'}
+  }
+
+  doRefresh(refresher) {
+    setTimeout(function() {
+        refresher.complete();
+    }, 2000);
   }
 }
 

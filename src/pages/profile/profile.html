@@ -3,22 +3,6 @@
 <ion-content center class = "MainContent" [ngStyle]="{
   'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
 
-<!--Main Header-->
-<ion-header id="THeader" transparent no-border>
-  <ion-toolbar color="white"  transparent>
-    <div (click)="goBack()" id="Back" transparent>
-      <img src="./assets/icon/Back.png" id="Back"/>
-    </div>
-    <p class = "ProTitle">
-      Divy.
-    </p>
-    <button ion-button menuToggle right>
-      <ion-nav #search [root]="rootPage"></ion-nav>
-      <ion-icon name="search"></ion-icon>
-    </button>
-  </ion-toolbar>
-</ion-header>
-
 <!--Main Footer-->
 <ion-footer id = "Footer" >
   <div id = "User" swipeAll (swipedown) = "swipeToggle(false)">

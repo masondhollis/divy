@@ -75,13 +75,7 @@ export class ProfilePage {
   swipeToggle(key){
     if(this.menu == false)
       this.swipe = key;
-  }
-
-  //Go to previous page
-  goBack()
-  {
-    this.navCtrl.pop();
-  }
+  } 
 
   //Toggle Plus Menu
   plusTog()

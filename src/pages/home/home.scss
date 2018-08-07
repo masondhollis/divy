@@ -5,6 +5,7 @@ page-home {
 #head{
   text-align: center;
   background-size: 100% 100%;
+  background-color: white;
 }
 
 /* Image Related Styling*/
@@ -22,6 +23,7 @@ page-home {
 #mFooter{
   border:none;
   box-shadow:none;
+  background-color: white;
 }
 
 .Title{
@@ -36,6 +38,7 @@ page-home {
 .feed{
   padding:0;
   margin:0;
+  background-color: #FFF;
 }
 
 .post_pic {
@@ -57,9 +60,13 @@ page-home {
     width:100%;
     margin-left: 0;
     margin-right:0;
-    margin-bottom: .9em;
+    margin-bottom: 7px;
     margin-top: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 10px 0px #BBB;
   }
+
 
 /*Post Time formating*/
 #time {
@@ -119,7 +126,6 @@ page-home {
 	font-size: 3.5vw;
   color:grey;
   font-weight: 400;
-  margin-top: 0;
   width:100%;
 }
 
@@ -733,4 +739,13 @@ page-home {
 
 #extra{
   margin-top: 20%;
+}
+
+.toolbar-background {
+    border: none;
+    border-width: 0;
+}
+
+ion-refresher-content {
+    background-color: white;
 }

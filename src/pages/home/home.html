@@ -1,18 +1,5 @@
 <ion-header id="head">
 
-  <!--Main Header-->
-  <ion-toolbar color="white">
-    <button ion-button menuToggle="left">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <p class = "Title">
-      Divy.
-    </p>
-    <button ion-button menuToggle="right" right>
-      <ion-icon name="search"></ion-icon>
-    </button>
-  </ion-toolbar>
-
   <!--NavBar Selection Top -->
   <div id="navigation" >
     <div><button class="Nav" (click) = "filter('All')">
@@ -39,11 +26,15 @@
 
 <!--Main Feed -->
 <ion-content class= "feed">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+    </ion-refresher>
   <div *ngFor="let post of posts">
     <div *ngIf= "(post.type === filt || filt === 'All') && post.feed === feed">
 
       <!--Post Cards -->
-      <ion-card class="posts">
+      <ion-card class="posts" ng-class="{has-shadow:!$first}">
         <div id="proHead">
           <img class="prof_pic" src="{{post.prof_pic}}" />
           <div id="holder">
