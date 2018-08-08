@@ -19,6 +19,14 @@ $toolbar-ios-title-text-align: center;
 
 $toolbar-ios-title-font-weight: 100;
 
+@font-face {
+    font-family: 'Avenir';
+    src: url(./../assets/fonts/AvenirNextLTPro-Regular.otf) format('opentype');
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: Avenir;
+}
 
 /*line for menu*/
 hr {
@@ -187,6 +195,7 @@ ion-menu.ham-menu{
     padding: 0;
     margin: 0 auto;
     text-align: center;
+
 }
 
 #main-header {
