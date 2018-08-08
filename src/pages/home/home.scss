@@ -71,9 +71,9 @@ page-home {
 /*Post Time formating*/
 #time {
   display: inline-block;
-	font-size: .5em;
+	font-size: .6em;
 	color: black;
-  padding-left: 10%;
+  padding-left: 8%;
   vertical-align: top;
 }
 
@@ -93,14 +93,15 @@ page-home {
 
 #name {
 	font-size: 3.5vw;
-	font-weight: 450;
+	font-weight: 550;
   margin: 0;
 }
 
 #Uname {
-	font-size: 2.25vw;
+	font-size: 2.8vw;
 	color: grey;
   margin: 0;
+  font-weight: lighter;
 }
 
 #Text {
@@ -127,12 +128,17 @@ page-home {
   color:grey;
   font-weight: 400;
   width:100%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #navigation div{
-  width:15%;
+  width:20%;
   background-color: white;
   padding:0;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
 }
 
 .Nav
