@@ -30,7 +30,6 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-
   goHome()
   {
     this.navCtrl.goToRoot({animate:false});
@@ -56,4 +55,7 @@ export class MyApp {
     this.navCtrl.push(membersPage,{Group: group},{animate:false});
   }
 
+  getClass() {
+      this.navCtrl.getActive.name;
+  }
 }

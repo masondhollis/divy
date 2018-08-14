@@ -10,6 +10,10 @@
   backdrop-filter: blur(4px);
 }
 
+.profile_expand {
+    height: 70%;
+}
+
 #pnum{
   font-size: 1.25em;
 }
@@ -80,7 +84,6 @@
 
 #pUname {
 	font-size: 2.5vw;
-	width: 40%;
   color:black;
   margin: 0;
   padding-bottom: 3%;
@@ -93,7 +96,7 @@
   vertical-align: top;
   overflow: visible;
   float:left;
-  width:60%;
+  width:auto;
   height:100%;
   margin-top:.9em;
   padding:0;
@@ -116,7 +119,6 @@
 
 .plink {
 	width:5%;
-	position: auto;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -224,7 +226,8 @@
 {
   text-align: center;
   margin-top:5%;
-  padding:0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #outer
@@ -304,3 +307,25 @@
 #noTag{
   margin-top: 5%;
 }
+
+.posts {
+    width:100%;
+    margin-left: 0;
+    margin-right:0;
+    margin-bottom: 7px;
+    margin-top: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 10px 0px #BBB;
+  }
+
+  .prof_feed{
+    padding:0;
+    width: 100%;
+  }
+
+  #blank_space {
+      height: 40px;
+      padding: 0;
+      margin: 0;
+  }

@@ -1,10 +1,10 @@
 <!--Main Header-->
 <ion-header id="main-header">
     <ion-toolbar color="white">
-      <button ng-if="show-menu" ion-button menuToggle="left">
+      <button ion-button menuToggle="left">
         <ion-icon name="menu"></ion-icon>
       </button>
-      <p class = "Title">
+      <p class = "Title" (click) = "goHome()">
         Divy.
       </p>
       <button ion-button menuToggle="right" right>
@@ -36,4 +36,4 @@
     </div>
 </ion-menu>
 
-<ion-nav #hamMenu #content [root]="rootPage"></ion-nav>
+<div #hamMenu #content></div>

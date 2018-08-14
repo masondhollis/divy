@@ -13,6 +13,10 @@ var data = require("../../data/posts.json");
 })
 
 export class ProfilePage {
+  goHome()
+  {
+    this.navCtrl.goToRoot({animate:false});
+  }
   //Profiles definition
   profile = Object.keys(data.Profiles).map(function(key){
     return data.Profiles[key];
@@ -75,7 +79,7 @@ export class ProfilePage {
   swipeToggle(key){
     if(this.menu == false)
       this.swipe = key;
-  } 
+  }
 
   //Toggle Plus Menu
   plusTog()

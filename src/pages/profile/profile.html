@@ -4,7 +4,7 @@
   'background': 'url('+myprofile.main_pic+')','background-size':'cover'}">
 
 <!--Main Footer-->
-<ion-footer id = "Footer" >
+<ion-footer id = "Footer" [ngClass]="{'profile_expand': this.menu}">
   <div id = "User" swipeAll (swipedown) = "swipeToggle(false)">
     <img (click) = "togglePro()" class="plink link-close" *ngIf = "this.menu == true"/>
     <span *ngIf="this.swipe == true">
@@ -79,7 +79,6 @@
       </span>
     </div></div>
     <div id="bio">{{myprofile.bio}}</div>
-    <div id="webLink">{{myprofile.link}}</div>
   </span>
 
   <!--Plus popup-->
@@ -111,7 +110,7 @@
 
 <!--Post Feed-->
 <span *ngIf ="this.menu == true" >
-<ion-content class= "feed">
+<div class= "prof_feed">
   <div *ngFor="let post of proPosts">
     <div *ngIf= "post.feed === this.view">
       <ion-card class="posts">
@@ -189,7 +188,8 @@
     </ion-card>
     </div>
   </div>
-</ion-content>
+  <div id="blank_space"></div>
+</div>
 </span>
 </ion-content>
 
