@@ -170,21 +170,6 @@ export class HomePage {
   {
     this.navCtrl.push(ProfilePage,{ProKey: key});
   }
-
-  goMessages(gold)
-  {
-    this.navCtrl.push(messagesPage,{Gold:gold},{animate:false});
-  }
-
-  goSettings()
-  {
-    this.navCtrl.push(settingsPage,{},{animate:false});
-  }
-
-  goMembers(group)
-  {
-    this.navCtrl.push(membersPage,{Group: group},{animate:false});
-  }
 }
 
 
