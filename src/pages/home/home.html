@@ -17,7 +17,7 @@
 <!--Text Input -->
   <div id="input">
     <input type="text" ng-model="string" (input)="postB()"
-    id="htextbox" placeholder="Say something to the world...">
+    id="htextbox" placeholder = "Say something to the World...">
     <div id = "postButt"><div class="add" (click) = "goPic('main')"></div>
       <div *ngIf="this.button == true" class="arrow" (click)="createPost()"></div>
     </div>
