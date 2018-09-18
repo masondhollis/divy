@@ -58,4 +58,41 @@ export class MyApp {
   getClass() {
       this.navCtrl.getActive.name;
   }
+
+  getPage(){
+  if(this.navCtrl.getActive() != null)
+    {
+    if(this.navCtrl.getActive().name == 'HomePage')
+      return 'Ham';
+    else if(this.navCtrl.getActive().name == 'ProfilePage')
+      return 'Back';
+    }
+  }
+
+  checkMain(){
+  if(this.navCtrl.getActive() != null)
+    {
+    if(this.navCtrl.getActive().name == 'HomePage')
+      return 'true';
+    else if(this.navCtrl.getActive().name == 'ProfilePage')
+      return 'true';
+    else
+      return 'false';
+    }
+  }
+
+  goBack()
+  {
+    this.navCtrl.pop();
+  }
+
+  styleHeader(){
+    if(this.navCtrl.getActive() != null)
+    {
+    if(this.navCtrl.getActive().name == 'ProfilePage')
+      return {'background-color':'rgba(255,255,255,0.6)'};
+    else
+      return {'background-color':'rgba(255,255,255,1)'};
+    }
+  }
 }

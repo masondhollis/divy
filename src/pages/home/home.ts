@@ -34,7 +34,7 @@ export class HomePage {
     if(id === "profile")
       this.navCtrl.push(ProfilePage,{ProKey: 0},{animate:false});
   }
-  
+
   //Setting Filter based on input
   filter(type: string){
     this.filt = type;
@@ -43,7 +43,7 @@ export class HomePage {
   //Taking user input to set the feed
   setfeed(type: string){
     this.feed = type;
-	
+
 	//Set Placeholder values
 	if(this.feed == "public")
 		(<HTMLInputElement>document.getElementById('htextbox')).placeholder = "Say something to the World...";

@@ -1,9 +1,18 @@
 <!--Main Header-->
-<ion-header id="main-header">
-    <ion-toolbar color="white">
-      <button ion-button menuToggle="left">
+<span *ngIf ="checkMain() == 'true'">
+<ion-header transparent no-border id="main-header"
+[ngStyle] = "styleHeader()">
+    <ion-toolbar transparent id = "mainTool" >
+      <span *ngIf= "getPage() == 'Ham'">
+      <button ion-button menuToggle="left" >
         <ion-icon name="menu"></ion-icon>
       </button>
+      </span>
+      <span *ngIf ="getPage() == 'Back'">
+        <button ion-button left (click)="goBack()" id="MainBack">
+          <img src="./assets/icon/Back.png" id="Back"/>
+        </button>
+      </span>
       <p class = "Title" (click) = "goHome()">
         Divy.
       </p>
@@ -12,6 +21,7 @@
       </button>
     </ion-toolbar>
 </ion-header>
+</span>
 <ion-nav [root]="rootPage" id="main-content"></ion-nav>
 
 <!-- Hamburger Menu -->

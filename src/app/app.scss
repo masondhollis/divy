@@ -201,6 +201,22 @@ ion-menu.ham-menu{
     padding-top: 10px;
 }
 
+#MainBack{
+  width:20%;
+  vertical-align: middle;
+  height: 100%;
+  padding-top: 10px;
+}
+
+#mainTool{
+  background: none;
+  .toolbar {
+  .toolbar-background{
+    background: transparent;
+  }
+}
+}
+
 .toolbar {
     max-height: 40px !important;
     height: 40px !important;
@@ -215,4 +231,13 @@ ion-nav {
 
 .toolbar-background {
     border: none !important; // This is bad and I'm being a bad example don't do this sorry
+}
+
+#Back img{
+
+}
+
+#Back{
+  color: none;
+  width:100%;
 }
