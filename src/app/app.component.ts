@@ -66,6 +66,7 @@ export class MyApp {
       return 'Ham';
     else if(this.navCtrl.getActive().name == 'ProfilePage')
       return 'Back';
+    else return 'Ham';
     }
   }
 
@@ -90,9 +91,27 @@ export class MyApp {
     if(this.navCtrl.getActive() != null)
     {
     if(this.navCtrl.getActive().name == 'ProfilePage')
-      return {'background-color':'rgba(255,255,255,0.6)'};
+      return {'background-color':'rgba(255,255,255,0.6)','backdrop-filter': 'blur(4px)'};
     else
       return {'background-color':'rgba(255,255,255,1)'};
+    }
+  }
+
+  styleNav(){
+    if(this.navCtrl.getActive() != null)
+    {
+    if(this.navCtrl.getActive().name == 'HomePage')
+      return {'top':'40px'};
+    else
+      return {'top':'0px','height':'100%'};
+    }
+  }
+
+  headerFix(){
+    if(this.navCtrl.getActive() != null)
+    {
+    if(this.navCtrl.getActive().name == 'ProfilePage')
+      return {'width':'33.25%','position':'relative','right':'1.5%'};
     }
   }
 }

@@ -192,9 +192,9 @@ ion-menu.ham-menu{
  .Title{
     content: url(./../assets/icon/divy.png);
     width:40%;
-    padding: 0;
+    padding:0 auto;
     margin: 0 auto;
-    text-align: center;
+    position: inherit;
 }
 
 #main-header {
@@ -239,5 +239,4 @@ ion-nav {
 
 #Back{
   color: none;
-  width:100%;
 }
