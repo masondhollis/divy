@@ -10,14 +10,14 @@ import { messagesPage} from '../pages/messages/messages';
 import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
 import {convoPage} from '../pages/conversation/conversation';
-
+import { LoginPage} from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
   ProPage:any = ProfilePage;
   MePage:any = messagesPage;
   @ViewChild(Nav) navCtrl: Nav;

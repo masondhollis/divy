@@ -18,6 +18,9 @@ import { picPage } from '../pages/home/home';
 import {editPage} from '../pages/profile/profile'
 import { emberPage } from '../pages/home/home';
 import { commentPage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,11 +36,13 @@ import { commentPage } from '../pages/home/home';
     picPage,
     editPage,
     emberPage,
-    commentPage
+    commentPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
     //IonicSwipeAllModule
   ],
   bootstrap: [IonicApp],
@@ -54,12 +59,14 @@ import { commentPage } from '../pages/home/home';
     picPage,
     editPage,
     emberPage,
-    commentPage
+    commentPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CognitoServiceProvider
   ]
 })
 export class AppModule {
