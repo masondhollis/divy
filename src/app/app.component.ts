@@ -9,15 +9,15 @@ import { ProfilePage} from '../pages/profile/profile';
 import { messagesPage} from '../pages/messages/messages';
 import { settingsPage} from '../pages/settings/settings';
 import { membersPage} from '../pages/members/members';
-import {convoPage} from '../pages/conversation/conversation';
-import { LoginPage} from '../pages/login/login';
-
+import {convoPage } from '../pages/conversation/conversation';
+import { LoginPage } from '../pages/login/login';
+import { SignUpPage } from '../pages/sign-up/sign-up';
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-  rootPage:any = LoginPage;
+  rootPage:any = SignUpPage;
   ProPage:any = ProfilePage;
   MePage:any = messagesPage;
   @ViewChild(Nav) navCtrl: Nav;

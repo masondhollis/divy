@@ -21,6 +21,7 @@ import { commentPage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { HttpClientModule } from '@angular/common/http';
+import { SignUpPage} from '../pages/sign-up/sign-up';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     editPage,
     emberPage,
     commentPage,
-    LoginPage
+    LoginPage,
+    SignUpPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { HttpClientModule } from '@angular/common/http';
     editPage,
     emberPage,
     commentPage,
-    LoginPage
+    LoginPage,
+    SignUpPage
   ],
   providers: [
     StatusBar,

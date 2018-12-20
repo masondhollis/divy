@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-service';
 /**
  * Generated class for the SignUpPage page.
  *
@@ -14,12 +14,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
+  email: string;
+  password: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignUpPage');
   }
-
+  register() {
+    this.CognitoService.signUp(this.email, this.password).then(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    ); 
+  }
 }
