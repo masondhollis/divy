@@ -19,6 +19,9 @@ import {editPage} from '../pages/profile/profile'
 import { emberPage } from '../pages/home/home';
 import { commentPage } from '../pages/home/home';
 
+import { HttpModule } from '@angular/http';
+import { GatewayServiceProvider } from '../providers/gateway-services';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,10 +36,11 @@ import { commentPage } from '../pages/home/home';
     picPage,
     editPage,
     emberPage,
-    commentPage
+    commentPage,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     //IonicSwipeAllModule
   ],
@@ -59,6 +63,7 @@ import { commentPage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    GatewayServiceProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

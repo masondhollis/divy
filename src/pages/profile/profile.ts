@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController,ModalController } from 'ionic-angular';
-
+import { NavController, NavParams, ViewController,ModalController, Loading } from 'ionic-angular';
+import { Http } from '@angular/http'; 
+import {GatewayServiceProvider} from '../../providers/gateway-services';
 import { emberPage } from '../home/home';
 import { commentPage } from '../home/home';
 import { buttonPage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 var data = require("../../data/posts.json");
+
 
 @Component({
   selector: 'page-profile',
@@ -13,6 +15,7 @@ var data = require("../../data/posts.json");
 })
 
 export class ProfilePage {
+
   goHome()
   {
     this.navCtrl.goToRoot({animate:false});
@@ -30,17 +33,18 @@ export class ProfilePage {
   //Variables
   myprofile;
   menu = false;
-  plus = false;
+  plus = false; 
   following = false;
   favorites = false;
   family = false;
   swipe = true;
   view = "public";
   proPosts = [];
+  test = [];
 
   //constructor
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public modalCtrl: ModalController, public sanitizer: DomSanitizer) {
+    public modalCtrl: ModalController, public sanitizer: DomSanitizer, public http:Http, public GatewayService: GatewayServiceProvider) {
 
     //Current Profile
     this.myprofile = this.profile[navParams.get("ProKey")];
@@ -50,6 +54,7 @@ export class ProfilePage {
     for (x in this.myprofile.posts){
       this.proPosts.push(this.posts[this.myprofile.posts[x]]);
     }
+    this.GatewayService.getEndpoint('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile/10354');
   }
 
   //Menu Toggle
