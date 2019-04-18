@@ -1,37 +1,54 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController,ModalController, Loading } from 'ionic-angular';
-import { Http } from '@angular/http'; 
+import { NavController, NavParams, ViewController,ModalController, Loading, LoadingController, Config } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http'; 
 import {GatewayServiceProvider} from '../../providers/gateway-services';
 import { emberPage } from '../home/home';
 import { commentPage } from '../home/home';
 import { buttonPage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
-var data = require("../../data/posts.json");
 
+var data;
+var posts;
+var profile;
+var myprofile;
+
+interface ProfileDDB {
+  output: [{}];
+  image: [{}];
+}
 
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html'
+  selector: 'ProfilePage',
+  templateUrl: 'profile2.html'
 })
 
 export class ProfilePage {
+  
+  setData = async() => {
+    
+    data = await this.setProfile();
+    
+    profile = await Object.keys(data).map(function(key){ return data[key];});
+
+    myprofile = profile[0];
+    
+   //console.log(await profile[this.navParams.get("id")]);
+
+  }
 
   goHome()
   {
     this.navCtrl.goToRoot({animate:false});
   }
-  //Profiles definition
-  profile = Object.keys(data.Profiles).map(function(key){
-    return data.Profiles[key];
-  });
 
-  //Posts definition
-  posts = Object.keys(data.Posts).map(function(key){
-    return data.Posts[key];
-  });
+
+  // //Posts definition
+  // posts = Object.keys(data.Posts).map(function(key){
+  //   return data.Posts[key];
+  // });
 
   //Variables
-  myprofile;
+  
   menu = false;
   plus = false; 
   following = false;
@@ -40,21 +57,33 @@ export class ProfilePage {
   swipe = true;
   view = "public";
   proPosts = [];
-  test = [];
+  test;
+  profileSet;
 
   //constructor
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public modalCtrl: ModalController, public sanitizer: DomSanitizer, public http:Http, public GatewayService: GatewayServiceProvider) {
+    public modalCtrl: ModalController, public sanitizer: DomSanitizer, public http:HttpClient, public GatewayService: GatewayServiceProvider) {
+ 
+    this.setData();
+    // //Get current profile posts
+    // var x;
+    // for (x in this.myprofile.posts){
+    //   this.proPosts.push(this.posts[this.myprofile.posts[x]]);
+    // }
+  }
 
-    //Current Profile
-    this.myprofile = this.profile[navParams.get("ProKey")];
-
-    //Get current profile posts
-    var x;
-    for (x in this.myprofile.posts){
-      this.proPosts.push(this.posts[this.myprofile.posts[x]]);
-    }
-    this.GatewayService.getEndpoint('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile/10354');
+    setProfile(): Promise<{}>{
+    return new Promise((resolve) => {
+      if ( this.test !== undefined){
+        resolve(this.test);
+      }else{
+         this.GatewayService.getEndpoint<ProfileDDB>('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile?username=BurgerBoss')
+        //this.GatewayService.getEndpoint<ProfileDDB>('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/post?id=124')
+        .then((getData) => { this.test = getData.output
+        resolve(this.test);
+       });
+      }
+    });
   }
 
   //Menu Toggle
@@ -107,22 +136,22 @@ export class ProfilePage {
     buttonsPage.present();
   }
 
-  //Go COmment Modal
+  //Go Comment Modal
   Comment(post){
     let comPage = this.modalCtrl.create(commentPage,{post:post},{
     cssClass: "button-modal"});
     comPage.present();
   }
 
-  //Like FUnction
+  //Like Function
   Like(post){
   //Either like or unlike
   if(post.likes.Hit == "false")
   {
     post.likes.Hit = "true";
     post.likes.Amount =  String (parseInt(post.likes.Amount)+ 1);
-    var newLike = {name:this.myprofile.name,username:this.myprofile.username,
-    prof_pic: this.myprofile.prof_pic, id:"0"};
+    var newLike = {name:myprofile.name,username:myprofile.username,
+    prof_pic: myprofile.prof_pic, id:"0"};
     post.likes.people.push(newLike);
   }
   else
@@ -198,3 +227,4 @@ export class editPage {
    this.viewCtrl.dismiss();
  }
 }
+

@@ -19,8 +19,9 @@ import {editPage} from '../pages/profile/profile'
 import { emberPage } from '../pages/home/home';
 import { commentPage } from '../pages/home/home';
 
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { GatewayServiceProvider } from '../providers/gateway-services';
+import { httpFactory } from '@angular/http/src/http_module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { GatewayServiceProvider } from '../providers/gateway-services';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     //IonicSwipeAllModule
   ],
