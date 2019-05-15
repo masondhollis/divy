@@ -1,0 +1,210 @@
+<ion-content>
+        <!--Background Content-->
+    <span *ngIf ="this.myprofile">
+        <ion-content center class = "MainContent" [ngStyle]="{
+          'background': 'url('+myprofile.main_pic+')','background-size':'cover'}" scroll = 'false'>
+        
+        <!-- Main Footer -->
+        <ion-footer id = "Footer" [ngClass]="{'profile_expand': this.menu}">
+          <div id = "User" swipeAll (swipedown) = "swipeToggle(false)">
+            <img (click) = "togglePro()" class="plink link-close" *ngIf = "this.menu == true"/>
+            <span *ngIf="this.swipe == true">
+            <div id = "imgAndText">
+              <img class="plink link-add" (click) = "plusTog()"/>
+              <img item-start class="pprof_pic" src="{{myprofile.prof_pic}}" />
+              <div id = "Info">
+                <h2 id = "pname">{{myprofile.nameFirst}}</h2>
+                <h2 id = "pUname">@{{myprofile.username}}</h2>
+                <h2 id = "location">{{myprofile.location}}</h2>
+              </div>
+            </div>
+            </span>
+            <img (click) = "togglePro()" swipeAll (swipeup) = "swipeToggle(true)"
+              class="plink link-expand" *ngIf = "this.menu == false"/>
+          </div>
+        
+          <!-- Feed Display -->
+          <span *ngIf ="this.menu == true" >
+            <div class = "Stats">
+              <span *ngIf ="this.view === 'public'" >
+                <div class = "Stats Stats-stuff"> <b id='pnum'>{{myprofile.public.following}}</b>
+                  <p id="staText">Following</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.public.followers}}</b>
+                  <p id="staText">Followers</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.public.posts.amount}}</b>
+                  <p id="staText">Posts</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.public.photos}}</b>
+                  <p id="staText">Photos</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.public.videos}}</b>
+                  <p id="staText">Videos</p></div>
+              </span>
+              <span *ngIf ="this.view === 'friends'" >
+                <div class = "Stats Stats-stuff"> <b id='pnum'>{{myprofile.favs.members}}</b>
+                  <p id="staText">Members</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.favs.posts.amount}}</b>
+                  <p id="staText">Posts</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.favs.photos}}</b>
+                  <p id="staText">Photos</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.favs.videos}}</b>
+                  <p id="staText">Videos</p></div>
+              </span>
+              <span *ngIf ="this.view === 'family'" >
+                <div class = "Stats Stats-stuff"> <b id='pnum'>{{myprofile.fam.members}}</b>
+                  <p id="staText">Members</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.fam.posts.amount}}</b>
+                  <p id="staText">Posts</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.fam.photos}}</b>
+                  <p id="staText">Photos</p></div>
+                <div class = "Stats Stats-stuff"><b id='pnum'>{{myprofile.fam.videos}}</b>
+                  <p id="staText">Videos</p></div>
+              </span>
+            </div>
+        
+            <!--Middle Button-->
+            <div id="outer"><div id = "Edit" [ngStyle] = "styleButton()">
+              <span *ngIf = "myprofile === this.profile[0]" (click) = "edit()">
+                Edit Profile</span>
+              <span *ngIf = "myprofile !== this.profile[0]">
+              <span *ngIf ="this.view === 'public'" (click) = "toggle('follow')">
+                <span *ngIf="this.following == false">Follow</span>
+                <span *ngIf="this.following == true">Following</span>
+              </span>
+                <span *ngIf ="this.view === 'friends'" (click) = "toggle('favorites')">
+                  <span *ngIf="this.favorites == false">Invite to Favorites</span>
+                  <span *ngIf="this.favorites == true">Added to Favorites</span>
+                </span>
+                <span *ngIf ="this.view === 'family'" (click) = "toggle('family')">
+                  <span *ngIf="this.family == false">Invite to Family</span>
+                  <span *ngIf="this.family == true">Added to Family</span>
+                </span>
+              </span>
+            </div></div>
+            <div id="bio">{{myprofile.bio}}</div>
+      </span>
+        
+          <!--Plus popup-->
+          <ion-footer center id="plusM"*ngIf="this.plus == true">
+            <span *ngIf="myprofile !== this.profile[0]">
+              <h4>Send {{myprofile.name}} a message</h4><hr/>
+              <h4>Block</h4><hr/>
+              <h4>Mute</h4><hr/>
+              <h4>Report</h4><hr/>
+              <div>Grid View</div><div  [ngStyle] = "{'border-bottom':'solid',
+                'border-width':'thin'}">Full View</div><hr/>
+              <div id="plusMH"></div><hr/>
+              <div id='plusMHold'></div><hr/>
+              <h4 (click) = "plusTog()"> Go Back</h4>
+            </span>
+        
+            <span *ngIf="myprofile === this.profile[0]">
+              <h4>Liked</h4><hr/>
+              <h4>Embered</h4><hr/>
+              <h4>Tagged</h4><hr/>
+              <div id="plusMH"></div><hr/>
+              <div id="plusMH"></div><hr/>
+              <div id='plusMHold'></div><hr/>
+              <h4 (click) = "plusTog()"> Go Back</h4>
+            </span>
+          </ion-footer>
+        </ion-footer>
+        </ion-content>
+      </span>
+        <!--Post Feed-->
+        <span *ngIf ="this.menu == true" >
+        <div class= "prof_feed">
+          <div *ngFor="let post of proPosts">
+            <div *ngIf= "post.feed === this.view">
+              <ion-card class="posts">
+                <div id="proHead">
+                  <img class="prof_pic" src="{{post.prof_pic}}" />
+                  <div id="holder">
+                    <span (click)="goProfile(post.profile)">
+                    <div id="proInfo">
+                        <h2 id = "name">{{post.name}}</h2>
+                        <h2 id = "Uname">@{{post.username}}</h2>
+                    </div>
+                    </span>
+                     <h2 id ="time">{{post.time}}</h2>
+                     <span *ngIf = "post.text != ''">
+                       <div id = "Text">{{post.text}}</div>
+                     </span>
+                     <span *ngIf ="post.text === ''">
+                      <!--Actions: Like, comment, repost, share -->
+                       <div id="buttons">
+                         <div id="Tbuttons">
+                           <img [ngStyle]="stylebutt(post,'like')"
+                            class = "button button-like" (click) = "Like(post)"/>
+                           <div [ngStyle]="styleText(post,'like')" id = "LText"
+                            (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+                         </div>
+                         <div id="Tbuttons">
+                           <div [ngStyle]="stylebutt(post,'ember')"
+                            class = "button button-ember" (click) = "Ember(post)"></div>
+                           <div [ngStyle]="styleText(post,'ember')" id = "LText"
+                            (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+                         </div>
+                         <div id="Tbuttons" (click) = "Comment(post)">
+                           <div class = "button button-comment" ></div>
+                           <div id = "CText">{{post.comments.display}}</div>
+                         </div>
+                         <div id="Tbuttons">
+                         <div class = "button button-share"></div>
+                         </div>
+                       </div>
+                     </span>
+                   </div>
+                </div>
+        
+                <!--Actions: Like, comment, repost, share -->
+                <span *ngIf ="post.text !== ''">
+                  <div id="Lbuttons">
+                    <div id="LTbuttons">
+                      <img [ngStyle]="stylebutt(post,'like')"
+                        class = "button button-like" (click) = "Like(post)"/>
+                      <div [ngStyle]="styleText(post,'like')" id = "LText"
+                        (click) = "goLike('like',post)">{{post.likes.Display}}</div>
+                    </div>
+                    <div id="LTbuttons">
+                      <div [ngStyle]="stylebutt(post,'ember')"
+                        class = "button button-ember" (click) = "ember(post)"></div>
+                      <div [ngStyle]="styleText(post,'ember')" id = "LText"
+                        (click) = "goLike('ember',post)">{{post.embers.display}}</div>
+                    </div>
+                    <div id="LTbuttons" (click) = "Comment(post)">
+                      <div class = "button button-comment"></div>
+                      <div id = "CText" >{{post.comments.display}}</div>
+                    </div>
+                    <div id="LTbuttons">
+                      <div class = "button button-share"></div>
+                    </div>
+                  </div>
+                </span>
+        
+              <img *ngIf ="post.post_pic != '' && post.type != 'Video'" class = "post_pic"
+              src="{{post.post_pic}}" />
+              <iframe *ngIf="post.type == 'Video'" width="100%" height="100%"
+                [src]="sanitizer.bypassSecurityTrustResourceUrl(post.post_pic)"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+              </iframe>
+            </ion-card>
+            </div>
+          </div>
+          <div id="blank_space"></div>
+        </div>
+        </span>
+        </ion-content>
+        
+        <!--VIew Footer-->
+        <ion-footer *ngIf ="this.menu == true">
+          <div id= "whitebar">
+            <div id="filters">
+              <div (click) = "changeView('public')"><img [ngStyle]="pfilter('public')"
+                class="link link-all"/><h4 [ngStyle]="tfilter('public')">Public</h4></div>
+              <div (click) = "changeView('friends')"><img [ngStyle]="pfilter('friends')"
+                class="link link-friends"/><h4 [ngStyle]="tfilter('friends')">Favorites</h4></div>
+              <div (click) = "changeView('family')"><img [ngStyle]="pfilter('family')"
+                class="link link-family"/><h4 [ngStyle]="tfilter('family')">Family</h4></div>
+            </div>
+          </div>
+ </ion-footer>
+        

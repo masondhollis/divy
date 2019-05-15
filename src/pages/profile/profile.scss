@@ -6,8 +6,9 @@
 #Footer
 {
   padding-top: 4%;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(4px);
+  background: rgba(192, 192, 192, .9);
+  backdrop-filter: blur(10px);
+  //backdrop-filter: opacity(80%);
 }
 
 .profile_expand {

@@ -23,6 +23,10 @@ import { CognitoServiceProvider } from '../providers/cognito-service/cognito-ser
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpPage} from '../pages/sign-up/sign-up';
 
+import { HttpClientModule } from '@angular/common/http';
+import { GatewayServiceProvider } from '../providers/gateway-services';
+import { httpFactory } from '@angular/http/src/http_module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,6 +47,7 @@ import { SignUpPage} from '../pages/sign-up/sign-up';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule
     //IonicSwipeAllModule
@@ -68,8 +73,9 @@ import { SignUpPage} from '../pages/sign-up/sign-up';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CognitoServiceProvider
+    CognitoServiceProvider,
+    GatewayServiceProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {
