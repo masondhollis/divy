@@ -23,7 +23,6 @@ import { CognitoServiceProvider } from '../providers/cognito-service/cognito-ser
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpPage} from '../pages/sign-up/sign-up';
 
-import { HttpClientModule } from '@angular/common/http';
 import { GatewayServiceProvider } from '../providers/gateway-services';
 import { httpFactory } from '@angular/http/src/http_module';
 
