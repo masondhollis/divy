@@ -18,7 +18,7 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
 
 export class MyApp {
   //rootPage:any = SignUpPage;
-  rootPage:any = SignUpPage;
+  rootPage:any = LoginPage;
   ProPage:any = ProfilePage;
   MePage:any = messagesPage;
   @ViewChild(Nav) navCtrl: Nav;
@@ -33,7 +33,8 @@ export class MyApp {
   }
   goHome()
   {
-    this.navCtrl.goToRoot({animate:false});
+    //this.navCtrl.goToRoot({animate:false});
+    this.navCtrl.push(HomePage,{},{animate:false});
   }
 
   goProfile(key)
