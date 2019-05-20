@@ -17,6 +17,7 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
 })
 
 export class MyApp {
+  //rootPage:any = SignUpPage;
   rootPage:any = SignUpPage;
   ProPage:any = ProfilePage;
   MePage:any = messagesPage;
