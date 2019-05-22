@@ -33,7 +33,8 @@ export class MyApp {
   }
   goHome()
   {
-    this.navCtrl.goToRoot({animate:false});
+    //this.navCtrl.goToRoot({animate:false});
+    this.navCtrl.push(HomePage,{},{animate:false});
   }
 
   goProfile(key)
