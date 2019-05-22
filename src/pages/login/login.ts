@@ -16,17 +16,19 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
   login() {
-    this.CognitoService.authenticate(this.email, this.password)
-    .then(res => {
-      console.log(res);
-    }, err => {
-      console.log(err);
-    });
+    if((<HTMLInputElement>document.getElementById('Uname')).value != null &&
+    (<HTMLInputElement>document.getElementById('Pword')).value != null){
+      this.CognitoService.authenticate((<HTMLInputElement>document.getElementById('Uname')).value, (<HTMLInputElement>document.getElementById('Pword')).value)
+      .then(res => {
+        console.log(res);
+      }, err => {
+        console.log(err);
+      });
+    }
   }
-  
 
+  goBack(){
+    this.navCtrl.pop();
+  }
 }

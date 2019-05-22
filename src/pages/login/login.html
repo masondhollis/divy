@@ -1,40 +1,40 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      <!-- Ionic cognito app - Sign in 
-      Divy Login -->
-      <img alt="logo" height = "110" src = "../assets/imgs/logo.png">
-    </ion-title>
-  </ion-navbar>
+<ion-header transparent no-border id="sign-header">
+    <ion-toolbar transparent id = "mainTool" >
+      <div (click)="goBack()" id="Back" transparent>
+        <img src="./assets/icon/Back.png" id="Back"/>
+      </div>
+      <button (click) ='login()'>
+        Next
+      </button>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <form (ngSubmit)="login()" #registerForm="ngForm">
+
+  <input type="text" ng-model="string"
+  id='Uname' placeholder = "User Name or Phone Number">
+  <input type="text" ng-model="string"
+  id='Pword' placeholder = "Password">
+    <!--<form (ngSubmit)="login()" #registerForm="ngForm">
         <ion-row>
           <ion-col>
             <ion-list inset>
-              
+
               <ion-item>
                 <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
               </ion-item>
-              
+
               <ion-item>
                 <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
-              </ion-item>           
+              </ion-item>
             </ion-list>
           </ion-col>
         </ion-row>
-        
+
         <ion-row>
           <ion-col class="signup-col">
             <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
           </ion-col>
-        </ion-row>           
-      </form>
-
-      <!-- <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [navPush]="signUpPage">Sign Up</button>
-        </ion-col>
-      </ion-row>   -->
+        </ion-row>
+      </form> -->
 </ion-content>

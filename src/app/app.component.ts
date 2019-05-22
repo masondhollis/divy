@@ -12,12 +12,13 @@ import { membersPage} from '../pages/members/members';
 import {convoPage } from '../pages/conversation/conversation';
 import { LoginPage } from '../pages/login/login';
 import { SignUpPage } from '../pages/sign-up/sign-up';
+import { startPage } from '../pages/start/start';
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-  rootPage:any = SignUpPage;
+  rootPage:any = startPage;
   ProPage:any = ProfilePage;
   MePage:any = messagesPage;
   @ViewChild(Nav) navCtrl: Nav;
@@ -80,6 +81,23 @@ export class MyApp {
     else
       return 'false';
     }
+  }
+
+  localNext(){
+    if(this.navCtrl.getActive() != null)
+      {
+        this.navCtrl.getActive().name
+      }
+  }
+
+  checkLog(){
+    if(this.navCtrl.getActive() != null)
+      {
+      if(this.navCtrl.getActive().name == 'pinfo')
+        return 'true';
+      else
+        return 'false';
+      }
   }
 
   goBack()

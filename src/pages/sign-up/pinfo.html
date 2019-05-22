@@ -1,0 +1,29 @@
+<!--SignUp Header-->
+<ion-header transparent no-border id="sign-header">
+    <ion-toolbar transparent id = "mainTool" >
+      <div (click)="goBack()" id="Back" transparent>
+        <img src="./assets/icon/Back.png" id="Back"/>
+      </div>
+      <button id='next' (click) ='goNext()'>
+        Next
+      </button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <span *ngIf ="this.toggle == false">
+    <input type="text" ng-model="string"
+    id='Name' placeholder = "Name">
+    <input type="text" ng-model="string"
+    id='Uname' placeholder = "User Name">
+    <input type="text" ng-model="string"
+    id='Pword' placeholder = "Password">
+  </span>
+
+  <span *ngIf ="this.toggle == true">
+    <input type="text" ng-model="string"
+    id='Email' placeholder = "Email">
+    <input type="text" ng-model="string"
+    id='Pnum' placeholder = "Phone Number">
+  </span>
+</ion-content>
