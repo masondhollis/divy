@@ -16,6 +16,7 @@ import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-
 export class SignUpPage {
   email: string;
   password: string;
+  type = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider,
     public modalCtrl: ModalController) {
@@ -32,10 +33,28 @@ export class SignUpPage {
   }
 
   goPersonal(){
-    this.navCtrl.push(pinfo);
+    this.type = 1;
+  }
+  goCompany(){
+    this.type = 2;
+  }
+  goBack(){
+    this.navCtrl.pop();
+  }
 
+  goNext(){
+    if(this.type == 1){
+      this.navCtrl.push(pinfo);
+    }
+    else if(this.type == 2){
+      //this.navCtrl.push(corpinfo)
+    }
+    else{
+      //throw an error for an invalid choice
+    }
   }
 }
+
 //Page for showing user profiles who like or comment on a post
 @Component({selector: 'page-pinfo',
 templateUrl:`pinfo.html`})
@@ -59,7 +78,7 @@ export class pinfo {
         this.toggle = true;
       }
       else{
-        //TODO: Show some error code
+        //TODO: Show some error code on user input
       }
     }
     else{
@@ -67,12 +86,20 @@ export class pinfo {
     }
   }
 
-  goBack(){
-    this.navCtrl.pop();
+  createUser(){
+    if((<HTMLInputElement>document.getElementById('Email')).value != null &&
+    (<HTMLInputElement>document.getElementById('Pnum')).value != null){
+      this.User.email = (<HTMLInputElement>document.getElementById('Email')).value;
+      this.User.phone = (<HTMLInputElement>document.getElementById('Pnum')).value;
+
+      //Do the cognito call here
+    }
+    else{
+      //show some null error code
+    }
   }
 
-  createUser(){
-    this.User.email = (<HTMLInputElement>document.getElementById('Email')).value;
-    this.User.phone = (<HTMLInputElement>document.getElementById('Pnum')).value;
+  goBack(){
+    this.navCtrl.pop();
   }
 }

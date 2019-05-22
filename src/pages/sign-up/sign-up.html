@@ -1,6 +1,12 @@
-<ion-header>
-  <ion-navbar>
-  </ion-navbar>
+<ion-header transparent no-border id="sign-header">
+    <ion-toolbar transparent id = "mainTool" >
+      <div (click)="goBack()" id="Back" transparent>
+        <img src="./assets/icon/Back.png" id="Back"/>
+      </div>
+      <button id='next' (click) ='goNext()'>
+        Next
+      </button>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
