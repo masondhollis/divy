@@ -20,7 +20,18 @@ page-start {
 #sub {
   text-align: center;
   position: fixed;
-  top: 57.5%;
+  top: 55%;
+  left: 47.5%;
+  font-size: .75em;
+  letter-spacing: 1.2px;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#special {
+  text-align: center;
+  position: fixed;
+  top: 65%;
   left: 47.5%;
   font-size: .75em;
   letter-spacing: 1.2px;

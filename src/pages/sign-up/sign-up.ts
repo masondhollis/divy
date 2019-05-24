@@ -65,7 +65,7 @@ export class SignUpPage {
 templateUrl:`pinfo.html`})
 
 export class pinfo {
-  User={};
+  User= {};
   toggle = false;
   //constructor
   constructor(public navCtrl: NavController) {
