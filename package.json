@@ -33,6 +33,7 @@
         "cordova": "^8.1.2",
         "cordova-android": "^7.1.4",
         "cordova-ios": "^4.5.5",
+        "cordova-plugin-detect-screenshot": "^1.0.8",
         "cordova-plugin-device": "^2.0.2",
         "cordova-plugin-ionic-keyboard": "^2.1.2",
         "cordova-plugin-ionic-webview": "^1.2.1",
@@ -57,7 +58,8 @@
             "cordova-plugin-ionic-keyboard": {},
             "cordova-plugin-ionic-webview": {},
             "cordova-plugin-splashscreen": {},
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-detect-screenshot": {}
         },
         "platforms": [
             "ios",

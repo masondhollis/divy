@@ -178,6 +178,11 @@ export class HomePage {
   {
     this.navCtrl.push(ProfilePage,{ProKey: key});
   }
+
+  //Screenshot listener
+  document.addEventListener("screenshot", function() {
+    window.alert("Screenshot");
+  }, false);
 }
 
 
