@@ -3,10 +3,17 @@
     <div id="Title">
       Divy.
     </div>
+    <div id="sub">
+      Your Feed, Your Choice
+    </div>
+
+    <!--
+    TODO, insert something that says,Beta for this highschool only
+      -->
 
     <div id = "prompt">
-      <div (click) = "SignIn()"> Sign in</div>
-      <div (click) = "SignUp()"> Sign up</div>
+      <div (click) = "SignIn()" [ngStyle] = "signStyle(1)"> Sign in</div>
+      <div (click) = "SignUp()" [ngStyle] = "signStyle(2)"> Sign up</div>
     </div>
   </div>
 </ion-content>

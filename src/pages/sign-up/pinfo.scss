@@ -7,5 +7,24 @@
 
 #next{
   background: none;
-  
+}
+
+#uinput{
+  display: inline-block;
+  text-align: center;
+  padding-top: 10%;
+}
+::placeholder{
+  color: black;
+}
+
+#uinput input{
+  width:80%;
+  border:solid;
+  border-color: black;
+  font-size: 1em;
+  color: black;
+  margin: 4%;
+  padding: 2%;
+  text-align: center;
 }

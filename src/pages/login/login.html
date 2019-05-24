@@ -3,38 +3,27 @@
       <div (click)="goBack()" id="Back" transparent>
         <img src="./assets/icon/Back.png" id="Back"/>
       </div>
-      <button (click) ='login()'>
+      <button id=Next (click) ='login()'>
         Next
       </button>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <div id=pinput *ngIf ="this.toggle == false">
+    <input type="text" ng-model="string"
+    id='Uname' placeholder = "Email or Username">
+    <input type="text" ng-model="string"
+    id='Pword' placeholder = "Password">
+    <div (click)=goForgot()> Forgot Password?</div>
+  </div>
 
-  <input type="text" ng-model="string"
-  id='Uname' placeholder = "User Name or Phone Number">
-  <input type="text" ng-model="string"
-  id='Pword' placeholder = "Password">
-    <!--<form (ngSubmit)="login()" #registerForm="ngForm">
-        <ion-row>
-          <ion-col>
-            <ion-list inset>
+  <div id=finput *ngIf ="this.toggle == true">
+    <input type="text" ng-model="string"
+    id='femail' placeholder = "Email Address">
+    <div> or </div>
+    <input type="text" ng-model="string"
+    id='fphone' placeholder = "Phone Number">
+  </div>
 
-              <ion-item>
-                <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
-              </ion-item>
-
-              <ion-item>
-                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="signup-col">
-            <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
-          </ion-col>
-        </ion-row>
-      </form> -->
 </ion-content>

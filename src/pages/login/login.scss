@@ -1,3 +1,50 @@
-page-login {
+#pinput{
+  display: inline-block;
+  text-align: center;
+  padding-top: 8%;
+  background: white;
+}
+::placeholder{
+  color: black;
+}
 
+#pinput input{
+  width:80%;
+  border:solid;
+  border-color: black;
+  font-size: 1em;
+  color: black;
+  margin: 4%;
+  padding: 2%;
+  text-align: center;
+}
+
+#pinput div{
+  padding-top: 4%;
+}
+
+#finput{
+  display: inline-block;
+  text-align: center;
+  padding-top: 8%;
+  background: white;
+  width:100%;
+}
+
+#finput input{
+  width:80%;
+  border:solid;
+  border-color: black;
+  font-size: 1em;
+  color: black;
+  margin: 4%;
+  padding: 2%;
+  text-align: center;
+}
+
+#finput div{
+  padding-top: 0%;
+  text-align: center;
+  padding:0;
+  margin:0;
 }

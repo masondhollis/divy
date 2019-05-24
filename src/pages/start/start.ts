@@ -10,13 +10,21 @@ import { LoginPage } from '../../pages/login/login';
   templateUrl: 'start.html',
 })
 export class startPage {
+  type = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider) {
   }
 
   SignIn(){
+      this.type = 1;
       this.navCtrl.push(LoginPage);
   }
   SignUp(){
+    this.type = 2;
     this.navCtrl.push(SignUpPage);
+  }
+
+  signStyle(type){
+    if(this.type == type)
+      return {"border": "none", "background-color":"lightgrey"};
   }
 }

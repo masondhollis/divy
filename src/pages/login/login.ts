@@ -14,6 +14,7 @@ import { HomePage } from '../../pages/home/home';
 export class LoginPage {
   email: string;
   password: string;
+  toggle = false;
   signUpPage = SignUpPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider) {
   }
@@ -30,6 +31,9 @@ export class LoginPage {
       });
     }
   }
+  goForgot(){
+    this.toggle = true;
+  }
 
   goHome()
   {
@@ -40,4 +44,7 @@ export class LoginPage {
   goBack(){
     this.navCtrl.pop();
   }
+
+  //TODO: For the Forgot password functionality show
+  //austin.womack04@gmail.com
 }

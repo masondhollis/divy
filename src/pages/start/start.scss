@@ -17,6 +17,17 @@ page-start {
     transform: translate(-50%, -50%);
 }
 
+#sub {
+  text-align: center;
+  position: fixed;
+  top: 57.5%;
+  left: 47.5%;
+  font-size: .75em;
+  letter-spacing: 1.2px;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 #prompt{
   text-align: center;
   width:100%;

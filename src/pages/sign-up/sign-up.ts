@@ -53,6 +53,11 @@ export class SignUpPage {
       //throw an error for an invalid choice
     }
   }
+
+  signStyle(type){
+    if(this.type == type)
+      return {"border": "none", "background-color":"lightgrey"};
+  }
 }
 
 //Page for showing user profiles who like or comment on a post
@@ -60,7 +65,7 @@ export class SignUpPage {
 templateUrl:`pinfo.html`})
 
 export class pinfo {
-  User ;
+  User={};
   toggle = false;
   //constructor
   constructor(public navCtrl: NavController) {
