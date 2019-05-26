@@ -19,7 +19,7 @@ interface ProfileDDB {
 
 @Component({
   selector: 'ProfilePage',
-  templateUrl: 'profile2.html'
+  templateUrl: 'profile.html'
 })
 
 export class ProfilePage {

@@ -13,7 +13,8 @@
   <div id = "select">Select your account type</div>
   <div id = choice>
     <button (click) = 'goPersonal()' [ngStyle] = "signStyle(1)">Personal</button>
-    <button id=beta (click) = 'goCompany()' [ngStyle] = "signStyle(2)">Company</button>
+    <!-- <button id=beta (click) = 'goCompany()' [ngStyle] = "signStyle(2)">Company</button> -->
+    <button (click) = 'openModal()'>Company</button>
   </div>
 
 </ion-content>

@@ -27,6 +27,10 @@ export class HomePage {
   constructor(public navCtrl: NavController, public menuCtrl: MenuController,
     public modalCtrl: ModalController, public sanitizer: DomSanitizer){
       menuCtrl.enable(true, 'hamMenu');
+      //Screenshot listener
+      document.addEventListener("screenshot", function() {
+        window.alert("Screenshot");
+        }, false);
   }
 
   //Changing pages function
@@ -179,10 +183,7 @@ export class HomePage {
     this.navCtrl.push(ProfilePage,{ProKey: key});
   }
 
-  //Screenshot listener
-  document.addEventListener("screenshot", function() {
-    window.alert("Screenshot");
-  }, false);
+  
 }
 
 

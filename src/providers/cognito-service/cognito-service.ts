@@ -5,6 +5,7 @@ import {Config as AppConfig } from 'ionic-angular';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/observable/from'
+import { ModalPage } from '../../modal/modal';
 
 var AWS = require('aws-sdk');
 
@@ -80,7 +81,7 @@ private authDetails (email, password): AWSCognito.AuthenticationDetails {
     this._cognitoUser = null
     this.unauthCreds = this.unauthCreds || new AWS.CognitoIdentityCredentials({IdentityPoolId: this.config.get('identityPool')})
     if (clearCache){
-      this.unauthCreds.clearCacheId()
+      this.unauthCreds.clearCachedId()
     }
     this.setCredentials(this.unauthCreds)
   }

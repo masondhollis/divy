@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Nav} from 'ionic-angular';
 
+import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage} from '../pages/profile/profile';
 import { messagesPage} from '../pages/messages/messages';
@@ -13,6 +14,8 @@ import {convoPage } from '../pages/conversation/conversation';
 import { LoginPage } from '../pages/login/login';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { startPage } from '../pages/start/start';
+import { ModalPage } from '../modal/modal';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -23,7 +26,7 @@ export class MyApp {
   MePage:any = messagesPage;
   @ViewChild(Nav) navCtrl: Nav;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public CognitoService: CognitoServiceProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -35,6 +38,12 @@ export class MyApp {
   {
     //this.navCtrl.goToRoot({animate:false});
     this.navCtrl.push(HomePage,{},{animate:false});
+  }
+
+  signout()
+  { 
+    this.CognitoService.signout();
+    this.navCtrl.push(startPage,{},{animate:false});
   }
 
   goProfile(key)

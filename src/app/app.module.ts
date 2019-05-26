@@ -19,6 +19,7 @@ import {editPage} from '../pages/profile/profile'
 import { emberPage } from '../pages/home/home';
 import { commentPage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { ModalPage } from '../modal/modal';
 import { startPage } from '../pages/start/start';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { HttpClientModule } from '@angular/common/http';
@@ -47,7 +48,8 @@ import { httpFactory } from '@angular/http/src/http_module';
     LoginPage,
     SignUpPage,
     pinfo,
-    startPage
+    startPage,
+    ModalPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import { httpFactory } from '@angular/http/src/http_module';
     commentPage,
     LoginPage,
     SignUpPage,
-    startPage
+    startPage,
+    ModalPage
   ],
   providers: [
     StatusBar,

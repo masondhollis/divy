@@ -1,0 +1,35 @@
+@include media-breakpoint-down(sm) {
+    .my-modal {
+        ion-backdrop {
+          visibility: visible !important;
+        }
+        .modal-wrapper {
+        overflow: hidden;
+        margin: auto;
+        width: 95%;
+        height:145px;
+        top: 50%;
+        border:  solid 1px #b1b1b1;
+        background: rgba(255,255,255,0.95);
+        padding: 10px;
+        position: relative;
+
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    #modalFont{
+        text-align: center;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+      }
+      
+
