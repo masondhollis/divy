@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController,ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController,ModalController, ModalOptions } from 'ionic-angular';
 import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-service';
 import { SignUpPage } from "../../pages/sign-up/sign-up";
 import { HomePage } from '../../pages/home/home';
-
+import { ModalPage } from '../../modal/modal';
 
 // Amazon Cognito Domain: https://divy.auth.us-east-2.amazoncognito.com
 @IonicPage()
@@ -16,7 +16,7 @@ export class LoginPage {
   password: string;
   toggle = false;
   signUpPage = SignUpPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider, public modalCtrl: ModalController) {
   }
 
   login() {
@@ -31,6 +31,22 @@ export class LoginPage {
       });
     }
   }
+
+  openModal(){
+
+    const myModalOptions: ModalOptions = {
+      showBackdrop: true,
+      cssClass: "my-modal"
+    };
+
+    const myModalData = {
+      name: "To reset your password, please email: austin.womack04@gmail.com."
+    };
+
+    const myModal = this.modalCtrl.create( ModalPage, {data:myModalData}, myModalOptions);
+    myModal.present();
+  }
+
   goForgot(){
     this.toggle = true;
   }
@@ -45,6 +61,4 @@ export class LoginPage {
     this.navCtrl.pop();
   }
 
-  //TODO: For the Forgot password functionality show
-  //austin.womack04@gmail.com
 }

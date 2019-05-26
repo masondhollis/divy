@@ -15,7 +15,8 @@
     id='Uname' placeholder = "Email or Username">
     <input type="password" ng-model="string"
     id='Pword' placeholder = "Password">
-    <div (click)=goForgot()> Forgot Password?</div>
+    <!-- <div (click)=goForgot()> Forgot Password?</div> -->
+    <div (click) = openModal()> Forgot Password?</div>
   </div>
 
   <div id=finput *ngIf ="this.toggle == true">
