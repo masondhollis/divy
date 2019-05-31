@@ -44,7 +44,7 @@ export class CognitoServiceProvider {
     return this._cognitoUser
   }
 
-  get currentIdentity (): string {
+  get currentIdentity (): string  {
     return AWS.config.credentials.identityId
   }
 
@@ -56,16 +56,21 @@ private authDetails (email, password): AWSCognito.AuthenticationDetails {
   return new AWSCognito.AuthenticationDetails({Username: email, Password: password})
 }
 
-  private refreshOrResetCreds () {
-    this._cognitoUser = this.userPool.getCurrentUser()
+private refreshOrResetCreds () {
+  this._cognitoUser = this.userPool.getCurrentUser()
 
-    if(this._cognitoUser !== null) {
-      this.refreshSession()
-    }
-    else {
-      this.resetToken()
-    }
+  if(this._cognitoUser !== null) {
+    this.refreshSession()
   }
+  else {
+    this.resetToken()
+  }
+}
+
+getUserId () {
+  this._cognitoUser = this.userPool.getCurrentUser()
+  return this._cognitoUser.getUsername()
+}
 
   private refreshSession(): Promise<AWSCognito.CognitoUserSession> {
     let self = this

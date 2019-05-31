@@ -27,6 +27,10 @@ export class LoginPage {
         console.log(res);
         this.goHome()
       }, err => {
+        if(err.name == "UserNotFoundException" || err.name == "NotAuthorizedException")
+        {
+          this.openModalLogin("Sorry! Your username or password is incorrect.")
+        }
         console.log(err);
       });
     }
@@ -47,13 +51,27 @@ export class LoginPage {
     myModal.present();
   }
 
+  openModalLogin(problem){
+
+    const myModalOptions: ModalOptions = {
+      showBackdrop: true,
+      cssClass: "my-modal"
+    };
+
+    const myModalData = {
+      name: problem
+    };
+
+    const myModal = this.modalCtrl.create( ModalPage, {data:myModalData}, myModalOptions);
+    myModal.present();
+  }
+
   goForgot(){
     this.toggle = true;
   }
 
   goHome()
   {
-    //this.navCtrl.goToRoot({animate:false});
     this.navCtrl.push(HomePage,{},{animate:false});
   }
 

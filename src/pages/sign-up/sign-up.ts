@@ -4,6 +4,8 @@ import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-
 import { ModalPage } from '../../modal/modal';
 import { registerLocaleData } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
+import {GatewayServiceProvider} from '../../providers/gateway-services';
+import { HomePage } from '../../pages/home/home';
 
 /**
  * Generated class for the SignUpPage page.
@@ -11,6 +13,9 @@ import { HttpErrorResponse } from '@angular/common/http';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+interface ProfileDDB {
+  output: [{}];
+}
 
 @IonicPage()
 @Component({
@@ -77,9 +82,10 @@ templateUrl:`pinfo.html`})
 
 export class pinfo {
   User = <any>{}
+  tempUsername = "";
   toggle = false;
   //constructor
-  constructor(public navCtrl: NavController,public CognitoService: CognitoServiceProvider,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController,public CognitoService: CognitoServiceProvider,public modalCtrl: ModalController, public GatewayService: GatewayServiceProvider) {
   }
 
   openModal(errorResponse: string){
@@ -114,8 +120,9 @@ export class pinfo {
         else{
           this.toggle = true;
         }
-
         //add error checking for username being used
+        //this.GatewayService.getEndpoint<ProfileDDB>('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile').then((getData) => { this.tempUsername= getData.output});
+        
       }
       else{
         //TODO: Show some error code on user input
@@ -135,6 +142,13 @@ export class pinfo {
       this.CognitoService.signUp(this.User.email, this.User.password, this.User.uname, this.User.phone, this.User.name).then(
         res => {
           console.log(res);
+          this.CognitoService.authenticate(this.User.email, this.User.password)
+          .then(res => {
+            console.log(res);
+            this.goHome()
+          }, err => {
+            console.log(err);
+          });
         },
         err => {
           if(err.name == "UsernameExistsException")
@@ -153,5 +167,10 @@ export class pinfo {
 
   goBack(){
     this.navCtrl.pop();
+  }
+
+  goHome()
+  {
+    this.navCtrl.push(HomePage,{},{animate:false});
   }
 }

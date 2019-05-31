@@ -6,11 +6,13 @@ import { emberPage } from '../home/home';
 import { commentPage } from '../home/home';
 import { buttonPage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
+import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-service';
 
 var data;
 var posts;
 var profile;
 var myprofile;
+var loaded: boolean;
 
 interface ProfileDDB {
   output: [{}];
@@ -18,22 +20,20 @@ interface ProfileDDB {
 }
 
 @Component({
-  selector: 'ProfilePage',
-  templateUrl: 'profile.html'
+  selector: 'page-ProfilePage',
+  templateUrl: 'profile2.html'
 })
 
 export class ProfilePage {
   
-  setData = async() => {
-    
+  async setData () {
+    loaded = false;
     data = await this.setProfile();
-    
     profile = await Object.keys(data).map(function(key){ return data[key];});
-
-    myprofile = profile[0];
-    
-   //console.log(await profile[this.navParams.get("id")]);
-
+    myprofile = await profile[0];  
+    loaded = await this.setLoaded(myprofile)
+    console.log(await loaded)
+    console.log(await myprofile)
   }
 
   goHome()
@@ -41,6 +41,11 @@ export class ProfilePage {
     this.navCtrl.goToRoot({animate:false});
   }
 
+  setLoaded(myprofile)
+  {
+    let newResult = true;
+    return newResult;
+  }
 
   // //Posts definition
   // posts = Object.keys(data.Posts).map(function(key){
@@ -55,6 +60,7 @@ export class ProfilePage {
   favorites = false;
   family = false;
   swipe = true;
+  userToken = "";
   view = "public";
   proPosts = [];
   test;
@@ -62,7 +68,7 @@ export class ProfilePage {
 
   //constructor
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public modalCtrl: ModalController, public sanitizer: DomSanitizer, public http:HttpClient, public GatewayService: GatewayServiceProvider) {
+    public modalCtrl: ModalController, public sanitizer: DomSanitizer, public http:HttpClient, public GatewayService: GatewayServiceProvider, public CognitoService: CognitoServiceProvider) {
  
     this.setData();
     // //Get current profile posts
@@ -77,10 +83,13 @@ export class ProfilePage {
       if ( this.test !== undefined){
         resolve(this.test);
       }else{
-         this.GatewayService.getEndpoint<ProfileDDB>('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile?username=BurgerBoss')
-        //this.GatewayService.getEndpoint<ProfileDDB>('https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/post?id=124')
-        .then((getData) => { this.test = getData.output
-        resolve(this.test);
+        let userToken = this.CognitoService.getUserId();
+        let url = "https://9tvh32rkk2.execute-api.us-east-2.amazonaws.com/test/profile?CognitoUserId="
+        let invokeUrl = url.concat(userToken)
+        this.GatewayService.getEndpoint<ProfileDDB>(invokeUrl)
+        .then((getData) => { 
+          this.test = getData.output
+          resolve(this.test);
        });
       }
     });
