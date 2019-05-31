@@ -138,26 +138,33 @@ export class pinfo {
     (<HTMLInputElement>document.getElementById('Pnum')).value != null){
       this.User.email = (<HTMLInputElement>document.getElementById('Email')).value;
       this.User.phone = (<HTMLInputElement>document.getElementById('Pnum')).value;
-      //Do the cognito call here
-      this.CognitoService.signUp(this.User.email, this.User.password, this.User.uname, this.User.phone, this.User.name).then(
-        res => {
-          console.log(res);
-          this.CognitoService.authenticate(this.User.email, this.User.password)
-          .then(res => {
+      if(this.User.email.endsWith("@lakesidesd.org")){
+        this.CognitoService.signUp(this.User.email, this.User.password, this.User.uname, this.User.phone, this.User.name).then(
+          res => {
             console.log(res);
-            this.goHome()
-          }, err => {
+            this.CognitoService.authenticate(this.User.email, this.User.password)
+            .then(res => {
+              console.log(res);
+              this.goHome()
+            }, err => {
+              console.log(err);
+            });
+          },
+          err => {
+            if(err.name == "UsernameExistsException")
+            {
+              this.openModal("This email is already in use. Please try another.")
+            }
             console.log(err);
-          });
-        },
-        err => {
-          if(err.name == "UsernameExistsException")
-          {
-            this.openModal("This email is already in use. Please try another.")
           }
-          console.log(err);
-        }
-      );
+        );
+      }
+      else{
+        this.openModal("Sorry! You must sign up using your Lakeside Email Address.")
+      }
+      
+      //Do the cognito call here
+      
       
     }
     else{
