@@ -17,6 +17,8 @@ export class CognitoServiceProvider {
       ClientId: "5n063j70a3uq6ld4cco88n4pqi"
   };
 
+  
+
   private unauthCreds: any
   private poolData: AWSCognito.ICognitoUserPoolData
   private userPool: AWSCognito.CognitoUserPool
@@ -29,6 +31,10 @@ export class CognitoServiceProvider {
     console.log('Hello CognitoServiceProvider Provider');
     this.userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA)
     this.refreshOrResetCreds()
+    AWS.config.region = 'us-east-2'; // Region
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: 'us-east-2:188f523a-6f6b-49a1-903d-ca2f8dcd20bb',
+    });
   }
 
   // get signoutNotification () { return Observable.create( fn => this._signoutSubject.subscribe(fn))}
@@ -110,18 +116,24 @@ private authDetails (email, password): AWSCognito.AuthenticationDetails {
     this.setCredentials(this.buildToken())
   }
 
-  private buildAttributes(email, password): Array<AWSCognito.CognitoUserAttribute>{
+  private buildAttributes(email, uname, phone, name): Array<AWSCognito.CognitoUserAttribute>{
     let attributeList = []
     let attributeEmail = new AWSCognito.CognitoUserAttribute({Name: 'email', Value: email})
+    let attributeUname = new AWSCognito.CognitoUserAttribute({Name:'preferred_username', Value: uname})
+    let attributePhone = new AWSCognito.CognitoUserAttribute({Name:'phone_number', Value: phone})
+    let attributeName = new AWSCognito.CognitoUserAttribute({Name: 'name', Value: name})
     attributeList.push(attributeEmail)
+    attributeList.push(attributeUname)
+    attributeList.push(attributePhone)
+    attributeList.push(attributeName)
     return attributeList
   }
 
-  signUp(email, password): Promise<AWSCognito.CognitoUser>{
+  signUp(email, password, uname, phone, name): Promise<AWSCognito.CognitoUser>{
     let self = this
     return new Promise((resolve, reject) => {
       try{
-        self.userPool.signUp(email, password, self.buildAttributes(email, password), null, (err, result) => {
+        self.userPool.signUp(email, password, self.buildAttributes(email, uname, phone, name), null, (err, result) => {
           if (err) {
             return reject(err)
           }

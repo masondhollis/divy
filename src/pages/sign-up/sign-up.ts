@@ -25,16 +25,7 @@ export class SignUpPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider,
     public modalCtrl: ModalController) {
   }
-  register() {
-    this.CognitoService.signUp(this.email, this.password).then(
-      res => {
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
+  
 
   goPersonal(){
     this.type = 1;
@@ -113,7 +104,7 @@ export class pinfo {
       (<HTMLInputElement>document.getElementById('Pword')).value != null){
 
         this.User.name = (<HTMLInputElement>document.getElementById('Name')).value;
-        this.User.username = (<HTMLInputElement>document.getElementById('Uname')).value;
+        this.User.uname = (<HTMLInputElement>document.getElementById('Uname')).value;
         this.User.password = (<HTMLInputElement>document.getElementById('Pword')).value;
         
 
@@ -141,7 +132,7 @@ export class pinfo {
       this.User.email = (<HTMLInputElement>document.getElementById('Email')).value;
       this.User.phone = (<HTMLInputElement>document.getElementById('Pnum')).value;
       //Do the cognito call here
-      this.CognitoService.signUp(this.User.email, this.User.password).then(
+      this.CognitoService.signUp(this.User.email, this.User.password, this.User.uname, this.User.phone, this.User.name).then(
         res => {
           console.log(res);
         },
