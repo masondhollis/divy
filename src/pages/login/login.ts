@@ -4,6 +4,7 @@ import { CognitoServiceProvider } from '../../providers/cognito-service/cognito-
 import { SignUpPage } from "../../pages/sign-up/sign-up";
 import { HomePage } from '../../pages/home/home';
 import { ModalPage } from '../../modal/modal';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 // Amazon Cognito Domain: https://divy.auth.us-east-2.amazoncognito.com
 @IonicPage()
@@ -16,16 +17,27 @@ export class LoginPage {
   password: string;
   toggle = false;
   signUpPage = SignUpPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public CognitoService: CognitoServiceProvider, public modalCtrl: ModalController, public nativeStorage: NativeStorage) {
   }
 
   login() {
-    if((<HTMLInputElement>document.getElementById('Uname')).value != null &&
-    (<HTMLInputElement>document.getElementById('Pword')).value != null){
-      this.CognitoService.authenticate((<HTMLInputElement>document.getElementById('Uname')).value, (<HTMLInputElement>document.getElementById('Pword')).value)
+    var username = (<HTMLInputElement>document.getElementById('Uname')).value
+    var password = (<HTMLInputElement>document.getElementById('Pword')).value
+    if(username != null && password != null) {
+      this.CognitoService.authenticate(username, password)
       .then(res => {
-        console.log(res);
-        this.goHome()
+        //TODO store as one?
+        this.nativeStorage.setItem('username', username)
+        this.nativeStorage.setItem('password', password)
+        console.log(res)
+        var storage
+        this.nativeStorage.getItem('username')
+          .then(
+              data => storage = data,
+              error => console.error(error)
+          );
+        console.log("storage: " + storage)
+        //this.goHome()
       }, err => {
         if(err.name == "UserNotFoundException" || err.name == "NotAuthorizedException")
         {

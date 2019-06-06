@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { NativeStorage } from '@ionic-native/native-storage';
 //import { IonicSwipeAllModule } from 'ionic-swipe-all';
 
 import { MyApp } from './app.component';
@@ -81,6 +82,7 @@ import { httpFactory } from '@angular/http/src/http_module';
   ],
   providers: [
     StatusBar,
+    NativeStorage,
     SplashScreen,
     CognitoServiceProvider,
     GatewayServiceProvider,
