@@ -37,7 +37,7 @@ export class LoginPage {
               error => console.error(error)
           );
         console.log("storage: " + storage)
-        //this.goHome()
+        this.goHome()
       }, err => {
         if(err.name == "UserNotFoundException" || err.name == "NotAuthorizedException")
         {
