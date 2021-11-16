@@ -30,7 +30,7 @@
         "amazon-cognito-identity-js": "^3.0.12",
         "atom-ide-ui": "^0.7.2",
         "aws-amplify-angular": "^2.1.4",
-        "aws-sdk": "^2.378.0",
+        "aws-sdk": "^2.814.0",
         "cordova": "^8.1.2",
         "cordova-android": "^7.1.4",
         "cordova-ios": "^4.5.5",
